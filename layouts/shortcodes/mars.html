@@ -1,0 +1,8 @@
+<ul class="mars {{ .Get 0}}">
+    <li>{{ .Inner  | markdownify }}</li>
+
+    <!-- NOTE: https://liatas.com/posts/hugo-shortcode-examples/
+
+         Changes in Hugo v0.62 that introduces .Page.RenderString instead of markdownify
+    -->
+</ul>

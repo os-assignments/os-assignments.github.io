@@ -1,0 +1,58 @@
+<!-- image -->
+
+
+
+<center>
+    <figure {{ with .Get "class" }}class="{{.}}"{{ end }} {{ with .Get "maxwidth" }} style="max-width:{{.}};"{{ end }} >
+    <!--img src="{{ .Get "src" }}" {{ if or (.Get "alt") (.Get "caption") }}alt="{{ with .Get "alt"}}{{.}}{{else}}{{ .Get "caption" }}{{ end }}" {{ end }}{{ with .Get "width" }}width="{{.}}" {{ end }}/-->
+    {{- partial "shortcodes/image.html" (dict
+    "page" .Page
+    "url" (.Get "src")
+    "title" (.Get "caption")
+    "alt" (.Get "caption")
+    "id" (md5 (.Get "caption"))
+  ) }}
+    {{- if or (or (.Get "title") (.Get "caption")) (.Get "attr")}}
+    <figcaption>
+    <div>
+        <p class="caption">
+        {{- if or (.Get "caption") (.Get "attr")}}
+            {{- .Get "caption" | markdownify }}
+            {{- end }}
+        </p>
+    
+    {{- with .Get "attr" }}
+    
+        {{- $attrElements := split (lower .) " " }}
+    
+        {{- if eq (index $attrElements 0) "cc" }}
+            {{- $.Scratch.Set "cc" true }}
+            {{- $.Scratch.Set "cclink" "https://creativecommons.org/licenses/" }}
+            {{- with index $attrElements 1 }}{{ $.Scratch.Add "cclink" . }} {{ end }}
+            {{- with index $attrElements 2 }}{{ $.Scratch.Add "cclink" (printf "/%s" .) }} {{ end }}
+        {{- end }}
+        {{- end }} <!-- with .Get "attr" -->
+        {{- $fig := . }}
+        <p class="attribution">
+            {{- with .Get "type" }}{{ with $fig.Get "source" }}<a href="{{.}}" target="_blank">{{ end }}{{$fig.Get "type"}}{{ with $fig.Get "source" }}</a>  {{ end }}{{ end }}
+        {{- if $.Scratch.Get "cc" }}
+        <a href={{ $.Scratch.Get "cclink" }} target="_blank" >
+            <i class="fab fa-creative-commons"></i> by </a>
+        {{- else }}
+        {{- $fig.Get "attr" }}&nbsp;
+        {{-  end }}
+            {{- with .Get "by" }}
+               {{- with $fig.Get "bylink" }}<a href="{{.}}" target="_blank">{{- end}}
+               {{- .}}
+               {{- with $fig.Get "bylink" }}</a>{{ end }}
+            {{- end }}
+        </p>
+        <span style="display: block; clear:both;"/>
+        </div>
+    </figcaption>
+    {{- end }}
+    </figure>
+    </center>
+    <!-- image -->
+    
+    

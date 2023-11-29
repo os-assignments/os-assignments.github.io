@@ -1,0 +1,6 @@
+# Default config in <root>/config/_default
+
+# Site specific config below. 
+
+baseURL = 'https://os-assignments.github.io/'
+title = 'Operating systems assignments'

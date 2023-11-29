@@ -1,0 +1,5 @@
+<div class='note {{ .Get "class" }}'>
+<p class="title">{{ .Get "title" }}</p>
+<p>{{ printf "%s" .Inner | markdownify }}</p>
+</div>
+

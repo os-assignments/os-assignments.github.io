@@ -1,0 +1,38 @@
+# Default config in <root>/config/_default
+
+# Site specific config below. 
+
+baseURL = 'https://os-assignments.github.io/v1/'
+title = 'Operating systems assignments'
+
+# contentDir = 'versions/v1/content'
+publishDir = 'public/v1/'
+
+# staticDir = ['root-css', 'static']
+
+# Sharing static with parent project?
+
+# https://discourse.gohugo.io/t/shared-content-between-multiple-sites/24589
+
+# https://gohugo.io/hugo-modules/
+
+# https://discourse.gohugo.io/t/consider-re-enabling-symlinks-at-least-opt-in/21269
+
+# https://gohugo.io/hugo-modules/configuration/#module-configuration-mounts
+
+#
+# https://gohugo.io/hugo-modules/configuration/#module-configuration-mounts
+#
+
+# When the mounts configuration was introduced in Hugo 0.56.0, we were careful to preserve the existing contentDir, staticDir, and similar configuration to make sure all existing sites just continued to work. But you should not have both: if you add a mounts section you should remove the old contentDir, staticDir, etc. settings.
+
+#### https://discourse.gohugo.io/t/how-to-mount-shared-static-folder-between-multiple-sites/47230
+
+
+[module]
+[[module.mounts]]
+    source = "versions/v1/content"
+    target = "content"
+[[module.mounts]]
+    source = "static"   
+    target = "static"  
