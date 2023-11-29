@@ -6,7 +6,7 @@ blackfriday:
 ---
 
 
-![](/v1/images/module-0/linux/shell-and-terminal/terminal-icon.png)
+![](/v1/images/prerequisites/linux/shell-and-terminal/terminal-icon.png)
 
 A [shell][shell] is a user interface for access to an operating system's services. Most
 often the user interacts with the shell using a
@@ -39,7 +39,7 @@ below image, a Univac 9400 system (1967) consisting of multiple cabinets is
 shown.
 
 {{% figure
-   src="/v1/images/module-0/linux/shell-and-terminal/univac-9400.jpg"
+   src="/v1/images/prerequisites/linux/shell-and-terminal/univac-9400.jpg"
    caption="A Univac 9400 mainframe computer data center on display in the Techikum29 museum."
    source="http://www.technikum29.de/en/computer/univac9400"
    type="Photograph"
@@ -62,7 +62,7 @@ the [Teletype Model 33 ASR][teletype-33-asr] (1963) shown below.
 
 [teletype-33-asr]:https://en.wikipedia.org/wiki/Teletype_Model_33 
 {{< figure 
-    src="/v1/images/module-0/linux/shell-and-terminal/teletype-model-33.jpg"
+    src="/v1/images/prerequisites/linux/shell-and-terminal/teletype-model-33.jpg"
     maxwidth="600px"
     source="https://commons.wikimedia.org/wiki/File:ASR-33_at_CHM.agr.jpg"
     caption="A model 33 ASR terminal from the Teletype Corporation on display at the Computer History Museum, Mountain View, California, USA."
@@ -81,7 +81,7 @@ shown below.
 [vt-100]: https://en.wikipedia.org/wiki/VT100 
 
 {{< figure
-    src="/v1/images/module-0/linux/shell-and-terminal/DEC-VT100-terminal.jpg"
+    src="/v1/images/prerequisites/linux/shell-and-terminal/DEC-VT100-terminal.jpg"
     maxwidth="500px"
     source="https://commons.wikimedia.org/wiki/File:DEC_VT100_terminal.jpg"
     caption="A DEC VT100 terminal."
@@ -96,7 +96,7 @@ VT100 terminal was
 only used for input and output to and from a connected computer. In the below image [DEC VT52](https://en.wikipedia.org/wiki/VT52) video terminal (1974) is connected to a PDP 11/55 computer (1975). 
 
 {{< figure 
-    src="/v1/images/module-0/linux/shell-and-terminal/DEC-VT52-terminal-PDP-11-55.jpg"
+    src="/v1/images/prerequisites/linux/shell-and-terminal/DEC-VT52-terminal-PDP-11-55.jpg"
     maxwidth="600px"
     caption="A DEC VT52 video terminal connected to a PDP 11/55 computer."
     source="http://www.bejaardecomputers.nl/index-en.html"
@@ -108,7 +108,7 @@ only used for input and output to and from a connected computer. In the below im
 
 <!--
 {{% figure
-           src="/images/module-0/linux/shell-and-terminal/pdp-11-40.jpg" 
+           src="/images/prerequisites/linux/shell-and-terminal/pdp-11-40.jpg" 
            maxwidth="450px"
            caption="A PDP-11/40 computer as exhibited in Vienna Technical Museumwith with the processor at the bottom and a TU56 dual DECtape drive is installed above it."
            type="Photograph"

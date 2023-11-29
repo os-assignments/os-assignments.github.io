@@ -12,7 +12,7 @@ calling `exec` unless explicitly set to close-on-exec.
 In the below diagram a process is executing Program 1. The program calls `exec`
 to replace the program executed by the process to Program 2. 
 
-![](/v1/images/module-2/exec.png)
+![](/v1/images/processes-and-ipc/exec.png)
 
 ## execlp 
 

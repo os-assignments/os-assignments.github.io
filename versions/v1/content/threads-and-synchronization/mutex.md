@@ -7,7 +7,7 @@ draft: false
 
 <h2 class="subtitle">Mandatory assignment</h2>
 
-![](/v1/images/module-4/mutex-inc-dec.png?width=555px)
+![](/v1/images/threads-and-synchronization/mutex-inc-dec.png?width=555px)
 
 In this assignment you will study different methods to enforce [mutual
 exclusion](definitions#mutual-exclusion-mutex).

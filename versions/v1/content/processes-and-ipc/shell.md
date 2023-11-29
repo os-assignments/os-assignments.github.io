@@ -92,7 +92,7 @@ This function [parse][wp-parsing] a command line string `str` such as `"ls -l -F
 
 The below figure shows the overall structure of the shell. 
 
-![](/v1/images/module-2/shell-pipeline.png)
+![](/v1/images/processes-and-ipc/shell-pipeline.png)
 
 When a user types a command line on the form `A | B | C` the parent parses the
 user input and creates one child process for each of the commands in the

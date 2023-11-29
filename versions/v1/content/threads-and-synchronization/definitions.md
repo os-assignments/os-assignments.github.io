@@ -31,7 +31,7 @@ executing the program, the program counter (PC) jumps around in the text
 segment.  
 
 
-![](/v1/images/module-4/process.png)
+![](/v1/images/threads-and-synchronization/process.png)
 
 
 ## Treads
@@ -43,7 +43,7 @@ concurrently. Depending on how threads are implemented, the CPU contexts can be
 stored in user space or kernel space. In the below figure a process with three
 threads is shown.
 
-![](/v1/images/module-4/process-with-three-threads.png)
+![](/v1/images/threads-and-synchronization/process-with-three-threads.png)
 
 ## Concurrent tasks
 

@@ -130,7 +130,7 @@ number.
 Mars initializes the status register in coprocessor 0 to `0x0000ff11` = [binary] = `0000 0000 0000 0000 1111 1111 0001
 0001`. 
 
-<img src="/v1/images/module-1/mars-status-register-startup.png" />
+<img src="/v1/images/fundamental-concepts/mars-status-register-startup.png" />
 
 On startup: 
 

@@ -7,7 +7,7 @@ weight: 30
 In order to study how the operating system interacts with the
 hardware, [Mips][mips] assembly will be used. 
 
-![](/v1/images/module-0/mips-mars/hello-world-source.png)
+![](/v1/images/prerequisites/mips-mars/hello-world-source.png)
 
 To edit and execute Mips assembly programs we will use [Mars][mars] (Mips
 Assembler and Runtime Simulator). Mars is available on the department Linux System.

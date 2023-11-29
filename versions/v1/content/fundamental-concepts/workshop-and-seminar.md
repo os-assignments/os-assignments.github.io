@@ -11,7 +11,7 @@ During the module 1 **workshop** you will sit down in groups of
 six students to discuss the [module 1 questions][module-1-questions]. Participation during the workshop is not
 mandatory but highly recommended.
 
-[module-1-questions]: https://github.com/uu-dsp-os-ospp-2020/{{< param site-prefix >}}-seminars/blob/master/module-1.pdf
+[module-1-questions]: https://github.com/uu-dsp-os-ospp-2020/{{< param site-prefix >}}-seminars/blob/master/fundamental-concepts.pdf
 
 {{% note class="tip" title="Learning" %}}
 During the workshop the groups will be able to get guidance from the teaching staff and learn from other groups.

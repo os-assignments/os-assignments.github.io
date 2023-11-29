@@ -10,7 +10,7 @@ draft: false
 Your task is to create a system with one parent process and two
 child processes where the children communicate using a pipe.
 
-![](/v1/images/module-2/parent-children-pipe.png?width=600px)
+![](/v1/images/processes-and-ipc/parent-children-pipe.png?width=600px)
 
 ## Open a terminal
 
@@ -135,7 +135,7 @@ to execute the `ls -F -1` command and Child B uses exec to execute the
 redirected to the write end of the pipe. The stdin of the Child B is redirected
 to the read end of the pipe.
 
-![](/v1/images/module-2/parent-ls-nl.png)
+![](/v1/images/processes-and-ipc/parent-ls-nl.png)
 
 
 ## Pipe

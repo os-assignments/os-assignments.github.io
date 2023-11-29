@@ -7,4 +7,4 @@ draft: false
 
 The fundamentals of program execution, processes and inter process communication (IPC).
 
-![](/v1/images/module-2/fork-exec-exit-wait.png?width=350px)
+![](/v1/images/processes-and-ipc/fork-exec-exit-wait.png?width=350px)

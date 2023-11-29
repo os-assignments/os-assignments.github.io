@@ -85,6 +85,6 @@ generate an interrupt every time new input is available. Using interrupts makes
 it possible for the CPU to do something useful, for example execute
 another program, while waiting for user input.
 
-![](/images/module-1/keyboard-interrupt-handling.png)
+![](/images/fundamental-concepts/keyboard-interrupt-handling.png)
 
 

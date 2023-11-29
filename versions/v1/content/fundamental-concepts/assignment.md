@@ -218,7 +218,7 @@ Execute the `li $s0, 0x7fffffff` instruction.
 
 Now, look at the register pane.
 
-![](/v1/images/module-1/assignment/step-1.png)
+![](/v1/images/fundamental-concepts/assignment/step-1.png)
 
 Note that register `$at` (register number 1) have been highlighted and that the value stored in `$at`
 changed from the initial value `0x00000000` to `0x7fff0000` , i.e., the upper
@@ -246,7 +246,7 @@ address is now highlighted.
 On the Coproc 0 tab in the register pane, look at the cause register (register
 13).
 
-![](/v1/images/module-1/assignment/step-2.png)
+![](/v1/images/fundamental-concepts/assignment/step-2.png)
 
 The value in the cause register is currently `0x00000000`.
 
@@ -260,7 +260,7 @@ The program counter have now jumped from `0x00400008` to `0x80000180`, i.e.,
 execution has transition to the kernel entry point. Now the status
 register (register 12) is highlighted in the register pane.
 
-![](/v1/images/module-1/assignment/step-3.png)
+![](/v1/images/fundamental-concepts/assignment/step-3.png)
 
 Note that the cause register changed from `0x00000000` to `0x00000030` and
 that EPC  have been set to
@@ -594,7 +594,7 @@ constantly increasing.
 Click inside the lower white area of the MMIO simulator window and type a few
 characters.
 
-![](/v1/images/module-1/assignment/mmio-simulator-type-here.png)
+![](/v1/images/fundamental-concepts/assignment/mmio-simulator-type-here.png)
 
 Nothing happens, the program is still stuck in the infinite loop.
 
@@ -638,7 +638,7 @@ Click on the play icon to run the program to completion.
 Click inside the lower white area of the MMIO simulator window and type **a
 single character**.
 
-![](/v1/images/module-1/assignment/mmio-simulator-type-here.png)
+![](/v1/images/fundamental-concepts/assignment/mmio-simulator-type-here.png)
 
 When you type a character on the simulated keyboard  a keyboard
 interrupt is generated. The interrupt is handled by the kernel.
@@ -689,7 +689,7 @@ Assemble the file.
 
 Click on the label `__todo_4` in the labels window.
 
-![](/v1/images/module-1/assignment/labels-window-todo-4.png)
+![](/v1/images/fundamental-concepts/assignment/labels-window-todo-4.png)
 
 The instruction at label `__todo_4` is now highlighted in the Execute pane. Add
 a **breakpoint** at this address by checking the checkbox in the leftmost
@@ -709,7 +709,7 @@ register.
 Click inside the lower white area of the MMIO simulator window and type **a
 single character**.
 
-![](/v1/images/module-1/assignment/mmio-simulator-type-here.png)
+![](/v1/images/fundamental-concepts/assignment/mmio-simulator-type-here.png)
 
 ### Execution paused at the breakpoint
 
@@ -738,7 +738,7 @@ Interrupts and exceptions are used to notify the CPU of events that needs
 immediate attention during program execution. Exceptions and interrupts are events that alters the normal sequence of
 instructions executed by a processor.
 
-![](/v1/images/module-1/exception-and-interrupt-handling-v1.png)
+![](/v1/images/fundamental-concepts/exception-and-interrupt-handling-v1.png)
 ### Exceptions are internal and synchronous
 
 - Exceptions are used to handle internal program errors.

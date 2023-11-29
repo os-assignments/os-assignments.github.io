@@ -39,7 +39,7 @@ The below figure shows an example where **job 1** calls the custom `getc` system
 call and **job 2** executes while **job 1** waits for the user to press a key on
 the keyboard. 
 
-![](/v1/images/module-1/getc-multiprogramming.png)
+![](/v1/images/fundamental-concepts/getc-multiprogramming.png)
 
 In the above figure important events are marked with a number inside a yellow
 circle.
@@ -123,7 +123,7 @@ characters and terminate the buffer with null. Until the input buffer is full
 the operating system (kernel) let job 2 execute between keyboard
 interrupts. 
 
-![](/v1/images/module-1/read-string-multiprogramming.png)
+![](/v1/images/fundamental-concepts/read-string-multiprogramming.png)
 
 ## System call convention
 

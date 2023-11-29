@@ -4,7 +4,7 @@ weight: 30
 ---
 
 
-![](/v1/images/module-0/linux/ubuntu-laptop.png?width=400px)
+![](/v1/images/prerequisites/linux/ubuntu-laptop.png?width=400px)
 
 Since there might be minor variations among various Linux distributions, the
 only fully supported platform for tutorials and programming assignments is the [department

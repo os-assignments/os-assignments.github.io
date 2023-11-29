@@ -38,7 +38,7 @@ device controllers can execute in parallel, competing for memory cycles. To
 ensure orderly access to the shared memory, a memory controller is provided
 whose function is to synchronize the access to the memory. 
 
-![](/v1/v1/images/module-1/computer-system.png)
+![](/v1/v1/images/fundamental-concepts/computer-system.png)
 
 ## Input/Output (I/O)
 
@@ -54,7 +54,7 @@ perform an input or output operation. [^I/O]
 For our purposes, any transfer of information between the CPU/Memory and any of the
 external devices is considered I/O.
 
-![](/v1/images/module-1/computer-system-io.png)
+![](/v1/images/fundamental-concepts/computer-system-io.png)
 
 Usually I/O operations does not make use of the CPU but are handled by the external
 devices. 
@@ -68,7 +68,7 @@ programs for the various user.
 
 [^os]: https://en.wikipedia.org/wiki/Operating_system
 
-![](/v1/images/module-1/os-overview-and-catch-phrase.png)
+![](/v1/images/fundamental-concepts/os-overview-and-catch-phrase.png)
 
 ## Program, executable and process
 
@@ -119,7 +119,7 @@ system, with complete control over everything in the system. [^kernel]
 In order to protect the operating system from user processes two modes are
 provided by the hardware: **user mode** and **kernel mode**.
 
-![](/v1/images/module-1/user-mode-kernel-mode.png)
+![](/v1/images/fundamental-concepts/user-mode-kernel-mode.png)
 
 Dual mode operation place restrictions on the type and scope of operations that
 can be executed by the CPU. This design allows the operating system kernel
@@ -186,7 +186,7 @@ When an exception or interrupt occurs, execution transition from user mode to
 kernel mode where the exception or interrupt is handled. When the exception or
 interrupt has been handled execution resumes in user space.
 
-![](/v1/images/module-1/exception-and-interrupt-handling-v1.png)
+![](/v1/images/fundamental-concepts/exception-and-interrupt-handling-v1.png)
 
 ## System call
 
@@ -195,7 +195,7 @@ System calls are implemented using a special system call exception. Another name
 for exception is trap.
 
 
-![](/v1/images/module-1/system-call.png)
+![](/v1/images/fundamental-concepts/system-call.png)
 
 <!--
 ### Blocking system call

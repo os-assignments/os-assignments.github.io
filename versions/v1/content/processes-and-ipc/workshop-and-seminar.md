@@ -17,7 +17,7 @@ During a **workshop** you will sit down in groups of six students to discuss the
 [module 2 questions][seminar-questions]. Participation during the workshop is
 not mandatory but highly recommended.
 
-[seminar-questions]: https://github.com/uu-dsp-os-ospp-2020/{{< param site-prefix >}}-seminars/blob/master/module-2.pdf
+[seminar-questions]: https://github.com/uu-dsp-os-ospp-2020/{{< param site-prefix >}}-seminars/blob/master/processes-and-ipc.pdf
 
 
 {{% note class="tip" title="Learning" %}}

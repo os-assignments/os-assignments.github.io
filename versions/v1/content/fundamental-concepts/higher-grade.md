@@ -48,7 +48,7 @@ of [multiprogramming](multiprogramming).
 
 An overview of the system is shown in the below figure. 
 
-![](/v1/images/module-1/higher-grade/so.png?width=700px)
+![](/v1/images/fundamental-concepts/higher-grade/so.png?width=700px)
 
 For simplicity there will be exactly two jobs in the system. The kernel will implement three custom system calls: `getjid`, `getc` and
 `gets`. The kernel will use multiprogramming to switch job only when a job
@@ -121,7 +121,7 @@ the following state transitions are possible.
 In the below diagram a sequence of five events shows how the two jobs change
  states.
  
-![](/v1/images/module-1/higher-grade/example-state-transitions.png)
+![](/v1/images/fundamental-concepts/higher-grade/example-state-transitions.png)
 
 ## Kernel
 
@@ -147,7 +147,7 @@ Each register is four byte, hence 6*4 = 24 bytes of storage is needed to store
 the context. The contents of the registers are saved in the following order in each job
 context. 
 
-![](/v1/images/module-1/higher-grade/contexts.png?width=500px)
+![](/v1/images/fundamental-concepts/higher-grade/contexts.png?width=500px)
 
 ### Addressing the context
 
@@ -181,7 +181,7 @@ To store the contexts of the two jobs, a two element array is used. The array is
 indexed by job id (0 or 1). Each element of the array is a **pointer** to
 storage allocated for the context.
 
-![](/v1/images/module-1/higher-grade/context-array.png?width=600px)
+![](/v1/images/fundamental-concepts/higher-grade/context-array.png?width=600px)
 
 ### Addressing the context array
 
@@ -284,7 +284,7 @@ teqi $zero, 0
 The below figure shows an example where **job 1** calls the custom `getjid`
 system call. 
 
-![](/v1/images/module-1/higher-grade/getjid_multiprogramming.png)
+![](/v1/images/fundamental-concepts/higher-grade/getjid_multiprogramming.png)
 
 In the above figure important events are marked with a number inside a yellow
 circle. 
@@ -317,7 +317,7 @@ The below figure shows an example where **job 1** calls the custom `getc` system
 call and **job 2** executes while **job 1** waits for the user to press a key on
 the keyboard. 
 
-![](/v1/images/module-1/higher-grade/getc_multiprogramming.png)
+![](/v1/images/fundamental-concepts/higher-grade/getc_multiprogramming.png)
 
 In the above figure important events are marked with a number inside a yellow
 circle.

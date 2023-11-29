@@ -17,7 +17,7 @@ During a **workshop** you will sit down in groups of six students to discuss the
 [module 4 questions and problems][seminar-questions]. Participation during the
 workshop is not mandatory but highly recommended.
 
-[seminar-questions]: https://github.com/uu-dsp-os-ospp-2020/{{< param site-prefix >}}-seminars/blob/master/module-4.pdf
+[seminar-questions]: https://github.com/uu-dsp-os-ospp-2020/{{< param site-prefix >}}-seminars/blob/master/threads-and-synchronization.pdf
 
 
 ## Seminar

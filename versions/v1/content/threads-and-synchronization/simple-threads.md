@@ -9,7 +9,7 @@ draft: false
 
 <h2 class="subtitle">Optional assignment for higher grade</h2>
 
-![](/v1/images/module-4/higher-grade-overview.png?width=666px)
+![](/v1/images/threads-and-synchronization/higher-grade-overview.png?width=666px)
 
 In this assignment you will implement a simplified version of many-to-one user level
 threads in form of a library called Simple Threads(tm).
@@ -25,7 +25,7 @@ You should already have [cloned](clone-repository) the [module 4
 repository][repo].
 
 
-[repo]: https://github.com/uu-dsp-os-ospp-2020/module-4
+[repo]: https://github.com/uu-dsp-os-ospp-2020/threads-and-synchronization
 
 
 ## Manage execution contexts 
@@ -113,7 +113,7 @@ calling `yield()` one of the ready threads is selected to execute and changes
 state from ready to running. The thread calling `yield()` changes state from
 running to ready. 
 
-![](/v1/images/module-4/cooperative.png?height=333px)
+![](/v1/images/threads-and-synchronization/cooperative.png?height=333px)
 
 {{% notice style="info" title="Non-terminating threads" class="tip" %}}
 For grade 4 you may assume the main thread and all other threads are
@@ -126,7 +126,7 @@ For grade 5 you must also implement the `done()` and `join()` functions in the
 Simple Threads API. In addition to cooperative scheduling with `yield()` you must also implement
 **preemptive scheduling**. 
 
-![](/v1/images/module-4/cooperative-and-preemptive.png?height=333px)
+![](/v1/images/threads-and-synchronization/cooperative-and-preemptive.png?height=333px)
 
 If a thread doesn't call `yield()` within its time slice it will be preempted
 and one of the threads in the ready queue will be resumed. The preempted thread

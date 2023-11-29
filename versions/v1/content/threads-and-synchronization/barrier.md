@@ -7,7 +7,7 @@ draft: false
 
 <h2 class="subtitle">Mandatory assignment</h2>
 
-![](/v1/images/module-4/barrier.png?width=433px)
+![](/v1/images/threads-and-synchronization/barrier.png?width=433px)
 
 A mutex lock is meant to be taken and released, always in that order, by each
 task that uses the shared resource it protects.
@@ -99,7 +99,7 @@ For each iteration the order between **A** and **B** should not be restricted.
 
 An example for iteration 0 and 1 is shown below. 
 
-![](/v1/images/module-4/rendezvous-a-b-two-iterations.png?width=666px)
+![](/v1/images/threads-and-synchronization/rendezvous-a-b-two-iterations.png?width=666px)
 
 In the above example, the two threads A and B compete (execute concurrently) and
 one will be first to reach the rendezvous point. For iteration 0, thread B is

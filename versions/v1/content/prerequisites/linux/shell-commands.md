@@ -20,7 +20,7 @@ You can open a terminal in two ways:
 
 After a few seconds a new terminal window should open.
 
-![](/images/module-0/linux/shell-and-terminal/terminal-1.png)
+![](/images/prerequisites/linux/shell-and-terminal/terminal-1.png)
 
 
 In the upper left corner of the white area of the terminal window you see
@@ -456,7 +456,7 @@ The name tarball is often used to refer to a tar archive file.
 
 Download the following gziped compressed tar archive (tarball) to your home folder:
 
-* [archive.tar.gz](/files/module-0/archive.tar.gz)
+* [archive.tar.gz](/files/prerequisites/archive.tar.gz)
 
 
 ### Verify that you have the tarball in your current working directory

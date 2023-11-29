@@ -12,7 +12,7 @@ threads. Support for threads must be provided either at the user level or by the
 - User level threads are supported above the kernel in user space and are
   managed without kernel support.
 
-![](/v1/images/module-4/user-level-and-kernel-level-threads.png?width=777px)
+![](/v1/images/threads-and-synchronization/user-level-and-kernel-level-threads.png?width=777px)
 
 ## Kernel level threads
 
@@ -96,7 +96,7 @@ In the many-to-one model all user level threads execute on the same kernel
 thread. The process can only run one user-level thread at a time because there is only
 one kernel-level thread associated with the process. 
 
-![](/v1/images/module-4/many-to-one.png?width=300px)
+![](/v1/images/threads-and-synchronization/many-to-one.png?width=300px)
 
 The kernel has no knowledge of user-level threads. From its perspective, a
 process is an opaque black box that occasionally makes system calls. 
@@ -106,7 +106,7 @@ process is an opaque black box that occasionally makes system calls.
 In the one-to-one model every user-level thread execute on a separate
 kernel-level thread. 
 
-![](/v1/images/module-4/one-to-one.png?width=315px)
+![](/v1/images/threads-and-synchronization/one-to-one.png?width=315px)
 
 In this model the kernel must provide a system call for creating a new kernel
 thread.
@@ -116,14 +116,14 @@ thread.
 In the many-to-many model the process is allocated m number of kernel-level threads to execute n number of
 user-level thread. 
 
-![](/v1/images/module-4/many-to-many.png?width=290px)
+![](/v1/images/threads-and-synchronization/many-to-many.png?width=290px)
 
 ### Two-level
 
 The two-level model is similar to the many-to-many model but also allows for
 certain user-level threads to be bound to a single kernel-level thread. 
 
-![](/v1/images/module-4/two-level.png?width=300px)
+![](/v1/images/threads-and-synchronization/two-level.png?width=300px)
 
 ## Scheduler activations
 
@@ -155,7 +155,7 @@ The kernel has allocated **one kernel thread** (1) to a process with **three use
    threads** (2). The three user level threads take turn executing on the single kernel-level
    thread. 
 
-![](/v1/images/module-4/scheduler-activations-1-2.png?height=444px)
+![](/v1/images/threads-and-synchronization/scheduler-activations-1-2.png?height=444px)
 
 The executing thread makes a **blocking system call** (3) and the the kernel blocks the calling user-level thread and
    the kernel-level thread used to execute the user-level thread (4). 
@@ -166,12 +166,12 @@ The executing thread makes a **blocking system call** (3) and the the kernel blo
 The user-level thread manager move the other threads to the new kernel
    thread and resumes one of the ready threads (7). 
  
-![](/v1/images/module-4/scheduler-activations-3-7.png?height=444px)
+![](/v1/images/threads-and-synchronization/scheduler-activations-3-7.png?height=444px)
 
 While one user-level thread is blocked (8) the other threads can take turn
 executing on the new kernel thread (9). 
 
-![](/v1/images/module-4/scheduler-activations-8-9.png?height=444px)
+![](/v1/images/threads-and-synchronization/scheduler-activations-8-9.png?height=444px)
 
 ## User-level thread scheduling
 
@@ -191,7 +191,7 @@ calling a `yield()` provided by the user-level thread library) or implicitly (e.
 lock held by another thread). In the below figure a many-to-one system with
 cooperative user-level threads is shown.  
 
-![](/v1/images/module-4/cooperative.png?height=333px)
+![](/v1/images/threads-and-synchronization/cooperative.png?height=333px)
 
 ### Preemptive scheduling of user-level threads
 
@@ -207,11 +207,11 @@ execution flow to jump to a central dispatcher thread, which chooses the next
 thread to run. In the below figure a many-to-one system with preemptive
 user-level threads is shown. 
 
-![](/v1/images/module-4/preemptive.png?height=333px)
+![](/v1/images/threads-and-synchronization/preemptive.png?height=333px)
 
 ### Cooperative and preemptive (hybrid) scheduling of user-level threads
 
 A hybrid model between cooperative and preemptive scheduling is also possible
 where a running thread may `yield()` or preempted by a timer. 
 
-![](/v1/images/module-4/cooperative-and-preemptive.png?height=333px)
+![](/v1/images/threads-and-synchronization/cooperative-and-preemptive.png?height=333px)

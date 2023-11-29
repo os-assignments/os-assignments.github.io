@@ -12,7 +12,7 @@ When an exception or interrupt occurs, execution transition from user mode to
 kernel mode where the exception or interrupt is handled. When the exception or
 interrupt has been handled execution resumes in user space.
 
-![](/v1/images/module-1/exception-and-interrupt-handling-v1.png)
+![](/v1/images/fundamental-concepts/exception-and-interrupt-handling-v1.png)
 
 ## Details 
 
@@ -36,7 +36,7 @@ steps:
 2. Restore the context of the selected process.
 3. Resume execution of the selected process.
 
-![](/v1/images/module-1/exception-and-interrupt-handling-v2.png)
+![](/v1/images/fundamental-concepts/exception-and-interrupt-handling-v2.png)
 
 ## CPU context (CPU state)
 

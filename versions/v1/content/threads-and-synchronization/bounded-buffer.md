@@ -7,7 +7,7 @@ draft: false
 
 <h2 class="subtitle">Mandatory assignment</h2>
 
-![](/v1/images/module-4/bounded-buffer-medium-details.png?width=555px)
+![](/v1/images/threads-and-synchronization/bounded-buffer-medium-details.png?width=555px)
 
 ## Introduction
 
@@ -135,7 +135,7 @@ In the below example three data items B, C and D are currently in the buffer. On
 the next write data will be written to index `in = 4 `. On the next read
 data will be read from index `out = 1`.
 
-![](/v1/images/module-4/bounded-buffer-details.png?width=666px)
+![](/v1/images/threads-and-synchronization/bounded-buffer-details.png?width=666px)
 
 
 ### Buffer struct
@@ -213,7 +213,7 @@ Use one **semaphore** named **data** to count the number of data items in the bu
 
 A new bounded buffer with 10 elements will be represented as follows. 
 
-<img src="/v1/images/module-4/buffer-internals-example.png" style="width:444px;"/>
+<img src="/v1/images/threads-and-synchronization/buffer-internals-example.png" style="width:444px;"/>
 
 The `empty` semaphore counts the number of
 empty slots in the buffer and is initialized to `10`. Initially there are no

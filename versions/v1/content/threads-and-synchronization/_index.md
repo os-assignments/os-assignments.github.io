@@ -7,4 +7,4 @@ draft: false
 
 Introduction to threads and synchronization. 
 
-![](/v1/images/module-4/threads.png?width=600px)
+![](/v1/images/threads-and-synchronization/threads.png?width=600px)

@@ -11,7 +11,7 @@ process management is done with a number of system calls, each with a single
 
 [wp-unix-dotadiw]: https://en.wikipedia.org/wiki/Unix_philosophy#Do_One_Thing_and_Do_It_Well
 
-![](/v1/images/module-2/fork-exec-exit-wait.png?width=300px)
+![](/v1/images/processes-and-ipc/fork-exec-exit-wait.png?width=300px)
 
 The following system calls are used for basic process management. 
 
@@ -37,7 +37,7 @@ wait the parent can obtain the exit status of a terminated child.
 The process invoking `fork` is called the **parent**. The new process created as the
   result of a `fork` is the **child** of the parent. 
 
-![](/v1/images/module-2/fork.png)
+![](/v1/images/processes-and-ipc/fork.png)
 
 After a successful fork, the child process is a copy of the parent. The parent
 and child processes executes the same program but in separate processes. 
@@ -74,7 +74,7 @@ calling `fork`, the program can use the fork return value to tell whether
 - On failure `fork` returns `-1`.
 
 
-![](/v1/images/module-2/fork-details.png)
+![](/v1/images/processes-and-ipc/fork-details.png)
 
 ## Template program
 
@@ -268,7 +268,7 @@ exit status of the terminated child.
 
 [wait]: http://www.tutorialspoint.com/unix_system_calls/wait.htm
 
-![](/v1/images/module-2/fork-wait-exit.png)
+![](/v1/images/processes-and-ipc/fork-wait-exit.png)
 
 
 ``` C

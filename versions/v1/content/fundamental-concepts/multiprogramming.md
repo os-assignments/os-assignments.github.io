@@ -56,32 +56,32 @@ important events such as the completion of an I/O request.
 In a multiprogramming system, several jobs are kept in memory at the same time.
 Initially, all jobs are int the ready state.
 
-![](/v1/images/module-1/multiprogramming-1.png?width=500px)
+![](/v1/images/fundamental-concepts/multiprogramming-1.png?width=500px)
 
 One of the ready jobs is selected to execute on the CPU and changes state from
 ready to running. In this example, job 1 is selected to execute. 
 
-![](/v1/images/module-1/multiprogramming-2.png?width=500px)
+![](/v1/images/fundamental-concepts/multiprogramming-2.png?width=500px)
 
 Eventually, the running job makes a request for I/O and the state  changes from
 running to waiting.
 
-![](/v1/images/module-1/multiprogramming-3.png?width=500px)
+![](/v1/images/fundamental-concepts/multiprogramming-3.png?width=500px)
 
 Instead of idle waiting for the I/O request to complete, one of the ready jobs is
 selected to execute on the CPU and have its state change from ready to running.
 In this example job 3 is selected to execute. 
 
-![](/v1/images/module-1/multiprogramming-4.png?width=500px)
+![](/v1/images/fundamental-concepts/multiprogramming-4.png?width=500px)
 
 Eventually the the I/O request  job 1 is waiting for will complete and the CPU will be
 notified by an interrupt. In this example, job 1 was waiting for a keypress on
 the keyboard. 
 
-![](/v1/images/module-1/multiprogramming-5.png?width=500px)
+![](/v1/images/fundamental-concepts/multiprogramming-5.png?width=500px)
 
 The state of the waiting job (job 1) will change
 from waiting to ready.
 
-![](/v1/images/module-1/multiprogramming-6.png?width=500px)
+![](/v1/images/fundamental-concepts/multiprogramming-6.png?width=500px)
 
