@@ -36,3 +36,6 @@ publishDir = 'public/v1/'
 [[module.mounts]]
     source = "static"   
     target = "static"  
+[[module.mounts]]
+    source = "versions/v1/static/images"   
+    target = "static/images"  
