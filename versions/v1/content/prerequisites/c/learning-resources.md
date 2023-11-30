@@ -14,7 +14,7 @@ recommended links.
 ## A short introduction to C programming
 
 * [C Programming
-  Introduction](/files/prerequisites/introduction-to-c-programming-slides.pdf) is a
+  Introduction (PDF)](/v1/files/prerequisites/introduction-to-c-programming-slides.pdf) is a
   comprehensive set of slides introducing the basic concepts of C programming
   put together by Md Tahseen Anam, teaching assistant on the OS (1DT044) course, autumn 2020.
   
@@ -46,6 +46,6 @@ recommended links.
 * [C and C++ for Java Programmers](http://www.cprogramming.com/java/c-and-c++-for-java-programmers.html):
   If you are familiar with the Java programming language already but are new to
   the C programming language, this might be for you.
-* <a href="/files/prerequisites/C_for_Java_Programmers.pdf" target="_blank">C for Java Programmers (PDF)</a>:
+* <a href="/v1/files/prerequisites/C_for_Java_Programmers.pdf" target="_blank">C for Java Programmers (PDF)</a>:
   This is another introduction to the C programming language for people who
   already know Java.

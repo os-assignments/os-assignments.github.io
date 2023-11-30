@@ -49,3 +49,6 @@ editURL = "https://github.com/os-assignments/os-assignments.github.io/edit/main/
 [[module.mounts]]
     source = "versions/v1/static/images"   
     target = "static/images"  
+[[module.mounts]]
+    source = "versions/v1/static/files"   
+    target = "static/files"  

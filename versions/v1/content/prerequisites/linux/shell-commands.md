@@ -40,14 +40,18 @@ information such as your username, local time etc.
 
 [tweak-prompt]: https://help.ubuntu.com/community/CustomizingBashPrompt
 
-Since the appearance of the shell prompt might vary, in all further instructions the prompt `$` will be used to refer to
-the Linux shell prompt. In the instructions, interaction with
-the Linux shell in the terminal will be presented in a box like this.
+## No shell prompt in instructions
 
+Since the appearance of the shell prompt might vary, in all further instructions
+the prompt `$` will be omitted and commands you enter att the shell prompt will be 
+presented in a box like this.
 
 ``` text
-$
+Example shell interaction
 ```
+
+If you hover over the box above and press the {{% icon icon="copy" %}} icon in the upper right corner you copy the 
+text in the box and paste it at the shell prompt in your shell.  
 
 
 ## Your username (whoami)
@@ -57,16 +61,14 @@ Type `whoami` at the shell prompt.
 
 
 ``` text
-$ whoami
+whoami
 ```
 
 Press enter to execute the command. Now the result will be printed on the next
 line in the terminal and a new shell prompt will appear on the line after that.
 
 ``` console
-$ whoami
 abcd1234
-$
 ```
 
 In the above example the username of the logged in user `abcd234` is printed as
@@ -84,15 +86,13 @@ directory) commands prints the full path of the current working directory.
 Type `pwd` at the shell prompt.
 
 ``` text
-$ pwd
+pwd
 ```
 
 Press enter to execute the command. 
 
 ``` text
-$ pwd
 /home/abcd1234
-$
 ```
 
 In the above example the current working directory `/home/abcd1234` is printed
@@ -116,16 +116,14 @@ To list the files and directories in the current working directory the `ls` comm
 Type `ls` at the shell prompt.
 
 ``` text
-$ ls
+ls
 ```
 
 Press enter to execute the `ls` command. You should see something similar to the
 below as result but you might see other files and folders listed.
 
 ``` text
-$ ls
 foo.txt  Desktop  public_html
-$ 
 ```
 
 In the above example the only content in the current working directory is the
@@ -139,9 +137,13 @@ to the `ls` command. One useful option is `-F`  that marks directories
 with a trailing slash `/`.
 
 ``` text
-$ ls -F
+ls -F
+```
+
+You should now see something similar to this.
+
+``` text
 foo.txt  Desktop/  public_html/
-$ 
 ```
 
 ## Visualize a directory as a tree 
@@ -150,7 +152,7 @@ The `tree` command displays the contents of the current directory and
 subdirectories as a tree structure.
 
 ``` text
-$ tree
+tree
 ```
 The output takes a graphical form which will resemble the following example:
 
@@ -169,10 +171,15 @@ In the above example, there are three files (`README.md`, `one.txt` and
 `two.txt`) and one sub directory (`sub`) in the current working directory. In
 the sub directory `sub` there is a single file `three.txt`. 
 
-You can provide `three` with the path to a directory to visualize its content. 
+You can provide `tree` with the path to a directory to visualize its content. 
 
 ``` text
-$ tree sub
+tree sub
+```
+
+Now, only subtree of the `sub` directory is shown. 
+
+``` text
 sub/
 └── three.txt
 
@@ -194,59 +201,54 @@ The `cd` command navigates to a different folder. The name `cd` means change dir
 First print the current working directory.
 
 ``` text
-$ pwd
+pwd
+```
+
+This will show the path of the current working directory, for example. 
+
+``` text
 /home/abcd1234
-$
 ```
 
 To navigate to the `Desktop` folder, type `cd Desktop` at the shell prompt and press
 enter.
 
+``` text
+cd Desktop
+````
+
+Print the current working directory to confirm. 
 
 ``` text
-$ pwd
-/home/abcd1234
-$ cd Desktop
-$
-```
+pwd
+````
 
-Now, execute the pwd command. 
+You should now see your absolute path to your `Desktop` directory. 
 
-``` text
-$ pwd
-/home/abcd1234
-$ cd Desktop
-$ pwd
+```text
 /home/abcd1234/Desktop
-$
 ```
 
 Note how the current working directory changed from `/home/abcd1234` to
 `/home/abcd1234/Desktop` as the result of the `cd Desktop` command.
 
-The directory above the current working directory can be referred to using `..`. To navigate to the parent directory, type `cd ..` and press enter. 
+The directory above the current working directory can be referred to using `..`. 
+To navigate to the parent directory, type `cd ..` and press enter. 
+
 ``` text
-$ pwd
-/home/abcd1234
-$ cd Desktop
-$ pwd
-/home/abcd1234/Desktop
-$ cd ..
-$
+cd ..
 ```
 
 Now, execute the `pwd` command again. 
 
 ``` text
-$ pwd
-$ /home/abcd1234
-$ cd Desktop
-$ pwd
-/home/abcd1234/Desktop
-$ cd ..
-$ pwd
+pwd
+```
+
+And, you are back in your home directory. 
+
+```text 
 /home/abcd1234
-$
 ```
 
 Note how the current working directory changed back from `/home/abcd1234/Desktop`
@@ -268,12 +270,16 @@ The last line of the file.
 You can now print the content of `foo.txt` to the terminal using the `cat` command. 
 
 ``` text
-$ cat foo.txt
+cat foo.txt
+```
+
+Now, the content of the file `foo.txt` will be printed out in the terminal. 
+
+```text
 The first line of the file.
 
 The third line. The second line is empty.
 The last line of the file.
-$
 ```
 
 The name `cat` is a short form
@@ -284,27 +290,35 @@ provided files will be joined together and printed to the terminal.
 In the below example `cat` is used to concatenate the file `foo.txt` with itself. 
 
 ``` text
-$ cat foo.txt foo.txt
-The first line of the file.
-
-The third line. The second line is empty.
-The last line of the file.
-The first line of the file.
-
-The third line. The second line is empty.
-The last line of the file.
-$
+cat foo.txt foo.txt
 ```
 
-One useful option to the `cat` command is `-n` which prefixes each line with a line number. 
+This will output the contents of the file `foo.txt` twice.
 
 ``` text
-$ cat -n foo.txt
+The first line of the file.
+
+The third line. The second line is empty.
+The last line of the file.
+The first line of the file.
+
+The third line. The second line is empty.
+The last line of the file.
+```
+
+One useful option to the `cat` command is `-n`:
+
+``` text
+cat -n foo.txt
+```
+
+, which prefixes each line with a line number. 
+
+``` text
      1	The first line of the file.
      2
      3	The third line. The second line is empty.
      4	The last line of the file.
-$
 ```
 
 ## Count words, lines and bytes (wc)
@@ -312,9 +326,13 @@ $
 The `wc` command counts the number of words, lines and bytes. 
 
 ``` text
-$ wc foo.txt
+wc foo.txt
+```
+
+In this example the file `foo.txt` has four lines of text with a total of 20 words and 98 bytes. 
+
+```text
        4      20      98
-$
 ```
 
 In the above example we see that the file `foo.txt` contains for lines, 20 words and 98 bytes. 
@@ -328,7 +346,7 @@ To search for the the string `X` in the input type `grep X` at the shell prompt
 and press enter.
 
 ``` text
-$ grep X
+grep X
 ```
 
 Note that we don't get back the shell prompt. This is because the `grep` command is still running waiting for input. 
@@ -338,7 +356,6 @@ lines containing the character `X`.
 Now type `Hello` and press enter. 
 
 ``` text
-$ grep X
 Hello
 ```
 
@@ -347,8 +364,6 @@ There is no `X` in the string `Hello` and therefore `grep` will not print back t
 Type  `Hello mr X` and press enter and watch what happens.
 
 ``` text
-$ grep X
-Hello
 Hello mr X
 Hello mr X
 ```
@@ -359,14 +374,12 @@ the terminal since it contains a matching `X`.
 Lets try a few more lines and observe what happens. 
 
 ``` text
-$ grep X
-Hello
-Hello mr X
-Hello mr X
 abc
 abcXdef
 abcXdef
 xxx
+xXx
+xXx
 ```
 
 Only lines containing a matching `X` will be echoed back to the terminal. 
@@ -379,38 +392,34 @@ D key).
 
 Press `Ctrl D`. Now `grep` terminates and you get back to the shell prompt. 
 
+To filter the lines in a file, the name of the file can be given together with a search pattern to `grep`. 
+
+Assume you have the file `foo.txt` in your current directory. Using `cat`:
+
 ``` text
-$ grep X
-Hello
-Hello mr X
-Hello mr X
-abc
-abcXdef
-abcXdef
-ABC
-$
+cat foo.txt
 ```
 
-To filter the lines i a file, the name of the file can be given together with a search pattern to `grep`. 
-
-Assume you have the file `foo.txt` in your current directory. 
+, prints the contents of the file to the terminal:
 
 ``` text
-$ cat foo.txt
 The first line of the file.
 
 The third line. The second line is empty.
 The last line of the file.
-$
 ```
 
 In the below example only lines containing `of` in the file `foo.txt` will be printed to the terminal. 
 
 ``` text
-$ grep of foo.txt
+grep of foo.txt
+```
+
+The above command will result in the following being printed to the terminal.
+
+```text
 The first line of the file.
 The last line of the file.
-$
 ```
 
 ### Filter the output of ls using grep (ls | grep)
@@ -421,38 +430,40 @@ we will combine `grep` with `ls` to filter the output of `ls`.
 First we use `ls` to list all files and folders.
 
 ``` text
-$ ls
-foo.txt    Desktop    public_html
-$  
+ls
+foo.txt    Desktop    public_html  
 ```
 
 If we are only interested in files (and folders) with names ending in `.txt` we
 can combine `ls` and `grep` to using the pipe character `|`.
 
 ``` text
-$ ls | grep .txt
-foo.txt
-$ 
+ls | grep .txt
 ```
 
-In the above example, first the `ls` command exectutes but it does not print its
+In this example, only the `foo.txt` files matches the `.txt` pattern. 
+
+``` text
+foo.txt 
+```
+
+In the above example, first the `ls` command executes but it does not print its
 result back to the terminal. Instead, the result of the `ls` command becomes the
 input to the `grep` command. The only file or folder name containing `.txt` is
 `foo.txt`. 
 
 
-{{% notice style="tip" title="Piping commands togehter" %}}
+{{% notice style="tip" title="Piping commands together" %}}
 Using the pipe character `|` the output of the command to the left becomes the
 input to the command to the right. This is called piping the two commands
 together. 
 {{% /notice %}}
 
-## Compressed file arhives (tarballs)
+## Compressed file archives (tarballs)
 
 It is often useful to compress multiple files and folders into a single file
 that can later be decompressed and expanded to get back the original files and
 folders. There exists many file formats for compressed file archives. 
-
 
 * **Windows** users commonly use the **zip** file format.
 * **Unix** users commonly use the tar **file** format. 
@@ -463,18 +474,22 @@ The name tarball is often used to refer to a tar archive file.
 
 Download the following gziped compressed tar archive (tarball) to your home folder:
 
-* [archive.tar.gz](/files/prerequisites/archive.tar.gz)
-
+* [archive.tar.gz](/v1/files/prerequisites/archive.tar.gz)
 
 ### Verify that you have the tarball in your current working directory
 
 From the terminal, make sure you have the downloaded tarball in the current
-working directory. 
+working directory. If you have many files in the current working directory you can 
+use `ls` together with `grep` to search for files with names matching `.tar`.
 
 ``` text
-$ ls | grep .tar
-archive.tar.gz
-$ 
+ls | grep .tar
+```
+
+Hopefully you will see the downloaded tar ball in the result. 
+
+``` text
+archive.tar.gz 
 ```
 
 In the above example the output of `ls` is piped together with `grep` to filter the
@@ -487,13 +502,17 @@ To see the contents of a tarball without extracting all the files you can use
 tar with options `t` and `f`.
 
 ``` text
-$ tar tf archive.tar.gz
+tar tf archive.tar.gz
+```
+
+In this example this is the content of the `archive.tar.gz` tar ball.
+
+```text
 archive/
 archive/large.txt
 archive/small.txt
 archive/sub_folder/
 archive/sub_folder/info.txt
-$
 ```
 
 In the above example we see that the tarball `archive.tar.gz` contains the top
@@ -507,54 +526,74 @@ To unpack and extract the contents of a gzipped tarball we need to use the `xvfz
 options together with the `tar` command.
 
 ``` text
-$ tar xvfz archive.tar.gz
+tar xvfz archive.tar.gz
+```
+
+Now the name of each directory/file that is extracted is printed to the terminal.
+
+```text
 x archive/
 x archive/large.txt
 x archive/small.txt
 x archive/sub_folder/
 x archive/sub_folder/info.txt
-$
 ```
 
 Now the tarball have been unpacked. Use `ls` to see what happened to the current
 working directory.
 
 ``` text
-$ ls | grep archive
+ls | grep archive
+```
+
+Now you should have both the tar ball `archive.tar.gz` and the extracted 
+`archive` in your working directory. 
+
+``` text
 archive
 archive.tar.gz
-$ 
 ```
 
 In the above example we now have a new directory named `archive` inside the
 current working directory.
 
-Use `cd` to "step inside" the `archive` directory and then `ls -F` to list the
-content.
+Use `cd` to "step inside" the `archive` directory.
 
 ``` text
-$ cd archive
-$ ls -F
+cd archive
+```
+
+Next, use `ls -F` to list the content in this directory.
+ 
+``` text
+ls -F
+```
+
+This is the content of the `archive` folder.
+
+``` text
 large.txt
 small.txt
 sub_folder/
-$ 
 ```
 
 Using the `-R` option `ls` will be run recursively stepping inside every sub-directory. 
 
 ``` text
-$ ls -R
+ls -R
+```
+
+The contents of the `archive` folder viewed recursively. 
+
+``` text
 large.txt	small.txt	sub_folder
 
 ./sub_folder:
 info.txt
-$
 ```
 
 In the result printed by `ls -R` a single period `.` means the current working
 directory. 
-
 
 ## Print text back to the terminal (echo)
 
@@ -562,12 +601,16 @@ To print anything to the terminal simply type `echo` followed by the text you wa
 to print.
 
 ``` text
-$ echo Hello
-Hello
-$
+echo Hello
 ```
 
-Note that `HELLO` is echoed back to the terminal as the result of executing the
+The text `Hello` now appears in the terminal.
+
+```text
+Hello
+```
+
+Note that `Hello` is echoed back to the terminal as the result of executing the
 `echo Hello` command before the shell prints the next command prompt.  
 
 ## Shell variables
@@ -578,9 +621,13 @@ a built-in shell variable to make a command more generic and/or portable.
 Remember that the command `woami` can be used to print your username. 
 
 ``` text
-$ whoami
+whoami
+```
+
+In this example your username is `abcd1234`.
+
+``` text
 abcd1234
-$
 ```
 
 ### $USER
@@ -590,25 +637,57 @@ An alternative to `woami` is to use echo together with the shell variable
 the value of the shell variable `USER` shell variables must be prefixed with `$`
 or enclosed within `${ }`.
 
+
+This: 
+
+
 ``` text
-$ echo Hello USER
+echo Hello USER
+```
+
+, results in: 
+
+``` text
 Hello USER
-$ echo Hello $USER
+```
+
+But this: 
+
+``` text
+echo Hello $USER
+```
+
+, results in: 
+
+``` text
 Hello abcd1234
-$ echo Hello ${USER}
+```
+
+And this: 
+
+``` text
+echo Hello ${USER}
+```
+
+Results in: 
+
+```text
 Hello abcd1234
-$
 ```
 
 ### $HOME
 
 Another useful shell variable is `HOME` with the full path to the home directory
-for the logged in user.
+for the logged in user. You can use `echo` to check the value of the `HOME` variable.
 
 ``` text
-$ echo $HOME
+echo $HOME
+```
+
+In this example the result is: 
+
+``` text 
 /home/abcd1234
-$
 ```
 
 ## Command history
@@ -616,27 +695,38 @@ $
 Often you type and run a command in the terminal and later you wants to run the
 very same command again. To prevent you from having to type the same thing again
 the shell keeps a history of executed command. To navigate the history, simply
-press the up-arrow to move backwards in history and press the down-arrow to move
+press the **up-arrow** to move backwards in history and press the **down-arrow** to move
 forward in history.
 
-Try the following command in the terminal.
+![](/v1/images/prerequisites/linux/arrow-keys.png?width=200px)
+
+
+Try the following command in the terminal:
 
 ``` text
-$ pwd
+pwd
+```
+
+, resulting in:
+
+``` text
 /home/abcd1234
-$
 ```
 
-And now this command. 
+And now this command: 
 
 ``` text
-$ whoami
-abcd1234
-$
+whoami
 ```
 
-If you want to repeat the `whoami` command, simply press the up-arrow key once.
-Instead if you wish to run the `pwd` command again, press the up-arrow key twice. 
+, resulting in: 
+
+``` text 
+abcd1234
+```
+
+If you want to repeat the `whoami` command, simply press the **up-arrow** key once.
+Instead if you wish to run the `pwd` command again, press the **up-arrow** key twice. 
 
 ## Reading manual pages (man)
 
@@ -645,23 +735,23 @@ built in manual page. For example, to read the manual page for the `ls` command
 simply type `man ls` and press enter at the shell prompt.
 
 ``` text
-$ man ls
+man ls
 ```
 
 This will print the manual one page at a time to the terminal. To view the next
-page, press the space bar. To quit, press q.
+page, press the space bar. To **quit**, press **q**.
 
 To learn more about the build in manual pages read the manual page about the man
 command.
 
 ``` text
-$ man man
+man man
 ```
 
-A summary of usefull controll keys when reading man pages.
+A summary of useful control keys when reading man pages.
 
 
-| Key            | Behaviour                         |
+| Key            | Behavior                         |
 | :------------: | ----------                        |
 | q              | Quit and get back to the terminal |
 | Space bar or F | Move forward one page             |
