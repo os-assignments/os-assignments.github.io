@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg
-   sodipodi:docname="favicon.svg"
+   sodipodi:docname="github-avatar.svg"
    inkscape:export-ydpi="90.199997"
    inkscape:export-xdpi="90.199997"
    inkscape:export-filename="/Users/karl/Teaching/OS_OSPP/OS and OSPP 2017/os.png"
@@ -22,15 +22,15 @@
   <sodipodi:namedview
      inkscape:document-rotation="0"
      inkscape:window-maximized="0"
-     inkscape:window-y="23"
-     inkscape:window-x="0"
+     inkscape:window-y="321"
+     inkscape:window-x="517"
      inkscape:window-height="1035"
      inkscape:window-width="1792"
      showgrid="false"
      inkscape:current-layer="layer1"
      inkscape:document-units="px"
-     inkscape:cy="1123.3889"
-     inkscape:cx="-592.39268"
+     inkscape:cy="1302.6002"
+     inkscape:cx="600.6895"
      inkscape:zoom="0.3013204"
      inkscape:pageshadow="2"
      inkscape:pageopacity="0.0"
@@ -56,21 +56,13 @@
      id="layer1"
      inkscape:groupmode="layer"
      inkscape:label="Layer 1">
-    <rect
-       style="opacity:1;fill:#84c767;fill-opacity:1;fill-rule:evenodd;stroke:#9ca3a3;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0"
-       id="rect4153"
-       width="500"
-       height="500"
-       x="1312.6577"
-       y="648.13348"
-       inkscape:export-filename="/Users/karl/Teaching/os/os-ospp-dsp-2019/git/private/homepages/os-ospp/static/images/dsp-favicon.png"
-       inkscape:export-xdpi="90.199997"
-       inkscape:export-ydpi="90.199997"
-       ry="78.320816" />
     <g
        id="g68033"
        transform="matrix(0.9375,0,0,0.9375,23.122628,40.848646)"
-       style="stroke-width:1.06667">
+       style="stroke-width:1.06667"
+       inkscape:export-filename="../png/github-avatar.png"
+       inkscape:export-xdpi="90.199997"
+       inkscape:export-ydpi="90.199997">
       <rect
          style="opacity:1;fill:#8451a1;fill-opacity:1;fill-rule:evenodd;stroke:#9ca3a3;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0"
          id="rect4190"
@@ -120,21 +112,6 @@
        inkscape:export-xdpi="90.199997"
        inkscape:export-ydpi="90.199997"
        ry="78.320816" />
-    <text
-       inkscape:export-ydpi="90.199997"
-       inkscape:export-xdpi="90.199997"
-       inkscape:export-filename="/Users/karl/Teaching/os/os-ospp-dsp-2019/git/private/homepages/os-ospp/static/images/dsp-favicon.png"
-       id="text4194"
-       y="827.46582"
-       x="1615.5804"
-       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#323232;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       xml:space="preserve"
-       transform="scale(0.82339984,1.2144768)"><tspan
-         style="font-size:241.592px;line-height:1.25"
-         y="827.46582"
-         x="1615.5804"
-         id="tspan4196"
-         sodipodi:role="line">DSP</tspan></text>
     <g
        inkscape:export-filename="/Users/karl/Teaching/os/os-ospp-dsp-2019/graphics/github-profile.png"
        inkscape:export-ydpi="90.199997"
