@@ -17,10 +17,10 @@ Before you continue, you must clone the [c-address-book][repo] repository.
 From the terminal, navigate to a directory where you want the cloned directory
 to be created and execute the following command. 
 
-[repo]: https://github.com/os-ospp-dsp/c-address-book
+[repo]: https://github.com/os-assignments/c-address-book.git
 
 ``` text
-$ git clone https://github.com/os-ospp-dsp/c-address-book.git
+$ git clone https://github.com/os-assignments/c-address-book.git
 ```
 
 ## address_book.h

@@ -7,7 +7,7 @@ draft: false
 
 Before you continue, you must clone the [processes-and-ipc][repo] repository.
 
-[repo]: https://github.com/os-ospp-dsp/processes-and-ipc
+[repo]: https://github.com/os-assignments/processes-and-ipc.git
 
 ## Use the git command
 
@@ -15,7 +15,7 @@ From the terminal, navigate to a directory where you want the cloned directory
 to be created and execute the following command.
 
 ``` text
-git clone https://github.com/os-ospp-dsp/processes-and-ipc.git
+git clone https://github.com/os-assignments/processes-and-ipc.git
 ```
 
 Now you should see something similar to this in the terminal.

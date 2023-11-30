@@ -11,7 +11,7 @@ small collection of features of the MIPS assembly language.
 ## The mips-examples repository
 
 Before you continue you should already have cloned the
-`module-0-mips-examples` repository. If you have not done this already,
+`mips-examples` repository. If you have not done this already,
 follow these [instructions](clone-repository) before you continue. 
 For each of the example files in the repository:
 

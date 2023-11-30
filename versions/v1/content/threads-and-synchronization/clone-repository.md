@@ -8,7 +8,7 @@ draft: false
 Before you continue, you must clone the [threads-synchronization-deadlock][repo]
 repository.
 
-[repo]: https://github.com/os-ospp-dsp/threads-synchronization-deadlock
+[repo]: https://github.com/os-assignments/threads-synchronization-deadlock.git
 
 ## Use the git command
 
@@ -16,7 +16,7 @@ From the terminal, navigate to a directory where you want the cloned directory
 to be created and execute the following command.
 
 ``` text
-$ git clone https://github.com/os-ospp-dsp/threads-synchronization-deadlock.git
+$ git clone https://github.com/os-assignments/threads-synchronization-deadlock.git
 ```
 
 Now you should see something similar to this in the terminal.

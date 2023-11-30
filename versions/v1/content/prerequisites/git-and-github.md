@@ -63,15 +63,15 @@ A small text file.
 
 Click on the green button named **Code** (1). Now a small pop-up will
 appear showing the repository URL. To copy the repository URL click on
-copy-to-clipboard icon <i class="far fa-clipboard"></i> (2) to the right of the URL.
+copy-to-clipboard icon <i class="far fa-clone"></i> (2) to the right of the URL.
 
 ![](/v1/images/prerequisites/git-and-github/example-github-repository-clone-or-download-copy-to-clipboard.png)
 
 From the terminal, navigate to a directory where you want the cloned directory
-to be created. To clone the example repository, type `git` followed by a space and paste the repository URL. 
+to be created. To clone the example repository, type `git clone` followed by a space and paste the repository URL. 
 
 ``` text
-$ git clone https://github.com/os-ospp-dsp/git-example-repo.git
+$ git clone https://github.com/os-assignments/git-example-repo.git
 ```
 
 Press **enter** to execute the command. Now you should see something similar to this written to the terminal.

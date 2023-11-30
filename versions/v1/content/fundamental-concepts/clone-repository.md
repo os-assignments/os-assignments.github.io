@@ -7,7 +7,7 @@ draft: false
 
 Before you continue, you must clone the [fundamental-os-concepts][repo] repository.
 
-[repo]: https://github.com/os-ospp-dsp/fundamental-os-concepts
+[repo]: https://github.com/os-assignments/fundamental-os-concepts.git
 
 
 ## Use the git command
@@ -16,7 +16,7 @@ From the terminal, navigate to a directory where you want the cloned directory
 to be created and execute the following command.
 
 ``` text
-git clone https://github.com/os-ospp-dsp/fundamental-os-concepts.git
+git clone https://github.com/os-assignments/fundamental-os-concepts.git
 ```
 
 Now you should see something similar to this in the terminal.

@@ -7,7 +7,7 @@ weight: 20
 
 Before you continue, you must clone the [mips-examples][repo] repository.
 
-[repo]: https://github.com/os-ospp-dsp/mips-examples.git
+[repo]: https://github.com/os-assignments/mips-examples.git
 
 
 ## Use the git command
@@ -16,7 +16,7 @@ From the terminal, navigate to a directory where you want the cloned directory
 to be created and execute the following command.
 
 ``` text
-$ git clone https://github.com/os-ospp-dsp/mips-examples.git
+$ git clone https://github.com/os-assignments/mips-examples.git
 ```
 
 Now you should see something similar to this written to the terminal.
