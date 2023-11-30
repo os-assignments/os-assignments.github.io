@@ -449,3 +449,12 @@ figure {
 #body-inner figure figcaption .attribution a {
     font-weight: 100;
 }
+
+/* Make inline code automatically break line */
+
+code.copy-to-clipboard-code {
+    white-space: normal;
+    max-width:100%; 
+    word-break:break-all;
+    word-wrap:break-word;
+}
