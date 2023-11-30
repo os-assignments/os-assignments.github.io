@@ -5,29 +5,39 @@
 baseURL = 'https://os-assignments.github.io/v1/'
 title = 'Operating systems assignments'
 
-# contentDir = 'versions/v1/content'
 publishDir = 'public/v1/'
 
-# staticDir = ['root-css', 'static']
+[params]
 
-# Sharing static with parent project?
+# The URL prefix to edit a page.
+# Default: not set
+# If set, an edit button will be shown in the topbar. If the button is hidden,
+# also the keyboard shortcuts are disabled. The given URL is prepended to the
+# relative file path of a the displayed page. The URL must end with a `/`.
+# This is useful if you want to give the opportunity for people to create merge
+#  request for your content.
 
-# https://discourse.gohugo.io/t/shared-content-between-multiple-sites/24589
+editURL = "https://github.com/os-assignments/os-assignments.github.io/edit/main/versions/v1/content/"
+
+# Symlinks are not allowed in the file system. 
+
+# https://discourse.gohugo.io/t/symbolic-links-not-supported/590
+
+# Instead of using symlinks to share files and folders the Hugo Module 
+# systems makes it possible to mount directories in the Hugo virtual 
+# file system. 
 
 # https://gohugo.io/hugo-modules/
 
-# https://discourse.gohugo.io/t/consider-re-enabling-symlinks-at-least-opt-in/21269
-
 # https://gohugo.io/hugo-modules/configuration/#module-configuration-mounts
 
-#
-# https://gohugo.io/hugo-modules/configuration/#module-configuration-mounts
-#
+# https://discourse.gohugo.io/t/how-to-mount-shared-static-folder-between-multiple-sites/47230
 
-# When the mounts configuration was introduced in Hugo 0.56.0, we were careful to preserve the existing contentDir, staticDir, and similar configuration to make sure all existing sites just continued to work. But you should not have both: if you add a mounts section you should remove the old contentDir, staticDir, etc. settings.
-
-#### https://discourse.gohugo.io/t/how-to-mount-shared-static-folder-between-multiple-sites/47230
-
+# When the mounts configuration was introduced in Hugo 0.56.0, we were careful
+# to preserve the existing contentDir, staticDir, and similar configuration to
+# make sure all existing sites just continued to work. But you should not have
+# both: if you add a mounts section you should remove the old contentDir, 
+# staticDir, etc. settings.
 
 [module]
 [[module.mounts]]
