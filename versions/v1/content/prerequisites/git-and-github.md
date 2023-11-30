@@ -34,7 +34,7 @@ If `git` is not installed you will something similar to this as a result in the
 terminal.
 
 ``` text
-$ git: command not found
+git: command not found
 ```
 
 ## Install Git

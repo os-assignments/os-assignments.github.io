@@ -20,15 +20,13 @@ You can open a terminal in two ways:
 
 After a few seconds a new terminal window should open.
 
-![](/images/prerequisites/linux/shell-and-terminal/terminal-1.png)
-
+![](/v1/images/prerequisites/linux/shell-and-terminal/terminal-1.png)
 
 In the upper left corner of the white area of the terminal window you see
 `abcd1234@arrhenius:~$ `. This it the shell prompt with your username on the form
 `abcd1234` and the name of the Linux server you are
 connected to, in this example `arrhenius`. The shell prompt you see might be
 different.
-
 
 ## The shell prompt 
 
@@ -42,13 +40,15 @@ information such as your username, local time etc.
 
 [tweak-prompt]: https://help.ubuntu.com/community/CustomizingBashPrompt
 
-Since the appearance of the shell prompt might vary, in all further instructions `$` will be used to refer to
-the Linux shell prompt. In the instructions,  interaction with
+Since the appearance of the shell prompt might vary, in all further instructions the prompt `$` will be used to refer to
+the Linux shell prompt. In the instructions, interaction with
 the Linux shell in the terminal will be presented in a box like this.
+
 
 ``` text
 $
 ```
+
 
 ## Your username (whoami)
 
