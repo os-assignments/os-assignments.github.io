@@ -14,7 +14,7 @@ child processes where the children communicate using a pipe.
 
 ## Open a terminal
 
-Open a terminal and navigate to the `module-2/mandatory` directory.
+Open a terminal and navigate to the `processes-and-ipc/mandatory` directory.
 
 ## List directory contents (ls)
 
@@ -22,22 +22,38 @@ The `ls` shell command list directory content. Execute the `ls` command in the
 terminal.
 
 ``` text
-$ ls
+ls
+```
+
+You should now see this: 
+
+``` text
 Makefile     bin     obj     src
 ```
+
 
 The `-F` option appends a slash `/` to directory entries.
 
 ``` text
-$ ls -F
-Makefile     bin/     obj/     src/
+ls -F
 ```
 
 The only file in the directory is `Makefile`. The directory contains the
 subdirectories `bin`, `obj` and `src`.
 
 ``` text
+Makefile     bin/     obj/     src/
+```
+
+Add the `-1` option to:
+
+``` text
 $ ls -F -1
+```
+
+, print each entry on a separate line:
+
+``` text
 Makefile
 bin/
 obj/
@@ -51,25 +67,19 @@ line prefixed with a line number to stdout. In the terminal, type `nl` and press
 enter.
 
 ``` text
-$ nl
-
+nl
 ```
 
 The `nl` command now waits for stdin input. Type `Some text` and press enter.
 
 ``` text
-$ nl
 Some text
      1 Some text
-
 ```
 
 Type `More text` and press enter.
 
 ``` text
-$ nl
-Some text
-     1 Some text
 More text
      2 More text
 ```
@@ -95,7 +105,12 @@ command is piped to input of the  `nl` command.
 [wp-pipeline]: https://en.wikipedia.org/wiki/Pipeline_(Unix)
 
 ``` text
-$ ls -F -1 | nl
+ls -F -1 | nl
+```
+
+Now the result of `ls -F -1` is printed with line numbers added at the front of each line. 
+
+``` text
     1 Makefile
     2 bin/
     3 obj/
@@ -116,15 +131,27 @@ see which program executables  the shell uses for the `ls` and `nl` commands.
 [wp-PATH]: https://en.wikipedia.org/wiki/PATH_(variable)
 
 ``` text
-$ which ls
-/bin/ls
-$ which nl
-/bin/nl
+which ls
 ```
 
-The executables for the `ls` and `nl` command programs are both located in the
+The executables for the `ls` command program is found in the `/bin` directory.
+
+``` text
+/bin/ls
+```
+
+What about the `nl` command?
+
+``` text
+$ which nl
+```
+
+The executables for the `nl` command programs is also  located in the
 `/bin` directory.
 
+``` text
+/bin/nl
+```
 
 ## System overview
 

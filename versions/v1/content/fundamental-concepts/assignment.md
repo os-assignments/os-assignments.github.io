@@ -55,8 +55,10 @@ and install Mars on your private computer.
 
 ### Clone repository
 
-If you haven't done so already, you
-must [clone the module-1 repository](clone-repository).
+If you haven't done so already, you must [clone](clone-repository) the 
+[fundamental-os-concepts][repo] repository.
+
+[repo]: https://github.com/os-assignments/fundamental-os-concepts.git
 
 ### Start Mars
 
@@ -72,7 +74,7 @@ Mars should now start and you should see something similar to this.
 
 ### Open file
 
-Open the file `module-1/mandatory/exceptions-and-interrupts.s` in Mars.
+Open the file `fundamental-os-concepts/mandatory/exceptions-and-interrupts.s` in Mars.
 
 
 ## Study the source code

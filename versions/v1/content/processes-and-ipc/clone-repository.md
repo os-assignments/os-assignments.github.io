@@ -35,7 +35,7 @@ Checking out files: 100% (32/32), done.
 To get an overview of the cloned repository, use the `tree` command.
 
 ``` text
-$> tree processes-and-ipc
+tree processes-and-ipc
 ```
 
 Now you should see a tree view of all files and directories in the

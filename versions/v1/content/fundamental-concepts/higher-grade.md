@@ -357,13 +357,16 @@ waits for input using the built-in system call 12 `read_char`.
 
 ## Clone repository
 
-If you haven't done so already, you must [clone the module-1 repository](clone-repository).
+If you haven't done so already, you must [clone](clone-repository) the 
+[fundamental-os-concepts][repo] repository.
+
+[repo]: https://github.com/os-assignments/fundamental-os-concepts.git
 
 
 ## Provided code
 
 You don't have to start from scratch but can use the provided 
-`module-1/higher-grade/multiprogramming.s` as a starting point. 
+`fundamental-os-concepts/higher-grade/multiprogramming.s` as a starting point. 
 
 ## Grade 4
 

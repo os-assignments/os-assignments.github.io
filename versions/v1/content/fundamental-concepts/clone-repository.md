@@ -34,7 +34,7 @@ Unpacking objects: 100% (7/7), done.
 To get an overview of the cloned repository, use the `tree` command.
 
 ``` text
-$> tree fundamental-os-concepts
+tree fundamental-os-concepts
 ```
 
 Now you should see a tree view of all files and directories in the

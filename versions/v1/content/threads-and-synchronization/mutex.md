@@ -39,7 +39,7 @@ to log in to one of the [Linux hosts][linux-hosts].
 ## Overview
 
 File to use
-: `module-4/mandatory/src/mutex.c`
+: `threads-synchronization-deadlock /mandatory/src/mutex.c`
 
 Description
 : In this program, a process creates a number of threads and waits for their
@@ -67,19 +67,19 @@ approach  to synchronization will be used by the threads updating the shared
 
 ## Compile and run
 
-In the terminal, navigate to the `module-4/mandatory` directory. Use
+In the terminal, navigate to the `threads-synchronization-deadlock /mandatory` directory. Use
 [make][wp-make] to compile the program.
 
 [wp-make]: https://en.wikipedia.org/wiki/Make_(software)
 
 ``` text
-$ make
+make
 ```
 
 The executable will be named `mutex` and placed in the `bin` sub directory. Run the program from the terminal.
 
 ``` text
-$ ./bin/mutex
+./bin/mutex
 ```
 
 ## Summary of all the tests

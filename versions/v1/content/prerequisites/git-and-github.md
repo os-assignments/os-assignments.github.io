@@ -20,7 +20,7 @@ Department Linux user account or to your private computer.
 Open a terminal, type `git --version` and press enter. 
 
 ``` text
-$ git --version
+git --version
 ```
 
 If `git` is installed you will something similar to this as a result in the
@@ -94,7 +94,7 @@ within the current working directory.
 To get an overview of the cloned repository, use the `tree` command.
 
 ``` text
-$ tree git-example-repo
+tree git-example-repo
 ```
 
 The `tree` command will print out a tree view showing all files and folders in

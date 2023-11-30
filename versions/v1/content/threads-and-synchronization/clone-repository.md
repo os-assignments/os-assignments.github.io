@@ -16,7 +16,7 @@ From the terminal, navigate to a directory where you want the cloned directory
 to be created and execute the following command.
 
 ``` text
-$ git clone https://github.com/os-assignments/threads-synchronization-deadlock.git
+git clone https://github.com/os-assignments/threads-synchronization-deadlock.git
 ```
 
 Now you should see something similar to this in the terminal.
@@ -34,7 +34,7 @@ Unpacking objects: 100% (23/23), done.
 To get an overview of the cloned repository, use the `tree -d` command.
 
 ``` text
-$> tree -d threads-synchronization-deadlock
+tree -d threads-synchronization-deadlock
 ```
 
 Now you should see a tree view of the directory strucure.
@@ -68,12 +68,12 @@ For example, you can use the `all` utility together with `make` to compile all
 programs.
 
 ``` C
-$ ./all make
+./all make
 ```
 
 The `all` utility can also be used to delete all objects files and executables.
 
 ``` C
-$ ./all make clean
+./all make clean
 ```
 

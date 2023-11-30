@@ -78,7 +78,7 @@ calling `fork`, the program can use the fork return value to tell whether
 
 ## Template program
 
-In the file `module-2/examples/src/fork-template.c` you find a template for a
+In the file `processes-and-ipc/examples/src/fork-template.c` you find a template for a
 typical program using  `fork`.
 
 {{< highlight c "linenos=inline" >}}
@@ -161,7 +161,7 @@ is the process ID (PID) of the newly created child process.
 
 ## A first fork example
 
-In the file `module-2/examples/fork.c` you find a program with the following
+In the file `processes-and-ipc/examples/fork.c` you find a program with the following
 `main` function. 
 
 
@@ -207,16 +207,16 @@ void parent(pid_t pid) {
 
 Both parent and child prints two messages and then
 terminates. 
-Navigate to the directory `module-2/examples`. Compile using make. 
+Navigate to the directory `processes-and-ipc/examples`. Compile using make. 
 
 ``` text
-$ make
+make
 ```
 
 Run the program. 
 
 ``` text
-$ ./bin/fork 
+./bin/fork 
 ```
 
 You should see output similar to this in the terminal. 
@@ -323,7 +323,7 @@ only if WIFEXITED returned true.
  
 ## Example using wait
 
-In the `module-2/examples/fork_exit_wait.c` example program the parent execute
+In the `processes-and-ipc/examples/fork_exit_wait.c` example program the parent execute
 the `parent` function. 
 
 {{< highlight c "linenos=inline" >}}
@@ -356,7 +356,7 @@ itself. As a consequence the child should:
 
 ## Example using wait to obtain the exit status of the child
 
-In the `module-2/examples/fork_exit_wait_status.c` example program the parent execute
+In the `processes-and-ipc/examples/fork_exit_wait_status.c` example program the parent execute
 the `parent` function. 
 
 {{< highlight c "linenos=inline" >}}
@@ -389,13 +389,13 @@ variable `status`.
 Compile using make. 
 
 ``` text
-$ make 
+make 
 ```
 
 Run the program. 
 
 ``` text
-$ ./bin/fork_exit_wait_status
+./bin/fork_exit_wait_status
 ```
 
 In the output you should be able to see that the
@@ -427,7 +427,7 @@ A terminated process is said to be a zombie or defunct until the parent does
 
 ## An example with a zombie process
 
-In the `module-2/examples/fork_zombie.c` example program the child terminates
+In the `processes-and-ipc/examples/fork_zombie.c` example program the child terminates
 before the parent does `wait` on the child and becomes a zombie process. 
 The parent execute
 the `parent` function. 
@@ -467,13 +467,13 @@ child.
 Compile using make. 
 
 ``` text
-$ make 
+make 
 ```
 
 Run the program. 
 
 ``` text
-$ ./bin/fork_zombie
+./bin/fork_zombie
 ```
 
 In the output you should be able to see that the child terminates and that the
@@ -491,14 +491,14 @@ of the child using `wait`. The child process has now become a zombie process.
 
 ## Monitor 
 
-Open a second terminal and navigate to the `module-2` directory. 
-The `module-2/tools/monitor` tool can be used to view process status information
+Open a second terminal and navigate to the `processes-and-ipc` directory. 
+The `processes-and-ipc/tools/monitor` tool can be used to view process status information
 about process. 
 Use the `--help` flag to see the documentation.  
 
 
 ``` text
-$ ./tools/monitor --help
+./tools/monitor --help
 ```
 
 This is the built in documentation for the monitor tool. 
@@ -520,7 +520,7 @@ to monitor. Use the monitor tool to view process status information
 for the parent and child, both executing the `fork_zombie` program.  
 
 ``` text
-$ ./tools/monitor fork_zombie
+./tools/monitor fork_zombie
 ```
 
 On Linux you should see something similar to this. 
@@ -601,7 +601,7 @@ If you don’t want to execute the same program in both the parent and the child
 you will need to use a system call of the `exec` family. The `exec` system calls
 will replace the currently executing program with a new executable.
 
-In `module-2/examples/src/child.c` you this small program. 
+In `processes-and-ipc/examples/src/child.c` you this small program. 
 
 ``` C
 #include <stdio.h>    // puts(), printf(), perror(), getchar()
@@ -628,13 +628,13 @@ int main(void) {
 Compile using make. 
 
 ``` text
-$ make 
+make 
 ```
 
 Run the program. 
 
 ``` text
-$ ./bin/child
+./bin/child
 ```
 
 First this program simply prints two messages to the terminal and then wait for a key-press.
@@ -654,7 +654,7 @@ After you press any key in the terminal the program terminates.
 ```
 
   
-The `module-2/examples/src/fork_exec.c` program uses `execv` to make the child process execute the `module-2/examples/bin/child` executable. After fork the child executes the `child` functions. 
+The `processes-and-ipc/examples/src/fork_exec.c` program uses `execv` to make the child process execute the `processes-and-ipc/examples/bin/child` executable. After fork the child executes the `child` functions. 
 
 {{< highlight c "linenos=inline" >}}
 void child() {
@@ -681,13 +681,13 @@ not be reached.
 Compile using make. 
 
 ``` text
-$ make 
+make 
 ```
 
 Run the program. 
 
 ``` text
-$ ./bin/fork_exec
+./bin/fork_exec
 ```
 
 ``` text
@@ -699,7 +699,7 @@ Open a second terminal and use the `ps` command with the `-p` option to see
 information about the child process.
 
 ``` text
-$ ps -p 33206
+ps -p 33206
   PID TTY           TIME CMD
   33423 ttys023    0:00.00 ./bin/fork_exec
 ```
@@ -717,7 +717,7 @@ From the other terminal and use the `ps` command with the `-p` option to see
 information about the child process.
 
 ``` text
-$ ps -p 33206
+ps -p 33206
   PID TTY           TIME CMD
   33423 ttys023    0:00.00 ./bin/child
 ```

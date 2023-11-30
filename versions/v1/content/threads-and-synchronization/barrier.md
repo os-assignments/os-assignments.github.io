@@ -43,7 +43,7 @@ the [Linux hosts][linux-hosts].
 ## Overview
 
 File to use
-: `module-4/mandatory/src/rendezvous.c`
+: `threads-and-synchronization/mandatory/src/rendezvous.c`
 
 Description
 : In this program, a process creates two threads, and waits for their termination.
@@ -52,18 +52,18 @@ iteration number and sleeps for some random amount of time.
 
 ## Compile and run
 
-In the terminal, navigate to the `module-4/mandatory` directory. Use [make][wp-make] to compile the program.
+In the terminal, navigate to the `threads-and-synchronization/mandatory` directory. Use [make][wp-make] to compile the program.
 
 [wp-make]: https://en.wikipedia.org/wiki/Make_(software)
 
 ``` text
-$ make
+make
 ```
 
 The executable will be named `rendezvous` and placed in the `bin` sub directory. Run the program from the terminal.
 
 ``` text
-$ ./bin/rendezvous
+./bin/rendezvous
 ```
 
 ## Questions
@@ -139,11 +139,16 @@ At the end of `main()`, don't forget to destroy any semaphores you have initiali
 
 ## Compile and run
 
-Compile and run the program.
+Compile:
 
 ``` text
-$ make
-$ ./bin/rendezvous
+make
+```
+
+, and run the program: 
+
+``` text
+./bin/rendezvous
 ```
 
 ## Example of invalid output

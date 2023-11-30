@@ -45,7 +45,7 @@ terminated by a NULL pointer.
 
 ### Example
 
-In `module-2/examples/src/execlp_ls.c` you find the following example program
+In `processes-and-ipc/examples/src/execlp_ls.c` you find the following example program
 demonstrating how `execv` can be used.
 
 
@@ -69,13 +69,13 @@ the shell command `ls` to list files in a directory.
 Use `make` to compile: 
 
 ``` text
-$ make
+make
 ```
 
 Run the program. 
 
 ``` text
-$ ./bin/execlp_ls
+./bin/execlp_ls
 ```
 
 You should see something similar to this in the terminal. 
@@ -126,7 +126,7 @@ terminated by a NULL pointer.
 
 ### Example
 
-In `module-2/examples/src/execvp_ls.c` you find the following example program
+In `processes-and-ipc/examples/src/execvp_ls.c` you find the following example program
 demonstrating how `execvp` can be used.
 
 ``` C
@@ -152,13 +152,13 @@ the name of the executable.
 Use `make` to compile: 
 
 ``` text
-$ make
+make
 ```
 
 Run the program. 
 
 ``` text
-$ ./bin/execvp_ls
+./bin/execvp_ls
 ```
 
 You should see something similar to this in the terminal. 
@@ -197,7 +197,7 @@ executable for the new program.
 
 ### Example 
 
-In `module-2/examples/src/execv_ls.c` you find the following example program
+In `processes-and-ipc/examples/src/execv_ls.c` you find the following example program
 demonstrating how `execv` can be used.
 
 ``` C
@@ -220,13 +220,13 @@ the shell command `ls` to list files in a directory.
 Use `make` to compile: 
 
 ``` text
-$ make
+make
 ```
 
 Run the program. 
 
 ``` text
-$ ./bin/execv_ls
+./bin/execv_ls
 ```
 
 You should see something similar to this in the terminal. 

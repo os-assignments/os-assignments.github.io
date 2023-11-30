@@ -21,11 +21,10 @@ Among the slides in Studium you also find self study material about implementing
 
 ## Git 
 
-You should already have [cloned](clone-repository) the [module 4
-repository][repo].
+You should already have [cloned](clone-repository) the [threads-and-synchronization][repo] repository.
 
 
-[repo]: https://github.com/uu-dsp-os-ospp-2020/threads-and-synchronization
+[repo]: https://github.com/os-assignments/threads-synchronization-deadlock.git
 
 
 ## Manage execution contexts 
@@ -49,24 +48,24 @@ execution contexts. Read the following manual pages.
 
 ### Example
 
-In `module-4/examples/src/contexts.c` you find an example program demonstrating
+In `threads-and-synchronization/examples/src/contexts.c` you find an example program demonstrating
 how to create and manipulate  execution contexts. 
-Study the source. To compile, navigate to `module-4/examples` in the terminal, type `make`
+Study the source. To compile, navigate to `threads-and-synchronization/examples` in the terminal, type `make`
 and press enter.
 
 ``` text
-$ make
+make
 ```
 
 To run: 
 
 ``` text
-$ ./bin/contexts
+./bin/contexts
 ```
 
 ## Get started 
 
-In `module-4/higher-grade/src` you find the following files. 
+In `threads-and-synchronization/higher-grade/src` you find the following files. 
 
 sthreads.h
 : Header file specifying the Simple Threads [API](https://en.wikipedia.org/wiki/Application_programming_interface).
@@ -81,17 +80,17 @@ Study the source and pay attention to all comments.
 
 ## First compile and test run
 
-In the terminal, navigate to the `module-4/higher-grade` directory. Use make to
+In the terminal, navigate to the `threads-and-synchronization/higher-grade` directory. Use make to
 compile. 
 
 ``` text
-$ make
+make
 ```
 
 Run the test program. 
 
 ``` text
-$ ./bin/sthreads_test
+./bin/sthreads_test
 ```
 
 The program prints the following to terminal and terminates. 
@@ -142,7 +141,7 @@ suspend the running thread and resume one of the threads in the ready queue.
 
 ### Timer example
 
-In `module-4/examples/src/timer.c` you find an example of how to set a timer.
+In `threads-and-synchronization/examples/src/timer.c` you find an example of how to set a timer.
 When the timer expires the kernel sends a signal to the process. A signal
 handler is used to catch the timer signal. 
 

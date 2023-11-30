@@ -51,19 +51,19 @@ are the files you will use to implement and test your implementation.
 
 bounded_buffer.h
 : The internal representation of the bounded buffer and the public API is
-defined in `module-4/mandatory/src/bounded_buffer.h`.
+defined in `threads-and-synchronization/mandatory/src/bounded_buffer.h`.
 
 bounded_buffer.c
 : The implementation of the API will be in the
-  `module-4/mandatory/src/bounded_buffer.c` file.
+  `threads-and-synchronization/mandatory/src/bounded_buffer.c` file.
 
 bounded_buffer_test.c
 : To test your various aspect of your implementation a collection of tests are provided in the
-  `module-4/mandatory/src/bounded_buffer_test.c` file. Here you can add your own
+  `threads-and-synchronization/mandatory/src/bounded_buffer_test.c` file. Here you can add your own
   tests if you want. 
   
 bounded_buffer_stress_test.c
-: The `module-4/mandatory/src/bounded_buffer_test.c` program make it easy to
+: The `threads-and-synchronization/mandatory/src/bounded_buffer_test.c` program make it easy to
   test the implementation for different sizes of the buffer and different numbers
   of producers and consumers.
   
@@ -238,22 +238,22 @@ before you continue.
 You will complete the implementaion step by step.
 
 For each step you will need to add code to a single function in the 
-`module-4/mandatory/src/bounded_buffer.c` source file. For each step there
-is also a test in the  `module-4/mandatory/src/bounded_buffer_test.c` source
+`threads-and-synchronization/mandatory/src/bounded_buffer.c` source file. For each step there
+is also a test in the  `threads-and-synchronization/mandatory/src/bounded_buffer_test.c` source
 file that should pass without any failed assertions. 
 
-In the terminal, navigate to the `module-4/mandatory` directory. Use [make][wp-make] to compile the program.
+In the terminal, navigate to the `threads-and-synchronization/mandatory` directory. Use [make][wp-make] to compile the program.
 
 [wp-make]: https://en.wikipedia.org/wiki/Make_(software)
 
 ``` text
-$> make
+make
 ```
 
 Run the test(s).
 
 ``` text
-$> ./bin/bounded_buffer_test
+./bin/bounded_buffer_test
 ```
 
 An example of a failed test where the assertion that the buffer size should be
@@ -351,7 +351,7 @@ doesn't terminate you most likely have made a mistake with the synchronization o
 ## Stress testing 
 
 It is now time to test the bounded buffer with multiple concurrent producers and
-consumers. In `module-4/mandatory/src/bounded_buffer_stress_test.c` you find a
+consumers. In `threads-and-synchronization/mandatory/src/bounded_buffer_stress_test.c` you find a
 complete test program that creates:
 
 - a bounded buffer of size `s`
@@ -362,7 +362,7 @@ For the test program to terminate, the total number of consumed items (`c*m`)
 must equal the total number of items produced (`p*n`). Run the stress test. 
 
 ``` text 
-$> ./bin/bounded_buffer_stress_test
+./bin/bounded_buffer_stress_test
 ```
 
 ### Default stress test
@@ -406,9 +406,9 @@ array[9]: (7, 9999)
 
 Note the `====> TEST SUCCESS <====` at the end. 
 
-### Overiding the default parameters
+### Overriding the default parameters
 
-The default values for test parameters can be overrided using the following
+The default values for test parameters can be overridden using the following
 flags. 
 
 | Flag | Description                               | Argument         |
@@ -423,7 +423,7 @@ flags.
 In the following example, the default buffer size 10 is changed to 3. 
 
 ``` text 
-$> ./bin/bounded_buffer_stress_test -s 3
+./bin/bounded_buffer_stress_test -s 3
 ```
 
 Experiment with different values for the test parameters. 

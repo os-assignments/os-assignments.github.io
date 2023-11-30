@@ -40,7 +40,7 @@ be able to deallocate the pipes and potentially re-use the descriptor values.
 
 ## Command data
 
-In the file `module-2/higher-grade/src/parser.h` the following  C structure is defined. 
+In the file `processes-and-ipc/higher-grade/src/parser.h` the following  C structure is defined. 
 
 ``` C
 /**
@@ -59,7 +59,7 @@ line.
 
 ## Command array
 
-In the file `module-2/higher-grade/src/shell.c` command data for all commands in
+In the file `processes-and-ipc/higher-grade/src/shell.c` command data for all commands in
 a command pipeline is stored in a global array.
 
 ``` C
@@ -72,7 +72,7 @@ cmd_t commands[MAX_COMMANDS];
 
 ## Parser
 
-In `module-2/higher-grade/src/parser.h ` you find the following prototype. 
+In `processes-and-ipc/higher-grade/src/parser.h ` you find the following prototype. 
 
 ``` C
 /**
@@ -103,7 +103,7 @@ of pipe 2.
 
 ## parser.c
 
-In the `module-2/higher-grade/src/parser.c` file you must complete the
+In the `processes-and-ipc/higher-grade/src/parser.c` file you must complete the
 implementation of the following function. 
 
 ``` C
@@ -119,25 +119,25 @@ position_t cmd_position(int i, int n) {
 
 ## shell.c
 
-Use  `module-2/higher-grade/src/shell.c` to implement your solution. This file
+Use `processes-and-ipc/higher-grade/src/shell.c` to implement your solution. This file
 already implements the most basic functionality but it is far from complete.
 
 ## Feel free to make changes 
 
-When inplementing your solution, you are allowed to:
+When implementing your solution, you are allowed to:
 
 - add your own functions
 - modify existing functions
 - add (or remove) arguments to existing functions
 - modify existing data structures
-- add you own data strutures.
+- add you own data structures.
 
 ## Alternative program design
 
 The provided code is based on a design where the shell (parent) process creates
 one child process for each command in the pipeline. 
 
-An alterantive design is for the first child process to create the second child,
+An alternative design is for the first child process to create the second child,
 the second child to create the third child etc. If you prefer this design, this
-might require you to modify the provided source code to fit this alterantive
+might require you to modify the provided source code to fit this alternative
 design. 

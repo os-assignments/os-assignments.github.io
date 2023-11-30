@@ -31,13 +31,15 @@ should be used.
 
 ## Clone repository
 
-If you haven't done so already, you
-must [clone](clone-repository) the module-2 repository.
+If you haven't done so already, you must [clone](clone-repository) the 
+[processes-and-ipc][repo] repository.
+
+[repo]: https://github.com/os-assignments/processes-and-ipc.git
 
 ## Open file
 
-Open the file `module-2/mandatory/src/signals.c` in
-the [source code editor] [source-code-editor] of your choice.
+Open the file `processes-and-ipc/mandatory/src/signals.c` in
+the [source code editor][source-code-editor] of your choice.
 
 [source-code-editor]: https://en.wikipedia.org/wiki/Source_code_editor
 
@@ -143,7 +145,7 @@ From a terminal, navigate to the `module-2/mandatory` directory. To compile all
 programs, type `make` and press enter.
 
 ``` text
-$ make
+make
 ```
 
 When compiling, `make` places all executables in the `bin` directory.
@@ -153,7 +155,7 @@ When compiling, `make` places all executables in the `bin` directory.
 Run the `signals` program.
 
 ``` text
-$ ./bin/signals
+./bin/signals
 ```
 
 You should now see output similar to this in the terminal.
@@ -185,13 +187,13 @@ To make the program divide by zero, uncomment the following line.
 Compile with `make`.
 
 ``` text
-$ make
+make
 ```
 
 Run the program.
 
 ``` text
-$ ./bin/signals
+./bin/signals
 ```
 
 In the terminal you should see something similar to this.
@@ -274,13 +276,13 @@ signal handler for the `SIGFPE` signal.
 Compile with `make`.
 
 ``` text
-$ make
+make
 ```
 
 Run the program.
 
 ``` text
-$ ./bin/signals
+./bin/signals
 ```
 
 In the terminal you should see something similar to this.
@@ -324,13 +326,13 @@ To make the program cause a segfault, uncomment the following line.
 Compile with `make`.
 
 ``` text
-$ make
+make
 ```
 
 Run the program.
 
 ``` text
-$ ./bin/signals
+./bin/signals
 ```
 
 In the terminal you should see something similar to this.
@@ -410,7 +412,6 @@ To terminate the process, press `Ctrl+C` in the terminal.
 ``` text
 My PID = 82249
 ^C
-$
 ```
 
 Note that once the process terminates you get the terminal prompt back.
@@ -437,7 +438,6 @@ press `Ctrl+C` you should now see output similar to this in the terminal.
 My PID = 82477
 ^CCaught SIGINT: interactive attention signal, probably a ctrl+c.
 I'm done!
-$
 ```
 
 ## Open a second terminal
@@ -458,7 +458,7 @@ To send the `SIGINT` signal to the blocked process, execute the following comman
 the terminal where you replace `<PID>` with the PID of the blocked process.
 
 ``` text
-$ kill -s INT <PID>
+kill -s INT <PID>
 ```
 
 In the other terminal you should now see the blocked process execute the signal
@@ -468,7 +468,6 @@ handler, then continue in `main` after `pause()`, print `I'm done!` and terminat
 My PID = 82629
 Caught SIGINT: interactive attention signal, probably a ctrl+c.
 I'm done!
-$
 ```
 
 ## Handle SIGUSR1
@@ -480,7 +479,7 @@ Add code to make the program print "Hello!" when receiving the `SIGUSR1` signal.
 `kill` command where you replace `<PID>` with the PID of the blocked process.
 
 ``` text
-$ kill -s SIGUSR1 <PID>
+kill -s SIGUSR1 <PID>
 ```
 
 ## Don't terminate on SIGUSR1
