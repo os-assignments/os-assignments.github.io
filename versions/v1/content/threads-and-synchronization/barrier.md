@@ -96,11 +96,13 @@ at the barrier in each iteration.
 
 ![](/v1/images/threads-and-synchronization/barrier.png?width=433px)
 
+For each iteration the order between the threads should not be restricted.
 The first thread to reach the barrier must wait for the other thread to also reach the barrier. 
-Once both threads have reached the barrier the threads are allowed to continue with the next iteration.
+Once both threads have reached the barrier the threads are allowed to continue with the next iteration. 
 Examples of execution traces:
-- ABBABAABBA (valid)
-- ABB**B**ABBAAB (invalid)
+
+- AB BA BA AB BA (valid barrier synchronization)
+- AB **BB** AB **AA** AB (invalid synchronization)
 
 {{% notice style="info" title="Lock-step and rendezvous" %}}
 
@@ -145,6 +147,13 @@ Initialize your semaphore(s) in the beginning of `main()`.
 
 At the end of `main()`, don't forget to destroy any semaphores you have initialized. 
 
+## Automatic error detection
+
+Instead of printing their identity (A or B) directly, the threads uses the provided `trace` function. 
+In each iteration thread A calls `trace('A')` and thread B calls `trace('B')`. 
+
+The `trace` functions prints the thread identity and keeps track of the next valid thread identity in the traced sequence. If the wrong thread identity is traced an error is reported and the process is terminated. 
+
 ## Compile and run
 
 Compile:
@@ -166,11 +175,12 @@ This is an example of an invalid execution trace.
 ``` c
 A
 B
+
 B
 A
+
 B
-B   // ERROR: should be A
-A
+B <===== ERROR: should have been A
 ```
 
 ## Example of valid output
@@ -181,12 +191,21 @@ This is an example of a valid  execution trace.
 ``` c
 A
 B
+
 B
 A
+
 B
 A
+
 A
 B
+
+B
+A
+
+B
+A
 ```
 
 ## Change the relative speeds of the threads
