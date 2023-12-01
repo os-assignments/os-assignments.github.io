@@ -123,7 +123,7 @@ Before you continue think about the following questions.
 
 ## Portable semaphores
 
-Use the [psem](psem) semaphores to enforce rendezvous between the two threads. .
+Use the [psem](psem) semaphores to enforce rendezvous between the two threads.
 
 ## Number of semaphores
 
@@ -186,7 +186,7 @@ B <===== ERROR: should have been A
 ## Example of valid output
 
 
-This is an example of a valid  execution trace.
+This is an example of a valid  execution trace, for `N = 6` iterations.
 
 ``` c
 A
