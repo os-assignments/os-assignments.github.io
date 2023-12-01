@@ -9,13 +9,13 @@ draft: false
 
 ![](/v1/images/threads-and-synchronization/barrier.png?width=433px)
 
-A mutex lock is meant to be taken and released, always in that order, by each
+A mutex lock is meant to first be taken and then released, always in that order, by each
 task that uses the shared resource it protects.
 In general, semaphores should not be used to enforce mutual exclusion.
 The correct use of a semaphore is to signaling from one task to another, i.e., a
-task  either signal or wait, not both.
+task either signal or wait on a semaphore, not both.
 
-In this assignment you will solve the rendezvous problem using semaphores. This
+In this assignment you will solve the barrier problem using semaphores. This
 problem clearly demonstrates the type of synchronization that can be provided by
 semaphores.
 
@@ -43,16 +43,20 @@ the [Linux hosts][linux-hosts].
 ## Overview
 
 File to use
-: `threads-and-synchronization/mandatory/src/rendezvous.c`
+: `threads-and-synchronization/mandatory/src/barrier.c`
 
 Description
-: In this program, a process creates two threads, and waits for their termination.
-Each thread performs five iterations. In each iteration the threads  print their
-iteration number and sleeps for some random amount of time.
+: In this program, a process creates two threads A and B, and waits for their termination.
+Each thread performs five iterations. In each iteration the threads print their name (A or B)
+and sleeps for some random amount of time. For each iteration the order between the threads should not be restricted. 
+
+![](/v1/images/threads-and-synchronization/no-barrier.png?width=433px)
+
 
 ## Compile and run
 
-In the terminal, navigate to the `threads-and-synchronization/mandatory` directory. Use [make][wp-make] to compile the program.
+In the terminal, navigate to the `threads-and-synchronization/mandatory` directory. 
+Use [make][wp-make] to compile the program.
 
 [wp-make]: https://en.wikipedia.org/wiki/Make_(software)
 
@@ -60,10 +64,11 @@ In the terminal, navigate to the `threads-and-synchronization/mandatory` directo
 make
 ```
 
-The executable will be named `rendezvous` and placed in the `bin` sub directory. Run the program from the terminal.
+The executable will be named `barrier` and placed in the `bin` sub directory. 
+Run the program from the terminal.
 
 ``` text
-./bin/rendezvous
+./bin/barrier
 ```
 
 ## Questions
@@ -78,38 +83,41 @@ predict this output? Why?
 
 ## Rendezvous
 
-Rendezvous or rendez-vous (French pronunciation: [ʁɑ̃devu]) refers to a planned
+Rendezvous or rendezvous (French pronunciation: [ʁɑ̃devu]) refers to a planned
 meeting between two or more parties at a specific time and place.
 [^wp-rendezvous]
 
 [^wp-rendezvous]: [Wikipedia - Rendezvous](https://en.wikipedia.org/wiki/Rendezvous)
 
-## Desired behavior
+## Barrier synchronization (desired behavior)
 
-We now want to make the two threads have a rendezvous after
-each iteration, i.e., the two threads **A** and **B** should perform their iterations in
-lockstep. Lockstep means that they both
-first perform iteration **0**, then iteration **1**, then iteration **2**, etc. 
-For each iteration the order between **A** and **B** should not be restricted. 
+We now want to put in a barrier in each thread that enforces the two threads to have rendezvous 
+at the barrier in each iteration. 
 
-- Either **A** completes iteration **i** before **B** or **B** completes
-  iteration **i** before **A**. 
-- A thread is not allowed to start itertion **i+1** until the other thread also
-  completed iteration **i**.
+![](/v1/images/threads-and-synchronization/barrier.png?width=433px)
 
-An example for iteration 0 and 1 is shown below. 
+The first thread to reach the barrier must wait for the other thread to also reach the barrier. 
+Once both threads have reached the barrier the threads are allowed to continue with the next iteration.
+Examples of execution traces:
+- ABBABAABBA (valid)
+- ABB**B**ABBAAB (invalid)
 
-![](/v1/images/threads-and-synchronization/rendezvous-a-b-two-iterations.png?width=666px)
+{{% notice style="info" title="Lock-step and rendezvous" %}}
 
-In the above example, the two threads A and B compete (execute concurrently) and
-one will be first to reach the rendezvous point. For iteration 0, thread B is
-first to reach the rendezvous point and must wait for thread B to also reach the
-rendezvous point. Once the two threads have been synchronized at the rendezvous
-point, they once again compete during iteration 1 to be the first to reach the
-next rendezvous point. In the above example, for iteration 1, thread A is first to reach the
-rendezvous point and must wait for thread B.
+Other names for barrier synchronization are lock-step and rendezvous. 
 
+{{% /notice %}}
 
+## Barrier implementation
+
+Your task is use semaphores to enforce barrier synchronization between the two thread A and B. 
+
+![](/v1/images/threads-and-synchronization/barrier-template.png?width=433px)
+
+Before you continue think about the following questions. 
+
+- What needs to be initialized? 
+- What needs to be done by each thread inside the barrier?
 
 ## Portable semaphores
 
@@ -117,11 +125,11 @@ Use the [psem](psem) semaphores to enforce rendezvous between the two threads. .
 
 ## Number of semaphores
 
-How many semaphores are needed to make the two threads have a rendezvous after
-each iteration?
+How many semaphores are needed to enforce barrier synchronization between two threads?
 
-- Can rendezvous be achieved using a single semaphore?
+- Can this be achieved using a single semaphore?
 - Do you need to use two semaphores?
+- Do you need more than two semaphores?
 
 ## Declare global semaphore variables
 
@@ -156,13 +164,13 @@ make
 This is an example of an invalid execution trace.
 
 ``` c
-A0
-B0
-B1
-A1
-B2
-B3   // ERROR: should be A2
-A2
+A
+B
+B
+A
+B
+B   // ERROR: should be A
+A
 ```
 
 ## Example of valid output
@@ -171,14 +179,14 @@ A2
 This is an example of a valid  execution trace.
 
 ``` c
-A0
-B0
-B1
-A1
-B2
-A2
-A3
-B3
+A
+B
+B
+A
+B
+A
+A
+B
 ```
 
 ## Change the relative speeds of the threads
@@ -193,9 +201,10 @@ Change the threads sleeping durations.
 Here are a few examples of questions that you should be able to answer, discuss
 and relate to the source code of you solution during the code grading.
 
-- Explain the concept of rendezvous.
-- What will happen when you wait on a semaphore?
-- What will happen when you signal on a semaphore?
-- How can semaphores be used to enforce rendezvous between two threads?
 - How are mutex locks different compared to semaphores?
-- Why can't mutex locks be used to solve the rendezvous problem?
+- In general, what will happen when you wait on a semaphore?
+- In general, What will happen when you signal on a semaphore?
+- Explain the barrier synchronization concept.
+- How can semaphores be used to enforce barrier synchronization between two threads?
+- Why can't mutex locks be used as drop-in replacements for the semaphores in your solution 
+with lock instead of wait and unlock instead of signal?
