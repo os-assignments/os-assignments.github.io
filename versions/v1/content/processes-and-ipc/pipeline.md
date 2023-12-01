@@ -218,7 +218,7 @@ You should check the return values of all system calls to detect errors. On erro
 
 ## pipeline.c
 
-Use the file `module-2/mandatory/pipeline.c` to implement your solution.
+Use the file `processes-and-ipc/mandatory/pipeline.c` to implement your solution.
 
 - You must add code the the `main` function. You must add code here.
 - After fork, Child A should execute the `child_a` function. You must add code here.
@@ -270,7 +270,7 @@ and relate to the source code of you solution during the code grading.
 
 - How many times does the parent calls fork and why?
 - Why do the children need to call execlp()?
-- Explain how each child is able to redirect stidin or stdout from or to the pipe?
+- Explain how each child is able to redirect stdin or stdout from or to the pipe?
 - How will the consumer know when there is no more data to expect from the pipe?
 - Why is it important for a process to close any pipe file descriptors it does not intend to use?
 - What could happen if you close a read descriptor to early?

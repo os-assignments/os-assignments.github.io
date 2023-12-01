@@ -82,9 +82,10 @@ entering console input as program execution progresses.
 
 ## The mips-examples repository
 
-Before you continue you should already have cloned the
-`mips-examples` repository. If you have not done this already,
-follow these [instructions](clone-repository) before you continue. 
+Before you continue you should already have [cloned](clone-repository) the
+[mips-examples][repo] repository. 
+
+[repo]: https://github.com/os-assignments/mips-examples.git
 
 ## Load hello.s into Mars
 
@@ -239,5 +240,5 @@ Click on the single-step-backwards icon  to run the execution backwards one inst
 ## Study the example programs
 
 You are now ready to continue and study the
-other [example programs](example-programs) in the `module-0-mips-examples` repository.
+other [example programs](example-programs) in the [mips-examples][repo] repository.
 

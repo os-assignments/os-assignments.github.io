@@ -134,14 +134,14 @@ entity and needs resources such as CPU time, memory etc to execute.
 ## The make build tool
 
 The [make] build tool is used together with the [Makefile] to compile all programs in
-the `moudule-2/mandatory/src` directory.
+the `processes-and-ipc/mandatory/src` directory.
 
 [make]: https://en.wikipedia.org/wiki/Make_(software)
 [Makefile]: https://en.wikipedia.org/wiki/Makefile
 
 ## Compile all programs
 
-From a terminal, navigate to the `module-2/mandatory` directory. To compile all
+From a terminal, navigate to the `processes-and-ipc/mandatory` directory. To compile all
 programs, type `make` and press enter.
 
 ``` text
