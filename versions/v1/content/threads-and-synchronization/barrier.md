@@ -47,7 +47,7 @@ File to use
 
 Description
 : In this program, a process creates two threads A and B, and waits for their termination.
-Each thread performs five iterations. In each iteration the threads print their name (A or B)
+Each thread performs N iterations. In each iteration the threads print their name (A or B)
 and sleeps for some random amount of time. For each iteration the order between the threads should not be restricted. 
 
 ![](/v1/images/threads-and-synchronization/no-barrier.png?width=433px)
