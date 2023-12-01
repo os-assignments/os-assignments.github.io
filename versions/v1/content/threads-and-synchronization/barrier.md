@@ -110,7 +110,7 @@ Other names for barrier synchronization are lock-step and rendezvous.
 
 ## Barrier implementation
 
-Your task is use semaphores to enforce barrier synchronization between the two thread A and B. 
+Your task is to use semaphores to enforce barrier synchronization between the two thread A and B. 
 
 ![](/v1/images/threads-and-synchronization/barrier-template.png?width=433px)
 
