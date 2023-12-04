@@ -1,5 +1,5 @@
 ---
-title: Barrier synchronization
+title: Two thread barrier synchronization
 assignment: mandatory
 weight: 200
 draft: false
@@ -7,7 +7,9 @@ draft: false
 
 <h2 class="subtitle">Mandatory assignment</h2>
 
-![](/v1/images/threads-and-synchronization/barrier.png?width=433px)
+![](/v1/images/threads-and-synchronization/two-thread-barrier.png?width=433px)
+
+## Background 
 
 A mutex lock is meant to first be taken and then released, always in that order, by each
 task that uses the shared resource it protects.
@@ -15,7 +17,7 @@ In general, semaphores should not be used to enforce mutual exclusion.
 The correct use of a semaphore is to signaling from one task to another, i.e., a
 task either signal or wait on a semaphore, not both.
 
-In this assignment you will solve the barrier problem using semaphores. This
+In this assignment you will solve the two thread barrier problem using semaphores. This
 problem clearly demonstrates the type of synchronization that can be provided by
 semaphores.
 
@@ -43,14 +45,15 @@ the [Linux hosts][linux-hosts].
 ## Overview
 
 File to use
-: `threads-and-synchronization/mandatory/src/barrier.c`
+: `threads-and-synchronization/mandatory/src/two_thread_barrier.c`
 
 Description
 : In this program, a process creates two threads A and B, and waits for their termination.
 Each thread performs N iterations. In each iteration the threads print their name (A or B)
-and sleeps for some random amount of time. For each iteration the order between the threads should not be restricted. 
+and sleeps for some random amount of time. For each iteration the order between the threads 
+should not be restricted. 
 
-![](/v1/images/threads-and-synchronization/no-barrier.png?width=433px)
+![](/v1/images/threads-and-synchronization/two-thread-no-barrier.png?width=433px)
 
 
 ## Compile and run
@@ -68,7 +71,7 @@ The executable will be named `barrier` and placed in the `bin` sub directory.
 Run the program from the terminal.
 
 ``` text
-./bin/barrier
+./bin/two_thread_barrier
 ```
 
 ## Questions
@@ -94,7 +97,7 @@ meeting between two or more parties at a specific time and place.
 We now want to put in a barrier in each thread that enforces the two threads to have rendezvous 
 at the barrier in each iteration. 
 
-![](/v1/images/threads-and-synchronization/barrier.png?width=433px)
+![](/v1/images/threads-and-synchronization/two-thread-barrier.png?width=433px)
 
 For each iteration the order between the threads should not be restricted.
 The first thread to reach the barrier must wait for the other thread to also reach the barrier. 
@@ -110,11 +113,11 @@ Other names for barrier synchronization are lock-step and rendezvous.
 
 {{% /notice %}}
 
-## Barrier implementation
+## Two thread barrier implementation
 
 Your task is to use semaphores to enforce barrier synchronization between the two thread A and B. 
 
-![](/v1/images/threads-and-synchronization/barrier-template.png?width=433px)
+![](/v1/images/threads-and-synchronization/two-thread-barrier-template.png?width=433px)
 
 Before you continue think about the following questions. 
 
@@ -152,7 +155,8 @@ At the end of `main()`, don't forget to destroy any semaphores you have initiali
 Instead of printing their identity (A or B) directly, the threads uses the provided `trace` function. 
 In each iteration thread A calls `trace('A')` and thread B calls `trace('B')`. 
 
-The `trace` functions prints the thread identity and keeps track of the next valid thread identity in the traced sequence. If the wrong thread identity is traced an error is reported and the process is terminated. 
+The `trace` functions prints the thread identity and keeps track of the next valid thread identity
+in the traced sequence. If the wrong thread identity is traced an error is reported and the process is terminated. 
 
 ## Compile and run
 
@@ -170,42 +174,61 @@ make
 
 ## Example of invalid output
 
-This is an example of an invalid execution trace.
+This is an example of an invalid execution trace for `N = 5` iterations.
 
-``` c
-A
-B
+``` text
+Two threads A and B doing 5 iterations each in lockstep.
 
-B
-A
+Iteration 0
 
-B
-B <===== ERROR: should have been A
+  A
+  B
+
+Iteration 1
+
+  B
+  A
+
+Iteration 2
+
+  B
+  B <===== ERROR: should have been A
 ```
 
 ## Example of valid output
 
 
-This is an example of a valid  execution trace, for `N = 6` iterations.
+This is an example of a valid  execution trace for `N = 5` iterations.
 
-``` c
-A
-B
+``` text
+Two threads A and B doing 5 iterations each in lockstep.
 
-B
-A
+Iteration 0
 
-B
-A
+  A
+  B
 
-A
-B
+Iteration 1
 
-B
-A
+  A
+  B
 
-B
-A
+Iteration 2
+
+  B
+  A
+
+Iteration 3
+
+  A
+  B
+
+Iteration 4
+
+  A
+  B
+
+SUCCESS: All iterations done!
 ```
 
 ## Change the relative speeds of the threads
