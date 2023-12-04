@@ -201,13 +201,12 @@ SUCCESS: All iterations done!
 ```
 
 
-## Change the relative speeds of the threads
+## Configuration
 
 In the beginning of `two_thread_barrier.c` you find the following definitions.
 
-
-```C 
-#define ITERATIONS      5   // Number of iterations each thread will execute. 
+``` text
+#define ITERATIONS      10  // Number of iterations each thread will execute. 
 #define MAX_SLEEP_TIME  3   // Max sleep time (seconds) for each thread. 
 ````
 

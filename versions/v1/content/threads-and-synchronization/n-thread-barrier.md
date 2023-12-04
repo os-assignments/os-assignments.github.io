@@ -138,7 +138,6 @@ identity (0, 1, 2, ..., N-1) directly, the threads uses the provided `trace` fun
 thread identity in the traced sequence. If a thread jumps over the barrier to early,
 an error is reported and the process is terminated. 
 
-
 ## Compile and run the test
 
 Compile:
@@ -150,8 +149,23 @@ make
 , and run the test program: 
 
 ``` text
-./bin/n_thread_test
+./bin/n_thread_barrier_test
 ```
+
+## Configuration
+
+In the beginning of `n_thread_barrier_test.c` you find the following definitions.
+
+``` text 
+#define ITERATIONS      10 // The number of iterations executed by each thread.
+#define NTHREADS        5  // Number of threads.
+#define MAX_SLEEP_TIME  3  // Max sleep time (seconds) for each thread. 
+```
+
+Experiment by changing the above values. 
+
+- Does the output change?
+- What are the possible outputs?
 
 ## Example of incorrect barrier synchronization
 
