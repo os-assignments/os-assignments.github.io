@@ -128,12 +128,9 @@ if (pthread_mutex_init(&mutex, NULL) < 0) {
 In `n_thread_barrier_test.c` you find a working program testing your implementation. 
 
 - The threads are created in the `main` function.
-
-- Each thread executes the `thread` function. 
-
-- In the `thread` function, instead of printing their 
-identity (0, 1, 2, ..., N-1) directly, the threads uses the provided `trace` function. 
-
+- Each thread executes the `thread` function.  In the `thread` function: 
+  - instead of printing their identity (0, 1, 2, ..., N-1) directly, the threads uses the provided `trace` function. 
+  - each thread calls the `barrier_wait` function.
 - The `trace` functions prints the thread identity and keeps track of the next valid
 thread identity in the traced sequence. If a thread jumps over the barrier to early,
 an error is reported and the process is terminated. 
