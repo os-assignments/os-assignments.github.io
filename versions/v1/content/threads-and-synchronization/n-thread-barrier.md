@@ -73,6 +73,10 @@ void barrier_destroy(barrier_t *barrier);
 void barrier_wait(barrier_t *barrier);
 ```
 
+## Implementing the barrier API
+
+Your task is to implement the barrier API in the `n_thread_barrier.c` file. 
+
 ## The barrier structure
 
 In `n_thread_barrier.h` you find the declaration of the `barrier_t` structure. 
@@ -90,6 +94,17 @@ What more is needed to be added to the structure to implement the barrier? For e
 - one ore more pthread mutex locks?
 - anything else?
 
+## Portable semaphores
+
+This is how you declare and initialize a portable [psem](psem) semaphore. 
+
+``` C
+
+psem_t *semaphore;
+
+semaphore = psem_init(0);
+```
+
 ## Pthread mutex locks
 
 This is how you can declare and initialize a [Pthread mutex lock][pthread-mutex]. 
@@ -106,21 +121,7 @@ if (pthread_mutex_init(&mutex, NULL) < 0) {
 
 [pthread-mutex]: https://man7.org/linux/man-pages/man3/pthread_mutex_lock.3p.html
 
-## Portable semaphores
 
-This is how you declare and initialize a portable [psem](psem) semaphore. 
-
-``` C
-
-psem_t *semaphore;
-
-semaphore = psem_init(0);
-```
-
-
-## Implementing the barrier API
-
-Your task is to implement the barrier API in the `n_thread_barrier.c` file. 
 
 ## Testing the barrier API implementation 
 
