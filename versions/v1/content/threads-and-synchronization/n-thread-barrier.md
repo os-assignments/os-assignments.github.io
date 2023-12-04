@@ -125,15 +125,14 @@ Your task is to implement the barrier API in the `n_thread_barrier.c` file.
 
 In `n_thread_barrier_test.c` you find a working program testing your implementation. 
 
+- The threads are created in the `main` function.
 
-The threads are created in `main`.
+- Each thread executes the `thread` function. 
 
-Each thread executes the `thread` function. 
-
-In the `thread` function, instead of printing their 
+- In the `thread` function, instead of printing their 
 identity (0, 1, 2, ..., N-1) directly, the threads uses the provided `trace` function. 
 
-The `trace` functions prints the thread identity and keeps track of the next valid
+- The `trace` functions prints the thread identity and keeps track of the next valid
 thread identity in the traced sequence. If a thread jumps over the barrier to early,
 an error is reported and the process is terminated. 
 

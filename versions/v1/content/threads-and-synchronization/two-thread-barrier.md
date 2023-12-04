@@ -124,39 +124,7 @@ Before you continue think about the following questions.
 - What needs to be initialized? 
 - What needs to be done by each thread inside the barrier?
 
-## Portable semaphores
 
-Use the [psem](psem) semaphores to enforce rendezvous between the two threads.
-
-## Number of semaphores
-
-How many semaphores are needed to enforce barrier synchronization between two threads?
-
-- Can this be achieved using a single semaphore?
-- Do you need to use two semaphores?
-- Do you need more than two semaphores?
-
-## Declare global semaphore variables
-
-For simplicity, declare all `psem_t` semaphore variables globally. 
-
-## Initial semaphore values
-
-Initialize your semaphore(s) in the beginning of `main()`. 
-
-- Should the semaphore(s) be initialized with counter value 0, 1 or some other value?
-
-## Destroy semaphores after use
-
-At the end of `main()`, don't forget to destroy any semaphores you have initialized. 
-
-## Automatic error detection
-
-Instead of printing their identity (A or B) directly, the threads uses the provided `trace` function. 
-In each iteration thread A calls `trace('A')` and thread B calls `trace('B')`. 
-
-The `trace` functions prints the thread identity and keeps track of the next valid thread identity
-in the traced sequence. If the wrong thread identity is traced an error is reported and the process is terminated. 
 
 ## Compile and run
 
@@ -169,7 +137,7 @@ make
 , and run the program: 
 
 ``` text
-./bin/rendezvous
+./bin/two_thread_barrier
 ```
 
 ## Example of invalid output
@@ -231,12 +199,63 @@ Iteration 4
 SUCCESS: All iterations done!
 ```
 
+
 ## Change the relative speeds of the threads
 
-Change the threads sleeping durations.
+In the beginning of `two_thread_barrier.c` you find the following definitions.
+
+
+```C 
+#define ITERATIONS      5   // Number of iterations each thread will execute. 
+#define MAX_SLEEP_TIME  3   // Max sleep time (seconds) for each thread. 
+````
+
+Experiment by changing the number of iterations and the max sleep time. 
 
 - Does the output change?
 - What are the possible outputs?
+
+## Portable semaphores
+
+Use the [psem](psem) semaphores to enforce rendezvous between the two threads.
+This is how you declare and initialize a portable [psem](psem) semaphore. 
+
+``` C
+psem_t *semaphore;
+
+semaphore = psem_init(0);
+```
+
+## Number of semaphores
+
+How many semaphores are needed to enforce barrier synchronization between two threads?
+
+- Can this be achieved using a single semaphore?
+- Do you need to use two semaphores?
+- Do you need more than two semaphores?
+
+## Declare global semaphore variables
+
+For simplicity, declare all `psem_t` semaphore variables globally. 
+
+## Initial semaphore values
+
+Initialize your semaphore(s) in the beginning of `main()`. Should the semaphore(s) be initialized with counter value:
+- 0?
+- 1? 
+- some other value?
+
+## Destroy semaphores after use
+
+At the end of `main()`, don't forget to destroy any semaphores you have initialized. 
+
+## Automatic error detection
+
+Instead of printing their identity (A or B) directly, the threads uses the provided `trace` function. 
+In each iteration thread A calls `trace('A')` and thread B calls `trace('B')`. 
+
+The `trace` functions prints the thread identity and keeps track of the next valid thread identity
+in the traced sequence. If the wrong thread identity is traced an error is reported and the process is terminated. 
 
 ## Code grading questions
 
