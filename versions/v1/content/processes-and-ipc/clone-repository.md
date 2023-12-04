@@ -87,3 +87,10 @@ processes-and-ipc
 14 directories, 26 files
 ```
 
+{{% notice style="warning" title="Install tree on macOS" %}}
+If you run **macOS** and `tree` is not installed, use [Homebrew](https://brew.sh/) to install `tree`.
+
+``` text
+brew install tree
+```
+{{% /notice %}}

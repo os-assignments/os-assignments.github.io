@@ -51,3 +51,10 @@ fundamental-os-concepts
 2 directories, 3 files
 ```
 
+{{% notice style="warning" title="Install tree on macOS" %}}
+If you run **macOS** and `tree` is not installed, use [Homebrew](https://brew.sh/) to install `tree`.
+
+``` text
+brew install tree
+```
+{{% /notice %}}
