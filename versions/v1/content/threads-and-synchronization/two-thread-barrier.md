@@ -1,5 +1,6 @@
 ---
 title: Two thread barrier synchronization
+linkTitle: Two thread barrier
 assignment: mandatory
 weight: 200
 draft: false

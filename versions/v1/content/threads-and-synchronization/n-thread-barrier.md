@@ -1,7 +1,8 @@
 ---
-title: N thread barrier
+title: N thread barrier synchronization
+linkTitle: N thread barrier
 assignment: higher-grade
-weight: 580
+weight: 210
 draft: false
 ---
 
