@@ -141,9 +141,9 @@ make
 ./bin/two_thread_barrier
 ```
 
-## Example of invalid output
+## Example incorrect synchronization
 
-This is an example of an invalid execution trace for `N = 5` iterations.
+This is an example of an invalid execution trace when running the `two_thread_barrier` program.
 
 ``` text
 Two threads A and B doing 5 iterations each in lockstep.
@@ -164,10 +164,9 @@ Iteration 2
   B <===== ERROR: should have been A
 ```
 
-## Example of valid output
+## Example of correct synchronization
 
-
-This is an example of a valid  execution trace for `N = 5` iterations.
+This is an example of a valid execution trace when running the `two_thread_barrier` program.
 
 ``` text
 Two threads A and B doing 5 iterations each in lockstep.
@@ -197,7 +196,7 @@ Iteration 4
   A
   B
 
-SUCCESS: All iterations done!
+SUCCESS: All iterations done in lockstep!
 ```
 
 

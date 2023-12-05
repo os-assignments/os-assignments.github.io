@@ -24,19 +24,19 @@ Linux.
 
 In the `threads-and-synchronization/higher-grade/src` directory you find the following files. 
 
-n_thread_barrier.h
+n_barrier.h
 : Header file with the API to the n thread barrier. Here you must 
 
-n_thread_barrier.c
+n_barrier.c
 : The implementation of the n thread barrier. 
 
-n_thread_barrier_test.c
+n_barrier_test.c
 : A program testing the implemented n thread barrier. 
 
 
 ## The barrier API
 
-The n thread barrier API is defined in `n_thread_barrier.h`.
+The n thread barrier API is defined in `n_barrier.h`.
 
 ``` C 
 /**
@@ -75,11 +75,11 @@ void barrier_wait(barrier_t *barrier);
 
 ## Implementing the barrier API
 
-Your task is to implement the barrier API in the `n_thread_barrier.c` file. 
+Your task is to implement the barrier API in the `n_barrier.c` file. 
 
 ## The barrier structure
 
-In `n_thread_barrier.h` you find the declaration of the `barrier_t` structure. 
+In `n_barrier.h` you find the declaration of the `barrier_t` structure. 
 
 ``` C
 typedef struct {
@@ -125,7 +125,7 @@ if (pthread_mutex_init(&mutex, NULL) < 0) {
 
 ## Testing the barrier API implementation 
 
-In `n_thread_barrier_test.c` you find a working program testing your implementation. 
+In `n_barrier_test.c` you find a working program testing your implementation. 
 
 - The threads are created in the `main` function.
 - Each thread executes the `thread` function.  In the `thread` function: 
@@ -146,12 +146,12 @@ make
 , and run the test program: 
 
 ``` text
-./bin/n_thread_barrier_test
+./bin/n_barrier_test
 ```
 
 ## Configuration
 
-In the beginning of `n_thread_barrier_test.c` you find the following definitions.
+In the beginning of `n_barrier_test.c` you find the following definitions.
 
 ``` text 
 #define ITERATIONS      10 // The number of iterations executed by each thread.
@@ -166,7 +166,7 @@ Experiment by changing the above values.
 
 ## Example of incorrect barrier synchronization
 
-This is an example of incorrect barrier synchronization.
+This is an example of incorrect barrier synchronization when running the `n_barrier_test` program.
 
 ``` text
 5 threads T0, ..., T4 doing 3 iterations each in lockstep.
@@ -189,7 +189,7 @@ Iteration 1
 
 ## Example of correct barrier synchronization
 
-This is an example of correct barrier synchronization.
+This is an example of correct barrier synchronization when running the `n_barrier_test` program.
 
 ``` text
 5 threads T0, ..., T4 doing 3 iterations each in lockstep.
@@ -218,7 +218,7 @@ Iteration 2
   T4
   T3
 
-SUCCESS: All iterations done!
+SUCCESS: All iterations done in lockstep!
 ```
 
 ## Code grading questions
