@@ -1,6 +1,6 @@
 ---
 title: Git and GitHub
-weight: 20
+weight: 40
 ---
 
 ![](/v1/images/prerequisites/git-and-github/git-github.jpg?width=400px)

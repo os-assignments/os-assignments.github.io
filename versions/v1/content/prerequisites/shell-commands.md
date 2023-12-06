@@ -1,6 +1,6 @@
 ---
 title: Useful shell commands
-weight: 50
+weight: 30
 ---
 
 ## Gnome
@@ -751,13 +751,13 @@ man man
 A summary of useful control keys when reading man pages.
 
 
-| Key            | Behavior                         |
-| :------------: | ----------                        |
-| q              | Quit and get back to the terminal |
+|      Key       | Behavior                          |
+| :------------: | --------------------------------- |
+|       q        | Quit and get back to the terminal |
 | Space bar or F | Move forward one page             |
-| D              | Move forward half a page          |
-| B              | 	Move backwards one page          |
-| U              | Move backwards half a page        |
+|       D        | Move forward half a page          |
+|       B        | Move backwards one page           |
+|       U        | Move backwards half a page        |
 
 ## Learn more
 

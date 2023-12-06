@@ -1,6 +1,6 @@
 ---
 title: C programming
-weight: 40
+weight: 60
 archetype: chapter
 ---
 

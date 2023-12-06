@@ -64,7 +64,7 @@ If you haven't done so already, you must [clone](clone-repository) the
 
 If you don't have Mars installed on your private computer, you can [log in to the department Linux system][dep-linux] and start Mars from the Applications menu under Programming.
 
-[dep-linux]: /prerequisites/linux/department-linux-system/
+[dep-linux]: /prerequisites/department-linux-system/
 
 ![](/v1/images/mars/Gnome_Applications_Programming_Mars.png)
 

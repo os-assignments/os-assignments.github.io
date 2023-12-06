@@ -500,3 +500,10 @@ img.uu-full-logo {
     margin-bottom: 3em;
 
 }
+
+
+#R-body-inner article h1:first-of-type+p a img,
+#R-body-inner article h1:first-of-type+h2+p a img {
+    margin-bottom: 3em;
+    margin-top: 2em;
+}

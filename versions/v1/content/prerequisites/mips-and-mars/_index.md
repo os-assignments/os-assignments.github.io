@@ -1,7 +1,7 @@
 ---
 title: Mips and Mars
 archetype: chapter
-weight: 30
+weight: 50
 ---
 
 In order to study how the operating system interacts with the

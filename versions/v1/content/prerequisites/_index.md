@@ -1,6 +1,6 @@
 ---
 title: Prerequisites 
-weight: 30
+weight: 20
 archetype: chapter
 ---
 

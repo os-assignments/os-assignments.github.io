@@ -74,49 +74,6 @@ principles of operating systems.
 In the the operating systems courses at Uppsala University both Unix and Linux
 will be used to introduce the basic principles of operating systems. 
 
-## Supported platforms for programming assignments
-
-To edit and execute Mips assembly programs we will use [Mars][mars] (Mips
-Assembler and Runtime Simulator). 
-
-- Mars is available on the [department Linux system][dep-linux]. 
-- Mars will run on any system (including Windows) as long as you have [Java
-installed][java-install]. If you prefer, you may [download][download] and
-install Mars on your private computer.
-
-[mips]: https://en.wikipedia.org/wiki/MIPS_instruction_set
-
-[mars]: http://courses.missouristate.edu/kenvollmar/mars/
-
-[java]: https://en.wikipedia.org/wiki/Java_(software_platform)
-
-[java-install]: https://java.com/en/download/help/index_installing.xml
-
-[download]: http://courses.missouristate.edu/KenVollmar/mars/download.htm
-
-The C programming assignments have been developed and tested on [macOS][macOS] and the
-[department Linux system][dep-linux]. 
-
-- In practice this means that you should be able to do the C programming
-assignments on any computer running macOS or Linux. 
-
-
-If you are using Windows you could try to install out the [Windows subsystem for Linux][wsl]. 
-If you don't want to install Linux on your computer, you can try to install
-[VirtualBox][virtualbox] and run a virtual Linux machine. 
-This [tutorial][installing-ubuntu-on-virtual-box] will cover how to install VirtualBox and set up your first virtual
-machine, show you how to get Ubuntu and prepare for installation, and walk you
-through an installation of Ubuntu.
-
-[macOS]: https://en.wikipedia.org/wiki/MacOS
-[dep-linux]: prerequisites/linux/department-linux-system/
-[wsl]: https://learn.microsoft.com/en-us/windows/wsl/about
-
-[virtualbox]: https://en.wikipedia.org/wiki/VirtualBox
-[installing-ubuntu-on-virtual-box]: http://www.wikihow.com/Install-Ubuntu-on-VirtualBox
-
-
-
 ## Menu
 
 To the left of each page you find the menu. If the menu is hidden, press the {{%
