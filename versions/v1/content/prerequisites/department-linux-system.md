@@ -3,9 +3,10 @@ title: The department Linux system
 weight: 10
 ---
 
-Here you will find information on how to log in to the University's Linux system
-from one of the computer rooms for students on campus Ångströmlaboratoriet
+Here you find information on how to log in to the University's Linux system
+from one of the computer rooms for students on [Campus Ångströmlaboratoriet][campus].
 
+[campus]: https://www.uu.se/en/campus/angstrom-laboratory
 ## Windows in all computer rooms
 
 In all computer rooms on campus Ångstrumslaboratoriet you find computers with
