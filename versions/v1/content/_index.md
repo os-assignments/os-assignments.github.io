@@ -91,3 +91,13 @@ At the bottom of the menu you see two icons.
 - Use {{% icon icon="tint" %}} to select between viewing in dark or light mode. 
 - Use {{% icon history %}} to clear the {{% icon check %}} markings of the pages
   you have visited. 
+
+## Author
+
+This webpage and all assignments have been created by [Karl Marklund][km] at the
+[Department of information technology][it], [Uppsala university][uu]. The
+original version of the `mutex.c` assignment was contributed by [Nikos
+Nikoleris][nn] when he worked as TA on the courses during his time as a PhD student.
+
+[km]: https://www.katalog.uu.se/profile/?id=N2-482
+[nn]: https://www.arm.ecs.soton.ac.uk/people/dr-nikos-nikoleris/
