@@ -13,12 +13,12 @@ Windows.
 
 ![Computer screen, keyboard and mouse](/v1/images/prerequisites/linux/hus-10-pc.jpg?width=400px)
 
-## Linux med ThinLinc
+## Access Linux using ThinLinc
 
 On campus Ångströmlaboratoiet there are a number of large computers ([servers][server]) running
 Linux somewhere in a basement. As a student, you will never physically interact
 with these server computers.  Instead, you log in to these servers from Windows
-to get accerss to the Linux desktop environment on the same screen as Windows. The system used
+to get access to the Linux desktop environment on the same screen as Windows. The system used
 for this is called [ThinLinc][thinlinc].
 
 
