@@ -16,9 +16,14 @@ university][uu].
 - Our studies will be based on principles of the [Unix](#unix) and
   [Linux](#linux) operating systems.
 - For all assignments, you will [use Git to clone provided source code from repositories on GitHub][git/github]. 
-- [Mips assembly][mips] will be used to study the fundamental principles of how the operating system interacts with the hardware.
-- [C programming][c] in an Linux or macOS environment will be used to further study a few important concepts.
+- [Mips assembly][mips] will be used to study the fundamental principles of how
+  the operating system interacts with the hardware. To edit and execute Mips assembly programs we will use [Mars][mars] (Mips
+Assembler and Runtime Simulator). 
+- [C programming][c] in an [Linux or macOS](supported-systems) environment will be used to further study a few important concepts.
 - [Make][make] will be used to compile all C programming assignments. 
+
+
+[mars]: http://courses.missouristate.edu/kenvollmar/mars/
 
 [make]: https://en.wikipedia.org/wiki/Make_(software)
 
