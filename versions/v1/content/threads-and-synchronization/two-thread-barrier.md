@@ -87,7 +87,7 @@ predict this output? Why?
 
 ## Rendezvous
 
-Rendezvous or rendezvous (French pronunciation: [ʁɑ̃devu]) refers to a planned
+Rendezvous or rendez-vous (French pronunciation: [ʁɑ̃devu]) refers to a planned
 meeting between two or more parties at a specific time and place.
 [^wp-rendezvous]
 

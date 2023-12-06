@@ -22,10 +22,11 @@
 
 #R-header-wrapper,
 #R-homelinks,
-#R-content-wrapper > * {
-    border-inline-end-style: solid; 
+#R-content-wrapper>* {
+    border-inline-end-style: solid;
     border-inline-end-width: 0px;
 }
+
 #R-homelinks.default-animation {
     background-color: red;
     //color: yellow;
@@ -43,7 +44,12 @@
     border-bottom: 4px solid var(--INTERNAL-MENU-SECTION-ACTIVE-CATEGORY-color);
 }
 
-h1, h2, h3, .site-title, .sub-title, #R-header a {
+h1,
+h2,
+h3,
+.site-title,
+.sub-title,
+#R-header a {
     text-transform: none;
     font-family: "Work Sans", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
     font-weight: 450;
@@ -51,15 +57,17 @@ h1, h2, h3, .site-title, .sub-title, #R-header a {
 
 
 @media screen and (max-width: 600px) {
- h1 {
-    font-size: 30px;
-    }
- h2 {
+    h1 {
         font-size: 30px;
     }
- h3 {
+
+    h2 {
+        font-size: 30px;
+    }
+
+    h3 {
         font-size: 20px;
-    }    
+    }
 }
 
 /*
@@ -68,7 +76,18 @@ h1, h2, h3, .site-title {
 }
 */
 
-.topbar-breadcrumbs a:hover, .topbar-breadcrumbs a:active, .topbar-breadcrumbs a:focus, .topbar-breadcrumbs a:hover *, .topbar-breadcrumbs a:active *, .topbar-breadcrumbs a:focus *, .topbar-content a:hover, .topbar-content a:active, .topbar-content a:focus, article a:hover, article a:active, article a:focus  {
+.topbar-breadcrumbs a:hover,
+.topbar-breadcrumbs a:active,
+.topbar-breadcrumbs a:focus,
+.topbar-breadcrumbs a:hover *,
+.topbar-breadcrumbs a:active *,
+.topbar-breadcrumbs a:focus *,
+.topbar-content a:hover,
+.topbar-content a:active,
+.topbar-content a:focus,
+article a:hover,
+article a:active,
+article a:focus {
     text-decoration: none;
 }
 
@@ -118,12 +137,12 @@ h2.subtitle {
     color: var(--SUBTITLE-color);
 }
 
-div.box ,
+div.box,
 pre:not(.mermaid) {
 
     border-radius: 0px;
     color: blue;
-} 
+}
 
 .copy-to-clipboard-button {
     bbackground-color: var(--INTERNAL-CODE-BLOCK-BG-color);
@@ -161,6 +180,7 @@ dt {
 dd {
     list-style: none;
 }
+
 /**** BOLD STUFF *****/
 
 b,
@@ -172,7 +192,7 @@ th {
 
 b,
 strong,
-label{
+label {
     color: var(--STRONG-color);
 }
 
@@ -183,11 +203,12 @@ div.note {
 
 }
 
-div.note p:empty + ul {
+div.note p:empty+ul {
     margin-top: 1rem;
 
 }
-div.note ul +  p:empty {
+
+div.note ul+p:empty {
     margin-top: -1rem;
 
 }
@@ -216,7 +237,7 @@ div.note.warning p.title {
 }
 
 
-div.note  p.title {
+div.note p.title {
     background-color: #6AB0DE;
     color: white;
     padding-left: 15px;
@@ -227,7 +248,7 @@ div.note  p.title {
 
 }
 
-div.box > .box-content {
+div.box>.box-content {
     border-radius: 0px;
 }
 
@@ -248,49 +269,50 @@ div.note p {
 
 ul.mars {
     padding-left: 0px;
-    border: 0px solid #272822; 
+    border: 0px solid #272822;
     border-radius: 5px;
     margin-top: 1.5rem;
     border-color: var(--INTERNAL-CODE-BLOCK-BORDER-color);
-    
+
     // background-color: #272822;
 }
 
-ul.mars > li {
+ul.mars>li {
     margin-left: 0px;
     padding-left: 34px;
-    vertical-align: middle;;
+    vertical-align: middle;
+    ;
     list-style: none;
 
 }
 
-ul.mars.pause > li {
+ul.mars.pause>li {
     background: url('images/mars/icons/Pause22.png') no-repeat left top;
 
 }
 
 
-ul.mars.play > li {
+ul.mars.play>li {
     background: url('images/mars/icons/Play22.png') no-repeat left top;
 
 }
 
-ul.mars.assemble > li {
+ul.mars.assemble>li {
     background: url(images/mars/icons/Assemble22.png) no-repeat left top;
 
 }
 
-ul.mars.step-forward > li {
+ul.mars.step-forward>li {
     background: url(images/mars/icons/StepForward22.png) no-repeat left top;
 
 }
 
-ul.mars.step-backward > li {
+ul.mars.step-backward>li {
     background: url(images/mars/icons/StepBack22.png) no-repeat left top;
 
 }
 
-ul.mars.stop > li {
+ul.mars.stop>li {
     background: url(images/mars/icons/Stop22.png) no-repeat left top;
 }
 
@@ -305,53 +327,54 @@ body:not(.print) #R-body-inner.narrow h1 {
 
 /***** Only show menu sub items under the active parent ******/
 
-#R-sidebar div.menu-item input:checked + div .fa-caret-right {
-  display: none;
-}
-
-#R-sidebar div.menu-item input:checked + div .fa-caret-down {
-    display: inline-block;
-}
-
-#R-sidebar div.menu-item input + div .fa-caret-right {
-    display: inline-block;
-  }
-  
-  #R-sidebar div.menu-item input + div .fa-caret-down {
-      display: none;
-  }
-
-
-
-#R-sidebar ul.collapsible-menu > li  input + label > .fa-caret-down {
+#R-sidebar div.menu-item input:checked+div .fa-caret-right {
     display: none;
 }
-#R-sidebar ul.collapsible-menu > li input + label > .fa-caret-right {
+
+#R-sidebar div.menu-item input:checked+div .fa-caret-down {
     display: inline-block;
 }
 
-#R-sidebar ul.collapsible-menu  li  input:checked div label  .fa-caret-down {
+#R-sidebar div.menu-item input+div .fa-caret-right {
+    display: inline-block;
+}
+
+#R-sidebar div.menu-item input+div .fa-caret-down {
+    display: none;
+}
+
+
+
+#R-sidebar ul.collapsible-menu>li input+label>.fa-caret-down {
+    display: none;
+}
+
+#R-sidebar ul.collapsible-menu>li input+label>.fa-caret-right {
+    display: inline-block;
+}
+
+#R-sidebar ul.collapsible-menu li input:checked div label .fa-caret-down {
     display: inline-block;
     background-color: white;
 }
 
-#R-sidebar ul.collapsible-menu > li (input:checked + label) > .fa-caret-right {
+#R-sidebar ul.collapsible-menu>li (input:checked + label)>.fa-caret-right {
     display: none;
 }
- 
+
 
 #R-sidebar .padding {
     padding: 0 1rem;
 }
 
-#R-sidebar ul.morespace > li > *,
-#R-sidebar ul.collapsible-menu li.active > a {
+#R-sidebar ul.morespace>li>*,
+#R-sidebar ul.collapsible-menu li.active>a {
     padding-left: 1.5em;
 
 }
 
 
-#R-sidebar ul.collapsible-menu > li > label {
+#R-sidebar ul.collapsible-menu>li>label {
     padding-inline-start: 0.5rem;
 }
 
@@ -366,7 +389,7 @@ body:not(.print) #R-body-inner.narrow h1 {
 
 
 
-#R-sidebar ul.collapsible-menu > li a i {
+#R-sidebar ul.collapsible-menu>li a i {
     padding-left: 1em;
 }
 
@@ -403,7 +426,7 @@ body:not(.print) #R-body-inner.narrow article.chapter p {
     padding-top: 1em;
 }
 
-article.chapter h1 + img {
+article.chapter h1+img {
     padding-top: 1em;
 }
 
@@ -441,7 +464,7 @@ figure figcaption .attribution {
 }
 
 figure {
-    margin: 0px; 
+    margin: 0px;
     margin-block-start: 1.5em;
     margin-block-end: 0.8em;
 }
@@ -454,7 +477,26 @@ figure {
 
 code.copy-to-clipboard-code {
     white-space: normal;
-    max-width:100%; 
-    word-break:break-all;
-    word-wrap:break-word;
+    max-width: 100%;
+    word-break: break-all;
+    word-wrap: break-word;
+}
+
+/* 
+
+https:
+//stackoverflow.com/questions/2182716/is-it-possible-to-set-a-src-attribute-of-an-img-tag-in-css
+
+http: //www.audenaerde.org/csstricks.html#
+
+*/
+
+img.uu-full-logo {
+    width: 0px !important;
+    height: 0px !important;
+    padding: 190px 200px 0px 0px;
+    background: var(--UU-FULL-LOGO);
+    background-size: auto;
+    margin-bottom: 3em;
+
 }

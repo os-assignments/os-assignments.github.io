@@ -10,7 +10,7 @@ hardware, [Mips][mips] assembly will be used.
 ![](/v1/images/prerequisites/mips-mars/hello-world-source.png)
 
 To edit and execute Mips assembly programs we will use [Mars][mars] (Mips
-Assembler and Runtime Simulator). Mars is available on the department Linux System.
+Assembler and Runtime Simulator). Mars is available on the department Linux system.
 
 Mars will run on any system (including Windows) as long as you
 have [Java installed][java-install]. If you prefer, you may [download][download]
