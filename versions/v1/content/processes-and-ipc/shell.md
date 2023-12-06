@@ -24,23 +24,74 @@ will be useful. Before you continue, make sure you have a basic understanding of
 at least the following system calls: `fork()`, `execvp()`, `getpid()`, `getppid()`,
 `wait()`, `pipe()`, `dup2()` and `close()`.
 
+## Files to use
+
+In the `higher-grade/src` directory you find the following files. 
+
+parser.h
+: Header file for a provided command line parser. 
+
+parser.c
+: Implementation of the provided command line parser. 
+
+shell.c
+: Here you will implement your shell. 
+
+## Compile and run 
+
+Navigate to the `higher-grade` directory. Use make to compile.
+
+``` text
+$ make
+```
+
+Run the shell.
+
+``` text
+$ ./bin/shell
+```
+
+The provided version of the shell is able to execute single commands, for
+example the `ls`.
+
+``` text
+>>> ls
+>>> Makefile	bin		obj		src
+````
+
+Note that something is wrong with the shell prompt `>>> `. When executing a
+command, the prompt is printed immediately after the command, and not after the
+command has completed. This is something you need to fix.  
+
+Let's try to pipe two commands together. 
+
+``` text
+>>> ls | nl
+>>> Makefile	bin		obj		src
+```
+
+When trying to pipe two commands together, only the first command is executed.
+The second command is not executed. The output of the first command in not piped
+to as input to the second command. This is something you need to fix. 
+
 ## Grade 4
 
-For grade 4 your shell must be able to handle a single command and a pipeline with two commands.
+For grade 4 your shell must be able to handle a single command and a pipeline
+with two commands. When executing a command line, the prompt `>>> ` &nbsp; must be
+printed after the execution of the command line has finished. 
 
 ## Grade 5
 
-For grade 5 your shell must be able to handle a single command or a pipeline
-with two, three or more commands. 
+In addition to the requirement for grade 4, the grade 5 shell must be able to
+handle a pipeline with two, three or more commands. 
 
-You must also make sure not to leak resources.
-Especially you must make sure, that after a command line has finished, all
+You must also make sure that after a command line has finished, all
 descriptor to created pipes are closed. Otherwise the operating system will not
 be able to deallocate the pipes and potentially re-use the descriptor values. 
 
 ## Command data
 
-In the file `processes-and-ipc/higher-grade/src/parser.h` the following  C structure is defined. 
+In the file `parser.h` the following  C structure is defined. 
 
 ``` C
 /**
@@ -59,7 +110,7 @@ line.
 
 ## Command array
 
-In the file `processes-and-ipc/higher-grade/src/shell.c` command data for all commands in
+In the file `shell.c` command data for all commands in
 a command pipeline is stored in a global array.
 
 ``` C
@@ -72,7 +123,7 @@ cmd_t commands[MAX_COMMANDS];
 
 ## Parser
 
-In `processes-and-ipc/higher-grade/src/parser.h ` you find the following prototype. 
+In `parser.h ` you find the following prototype. 
 
 ``` C
 /**
@@ -103,7 +154,7 @@ of pipe 2.
 
 ## parser.c
 
-In the `processes-and-ipc/higher-grade/src/parser.c` file you must complete the
+In the `parser.c` file you must complete the
 implementation of the following function. 
 
 ``` C
@@ -119,7 +170,7 @@ position_t cmd_position(int i, int n) {
 
 ## shell.c
 
-Use `processes-and-ipc/higher-grade/src/shell.c` to implement your solution. This file
+Use `shell.c` to implement your solution. This file
 already implements the most basic functionality but it is far from complete.
 
 ## Feel free to make changes 

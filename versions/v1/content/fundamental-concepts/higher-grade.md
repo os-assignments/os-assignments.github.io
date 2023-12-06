@@ -111,12 +111,12 @@ the other is marked as **ready** to run.
 In this simplified version of a  a multiprogramming system with only two jobs,
 the following state transitions are possible. 
 
-| From       | To        | Description                                                                                                        |
-| :--------: | :-------: | -------------                                                                                                      |
-| Running    | Waiting   | When the running job requests I/O, the job changes state from running to waiting.                                  |
-| Ready      | Running   | When the running job requests I/O, the other job changes state from ready to running.                              |
-| Running    | Ready     | When an I/O requests completes, the running job changes state from running to ready.                               |
-| Waiting    | Running   | When an I/O requests completes, the job waiting for the request to complete changes state from waiting to running. |
+|  From   |   To    | Description                                                                                                        |
+| :-----: | :-----: | ------------------------------------------------------------------------------------------------------------------ |
+| Running | Waiting | When the running job requests I/O, the job changes state from running to waiting.                                  |
+|  Ready  | Running | When the running job requests I/O, the other job changes state from ready to running.                              |
+| Running |  Ready  | When an I/O requests completes, the running job changes state from running to ready.                               |
+| Waiting | Running | When an I/O requests completes, the job waiting for the request to complete changes state from waiting to running. |
 
 In the below diagram a sequence of five events shows how the two jobs change
  states.
@@ -156,13 +156,13 @@ fields in the context is shown in the column **Assembly notation** in the
 following table. 
 
 
-| Field    | Offset    | Address         | Assembly notation |
-| :------: | :-------: | --------------- | ----------------- |
-| `$pc`    | `0`       | `$t0 + 0`       | `0($t0)`          |
-| `$v0`    | `4`       | `$t0 + 4`       | `4($t0)`          |
-| `$a0`    | `8`       | `$t0 + 8`       | `8($t0)`          |
-| `$a1`    | `12`      | `$t0 + 12`      | `12($t0)`         |
-| `$s0`    | `16`      | `$t0 + 16`      | `16($t0)`         |
+| Field | Offset | Address    | Assembly notation |
+| :---: | :----: | ---------- | ----------------- |
+| `$pc` |  `0`   | `$t0 + 0`  | `0($t0)`          |
+| `$v0` |  `4`   | `$t0 + 4`  | `4($t0)`          |
+| `$a0` |  `8`   | `$t0 + 8`  | `8($t0)`          |
+| `$a1` |  `12`  | `$t0 + 12` | `12($t0)`         |
+| `$s0` |  `16`  | `$t0 + 16` | `16($t0)`         |
 
 
 ### Examples
@@ -194,9 +194,9 @@ If `ca` is the address of the context array and `jid` the job id, the following 
 how to calculate the address to the context pointer the job with id `jid`.
 
 | Job id (`jid`) | Offset to context pointer | Address of context pointer |
-| :-------:      | -----                     | ---                        |
-| `0`            | `0 == jid * 4`            | `ca + jid * 4`             |
-| `1`            | `4 == jid * 4`            | `ca + jid * 4`             |
+| :------------: | ------------------------- | -------------------------- |
+|      `0`       | `0 == jid * 4`            | `ca + jid * 4`             |
+|      `1`       | `4 == jid * 4`            | `ca + jid * 4`             |
 
 ### Example
 
@@ -241,10 +241,10 @@ previously been saved to memory are read from memory and restored.
 The kernel will implement the following system calls. 
 
 | System call code | Name     | Description                                   | Arguments                       | Return value                      |
-| :--------------: | ------   | ------------------------------------------    | -----------------               | -----                             |
-| `0`              | `getjid` | Get job id of the caller                      |                                 | `$a0` - job id of the caller      |
-| `12`             | `getc`   | Read a single character from the keyboard     |                                 | `$v0` - ASCII code of pressed key |
-| `8`              | `gets`   | Read a string of characters from the keyboard | $a0 = buffer, $a1 = buffer size |                                   |
+| :--------------: | -------- | --------------------------------------------- | ------------------------------- | --------------------------------- |
+|       `0`        | `getjid` | Get job id of the caller                      |                                 | `$a0` - job id of the caller      |
+|       `12`       | `getc`   | Read a single character from the keyboard     |                                 | `$v0` - ASCII code of pressed key |
+|       `8`        | `gets`   | Read a string of characters from the keyboard | $a0 = buffer, $a1 = buffer size |                                   |
 
 ### The teqi instruction
 
@@ -366,7 +366,7 @@ If you haven't done so already, you must [clone](clone-repository) the
 ## Provided code
 
 You don't have to start from scratch but can use the provided 
-`fundamental-os-concepts/higher-grade/multiprogramming.s` as a starting point. 
+`higher-grade/multiprogramming.s` as a starting point. 
 
 ## Grade 4
 

@@ -38,7 +38,7 @@ If you haven't done so already, you must [clone](clone-repository) the
 
 ## Open file
 
-Open the file `processes-and-ipc/mandatory/src/signals.c` in
+Open the file `mandatory/src/signals.c` in
 the [source code editor][source-code-editor] of your choice.
 
 [source-code-editor]: https://en.wikipedia.org/wiki/Source_code_editor
@@ -134,14 +134,14 @@ entity and needs resources such as CPU time, memory etc to execute.
 ## The make build tool
 
 The [make] build tool is used together with the [Makefile] to compile all programs in
-the `processes-and-ipc/mandatory/src` directory.
+the `mandatory/src` directory.
 
 [make]: https://en.wikipedia.org/wiki/Make_(software)
 [Makefile]: https://en.wikipedia.org/wiki/Makefile
 
 ## Compile all programs
 
-From a terminal, navigate to the `processes-and-ipc/mandatory` directory. To compile all
+From a terminal, navigate to the `mandatory` directory. To compile all
 programs, type `make` and press enter.
 
 ``` text

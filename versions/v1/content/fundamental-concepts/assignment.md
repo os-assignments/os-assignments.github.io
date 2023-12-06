@@ -74,7 +74,7 @@ Mars should now start and you should see something similar to this.
 
 ### Open file
 
-Open the file `fundamental-os-concepts/mandatory/exceptions-and-interrupts.s` in Mars.
+Open the file `mandatory/exceptions-and-interrupts.s` in Mars.
 
 
 ## Study the source code

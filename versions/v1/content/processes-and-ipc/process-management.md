@@ -78,7 +78,7 @@ calling `fork`, the program can use the fork return value to tell whether
 
 ## Template program
 
-In the file `processes-and-ipc/examples/src/fork-template.c` you find a template for a
+In the file `examples/src/fork-template.c` you find a template for a
 typical program using  `fork`.
 
 {{< highlight c "linenos=inline" >}}
@@ -161,7 +161,7 @@ is the process ID (PID) of the newly created child process.
 
 ## A first fork example
 
-In the file `processes-and-ipc/examples/fork.c` you find a program with the following
+In the file `examples/fork.c` you find a program with the following
 `main` function. 
 
 
@@ -207,7 +207,7 @@ void parent(pid_t pid) {
 
 Both parent and child prints two messages and then
 terminates. 
-Navigate to the directory `processes-and-ipc/examples`. Compile using make. 
+Navigate to the `examples` directory. Compile using make. 
 
 ``` text
 make
@@ -323,7 +323,7 @@ only if WIFEXITED returned true.
  
 ## Example using wait
 
-In the `processes-and-ipc/examples/fork_exit_wait.c` example program the parent execute
+In the `examples/fork_exit_wait.c` example program the parent execute
 the `parent` function. 
 
 {{< highlight c "linenos=inline" >}}
@@ -356,7 +356,7 @@ itself. As a consequence the child should:
 
 ## Example using wait to obtain the exit status of the child
 
-In the `processes-and-ipc/examples/fork_exit_wait_status.c` example program the parent execute
+In the `examples/fork_exit_wait_status.c` example program the parent execute
 the `parent` function. 
 
 {{< highlight c "linenos=inline" >}}
@@ -427,7 +427,7 @@ A terminated process is said to be a zombie or defunct until the parent does
 
 ## An example with a zombie process
 
-In the `processes-and-ipc/examples/fork_zombie.c` example program the child terminates
+In the `examples/fork_zombie.c` example program the child terminates
 before the parent does `wait` on the child and becomes a zombie process. 
 The parent execute
 the `parent` function. 
@@ -492,7 +492,7 @@ of the child using `wait`. The child process has now become a zombie process.
 ## Monitor 
 
 Open a second terminal and navigate to the `processes-and-ipc` directory. 
-The `processes-and-ipc/tools/monitor` tool can be used to view process status information
+The `tools/monitor` tool can be used to view process status information
 about process. 
 Use the `--help` flag to see the documentation.  
 
@@ -601,7 +601,7 @@ If you don’t want to execute the same program in both the parent and the child
 you will need to use a system call of the `exec` family. The `exec` system calls
 will replace the currently executing program with a new executable.
 
-In `processes-and-ipc/examples/src/child.c` you this small program. 
+In `examples/src/child.c` you this small program. 
 
 ``` C
 #include <stdio.h>    // puts(), printf(), perror(), getchar()
@@ -654,7 +654,7 @@ After you press any key in the terminal the program terminates.
 ```
 
   
-The `processes-and-ipc/examples/src/fork_exec.c` program uses `execv` to make the child process execute the `processes-and-ipc/examples/bin/child` executable. After fork the child executes the `child` functions. 
+The `examples/src/fork_exec.c` program uses `execv` to make the child process execute the `examples/bin/child` executable. After fork the child executes the `child` functions. 
 
 {{< highlight c "linenos=inline" >}}
 void child() {

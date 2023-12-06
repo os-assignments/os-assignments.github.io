@@ -14,7 +14,7 @@ child processes where the children communicate using a pipe.
 
 ## Open a terminal
 
-Open a terminal and navigate to the `processes-and-ipc/mandatory` directory.
+Open a terminal and navigate to the `mandatory` directory.
 
 ## List directory contents (ls)
 
@@ -197,7 +197,7 @@ Don't forget to close unused pipe file descriptors, otherwise a reader or writer
 might be blocked .
 
 | Attempt | Conditions                     | Result                     |
-|---------|--------------------------------|----------------------------|
+| ------- | ------------------------------ | -------------------------- |
 | Read    | Empty pipe, writers attached   | Reader blocked             |
 | Read    | Empty pipe, no writer attached | End Of File (EOF) returned |
 | Write   | Full pipe, readers attached    | Writer blocked             |
@@ -218,7 +218,7 @@ You should check the return values of all system calls to detect errors. On erro
 
 ## pipeline.c
 
-Use the file `processes-and-ipc/mandatory/pipeline.c` to implement your solution.
+Use the file `src/pipeline.c` to implement your solution.
 
 - You must add code the the `main` function. You must add code here.
 - After fork, Child A should execute the `child_a` function. You must add code here.
