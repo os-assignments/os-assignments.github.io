@@ -8,7 +8,7 @@ Linux and macOS natively supports different types of semaphores. In order to
 have a single (simple) semaphore API that works on both Linux and macOS you will
 use a portable semaphore library named `psem`.
 
-In the `threads-and-synchronization/mandatory/psem/psem.h` header file you find the documentation of the
+In the `psem/psem.h` header file you find the documentation of the
 portable semaphore API.
 
 ## Example usage
@@ -36,13 +36,13 @@ int main(void) {
 
 ## Example program 
 
-In `threads-and-synchronization/mandatory/src/psem_test.c` you find a complete example program with
+In `examples/src/psem_test.c` you find a complete example program with
 two threads (main and a pthread) that synchronize their execution using a `psem`
 semaphore. 
 
 ### Compile
 
-In the terminal, navigate to the `threads-and-synchronization/mandatory` directory. Use
+In the terminal, navigate to the `examples` directory. Use
 [make][wp-make] to compile the program.
 
 [wp-make]: https://en.wikipedia.org/wiki/Make_(software)

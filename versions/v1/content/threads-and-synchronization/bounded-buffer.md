@@ -51,19 +51,19 @@ are the files you will use to implement and test your implementation.
 
 bounded_buffer.h
 : The internal representation of the bounded buffer and the public API is
-defined in `threads-and-synchronization/mandatory/src/bounded_buffer.h`.
+defined in `mandatory/src/bounded_buffer.h`.
 
 bounded_buffer.c
 : The implementation of the API will be in the
-  `threads-and-synchronization/mandatory/src/bounded_buffer.c` file.
+  `mandatory/src/bounded_buffer.c` file.
 
 bounded_buffer_test.c
 : To test your various aspect of your implementation a collection of tests are provided in the
-  `threads-and-synchronization/mandatory/src/bounded_buffer_test.c` file. Here you can add your own
+  `mandatory/src/bounded_buffer_test.c` file. Here you can add your own
   tests if you want. 
   
 bounded_buffer_stress_test.c
-: The `threads-and-synchronization/mandatory/src/bounded_buffer_test.c` program make it easy to
+: The `mandatory/src/bounded_buffer_test.c` program make it easy to
   test the implementation for different sizes of the buffer and different numbers
   of producers and consumers.
   
@@ -213,7 +213,7 @@ Use one **semaphore** named **data** to count the number of data items in the bu
 
 A new bounded buffer with 10 elements will be represented as follows. 
 
-<img src="/v1/images/threads-and-synchronization/buffer-internals-example.png" style="width:444px;"/>
+<img src="/v1/images/buffer-internals-example.png" style="width:444px;"/>
 
 The `empty` semaphore counts the number of
 empty slots in the buffer and is initialized to `10`. Initially there are no
@@ -238,11 +238,11 @@ before you continue.
 You will complete the implementaion step by step.
 
 For each step you will need to add code to a single function in the 
-`threads-and-synchronization/mandatory/src/bounded_buffer.c` source file. For each step there
-is also a test in the  `threads-and-synchronization/mandatory/src/bounded_buffer_test.c` source
+`mandatory/src/bounded_buffer.c` source file. For each step there
+is also a test in the  `mandatory/src/bounded_buffer_test.c` source
 file that should pass without any failed assertions. 
 
-In the terminal, navigate to the `threads-and-synchronization/mandatory` directory. Use [make][wp-make] to compile the program.
+In the terminal, navigate to the `mandatory` directory. Use [make][wp-make] to compile the program.
 
 [wp-make]: https://en.wikipedia.org/wiki/Make_(software)
 
@@ -351,7 +351,7 @@ doesn't terminate you most likely have made a mistake with the synchronization o
 ## Stress testing 
 
 It is now time to test the bounded buffer with multiple concurrent producers and
-consumers. In `threads-and-synchronization/mandatory/src/bounded_buffer_stress_test.c` you find a
+consumers. In `mandatory/src/bounded_buffer_stress_test.c` you find a
 complete test program that creates:
 
 - a bounded buffer of size `s`
@@ -411,14 +411,14 @@ Note the `====> TEST SUCCESS <====` at the end.
 The default values for test parameters can be overridden using the following
 flags. 
 
-| Flag | Description                               | Argument         |
-|:----:|-------------------------------------------|------------------|
-| -s   | Size of the buffer                       | positive integer |
-| -p   | Number of producer threads                | positive integer |
-| -n   | Number of items produced by each producer | positive integer |
-| -c   | Number of consumer threads                | positive integer |
-| -m   | Number of items consumed by each consumer | positive integer |
-| -v   | Turns on verbose output                    | no argument      |
+| Flag  | Description                               | Argument         |
+| :---: | ----------------------------------------- | ---------------- |
+|  -s   | Size of the buffer                        | positive integer |
+|  -p   | Number of producer threads                | positive integer |
+|  -n   | Number of items produced by each producer | positive integer |
+|  -c   | Number of consumer threads                | positive integer |
+|  -m   | Number of items consumed by each consumer | positive integer |
+|  -v   | Turns on verbose output                   | no argument      |
    
 In the following example, the default buffer size 10 is changed to 3. 
 

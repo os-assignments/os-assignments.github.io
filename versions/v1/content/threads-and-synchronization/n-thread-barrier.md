@@ -22,7 +22,7 @@ Linux.
 
 ## Overview
 
-In the `threads-and-synchronization/higher-grade/src` directory you find the following files. 
+In the `higher-grade/src` directory you find the following files. 
 
 n_barrier.h
 : Header file with the API to the n thread barrier. Here you must 

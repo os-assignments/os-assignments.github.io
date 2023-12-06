@@ -46,7 +46,7 @@ the [Linux hosts][linux-hosts].
 ## Overview
 
 File to use
-: `threads-and-synchronization/mandatory/src/two_thread_barrier.c`
+: `mandatory/src/two_thread_barrier.c`
 
 Description
 : In this program, a process creates two threads A and B, and waits for their termination.
@@ -59,7 +59,7 @@ should not be restricted.
 
 ## Compile and run
 
-In the terminal, navigate to the `threads-and-synchronization/mandatory` directory. 
+In the terminal, navigate to the `mandatory` directory. 
 Use [make][wp-make] to compile the program.
 
 [wp-make]: https://en.wikipedia.org/wiki/Make_(software)

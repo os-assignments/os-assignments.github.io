@@ -48,9 +48,9 @@ execution contexts. Read the following manual pages.
 
 ### Example
 
-In `threads-and-synchronization/examples/src/contexts.c` you find an example program demonstrating
+In `examples/src/contexts.c` you find an example program demonstrating
 how to create and manipulate  execution contexts. 
-Study the source. To compile, navigate to `threads-and-synchronization/examples` in the terminal, type `make`
+Study the source. To compile, navigate to the `examples` directory in the terminal, type `make`
 and press enter.
 
 ``` text
@@ -65,7 +65,7 @@ To run:
 
 ## Get started 
 
-In `threads-and-synchronization/higher-grade/src` you find the following files. 
+In `higher-grade/src` you find the following files. 
 
 sthreads.h
 : Header file specifying the Simple Threads [API](https://en.wikipedia.org/wiki/Application_programming_interface).
@@ -80,7 +80,7 @@ Study the source and pay attention to all comments.
 
 ## First compile and test run
 
-In the terminal, navigate to the `threads-and-synchronization/higher-grade` directory. Use make to
+In the terminal, navigate to the `higher-grade` directory. Use make to
 compile. 
 
 ``` text
@@ -141,7 +141,7 @@ suspend the running thread and resume one of the threads in the ready queue.
 
 ### Timer example
 
-In `threads-and-synchronization/examples/src/timer.c` you find an example of how to set a timer.
+In `examples/src/timer.c` you find an example of how to set a timer.
 When the timer expires the kernel sends a signal to the process. A signal
 handler is used to catch the timer signal. 
 
