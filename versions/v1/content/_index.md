@@ -170,14 +170,14 @@ symbols are used in the main menu.
 </tr>
 </table>
 
-At the bottom of the main menu you see two icons. 
+At the bottom of the main menu you see follwing two buttons. 
 <table class="icon-list">
 <tr>
   <td>
  {{% icon icon="tint" %}}
   </td>
   <td>
-    Choose to view the website in dark mode or light mode.
+    Switch between viewing the website in dark mode or light mode.
   </td>
 </tr>
 <tr>
