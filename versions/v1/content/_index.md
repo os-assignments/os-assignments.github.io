@@ -97,6 +97,27 @@ At the bottom of the menu you see two icons.
 - Use {{% icon history %}} to clear the {{% icon check %}} markings of the pages
   you have visited. 
 
+## Shell commands and code snippets 
+
+Shell commands will be shown in boxes like this. 
+
+``` text
+make # Run make to compile
+```
+
+Code snippets will be shown in boxes like this. 
+
+``` C
+int a = 127;    // A global variable. 
+
+int main(void) {
+  int b = 42;   // A local variable.
+}
+```
+
+If you hover over boxes like these, the {{% icon icon="copy" %}} icon will appear in the upper
+right corner of the box. Press this icon to copy the context of the box. 
+
 ## Author
 
 This webpage and all assignments have been created by [Karl Marklund][km] at the

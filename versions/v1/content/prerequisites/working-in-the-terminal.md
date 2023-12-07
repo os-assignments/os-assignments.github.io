@@ -1,58 +1,13 @@
 ---
-title: Useful shell commands
+title: Working in the terminal
 weight: 30
 ---
 
-## Gnome
+![](/v1/images/prerequisites/linux/shell-example-session.png)
 
-When you [log in to the department Linux system using the ThinLinc client](department-linux-system) you will be using
-the [Gnome][gnome] graphical desktop environment.
-
-[thinlinc]: https://en.wikipedia.org/wiki/ThinLinc
-[gnome]: https://en.wikipedia.org/wiki/GNOME
-
-## The Gnome terminal
-
-You can open a terminal in two ways:
-
-* From the Applicatinos menu at the top left of the desktop:  **Applications** → **Accessories** → **Terminal**.
-* By pressing the keyboard shorcut **CTRL** + **ALT** + **T** .
-
-After a few seconds a new terminal window should open.
-
-![](/v1/images/prerequisites/linux/shell-and-terminal/terminal-1.png)
-
-In the upper left corner of the white area of the terminal window you see
-`abcd1234@arrhenius:~$ `. This it the shell prompt with your username on the form
-`abcd1234` and the name of the Linux server you are
-connected to, in this example `arrhenius`. The shell prompt you see might be
-different.
-
-## The shell prompt 
-
-In the above example, the prompt shows the username of the logged in user `abcd1234`
-together with the name of the physical Linux server `arrhenius` used. You should
-see your own user name. If you are logged into a different physical Linux server
-you will also see a different server name in the prompt.
-
-It is also possible to [tweak the prompt][tweak-prompt] to show custom
-information such as your username, local time etc.
-
-[tweak-prompt]: https://help.ubuntu.com/community/CustomizingBashPrompt
-
-## No shell prompt in instructions
-
-Since the appearance of the shell prompt might vary, in all further instructions
-the prompt `$` will be omitted and commands you enter att the shell prompt will be 
-presented in a box like this.
-
-``` text
-Example shell interaction
-```
-
-If you hover over the box above and press the {{% icon icon="copy" %}} icon in the upper right corner you copy the 
-text in the box and paste it at the shell prompt in your shell.  
-
+On this page your find a small collection of useful shell commands when working
+in the terminal. You will also learn about shell variables, the command
+history and how to read manual pages in the terminal. 
 
 ## Your username (whoami)
 

@@ -1,6 +1,6 @@
 ---
 title: The department Linux system
-weight: 10
+weight: 20
 ---
 
 Here you find information on how to log in to the University's Linux system
@@ -14,7 +14,7 @@ Windows.
 
 ![Computer screen, keyboard and mouse](/v1/images/prerequisites/linux/hus-10-pc.jpg?width=400px)
 
-## Access Linux using ThinLinc
+## ThinLinc
 
 On campus Ångströmlaboratoiet there are a number of large computers ([servers][server]) running
 Linux somewhere in a basement. As a student, you will never physically interact
@@ -22,13 +22,16 @@ with these server computers.  Instead, you log in to these servers from Windows
 to get access to the Linux desktop environment on the same screen as Windows. The system used
 for this is called [ThinLinc][thinlinc].
 
-
 [server]: https://en.wikipedia.org/wiki/Server_(computing)
 
 [thinlinc]: https://en.wikipedia.org/wiki/ThinLinc
 
-- To access the Linux system, you must first log into Windows and from
+{{% notice style="info" title="Access Linux from Windows" %}}
+
+To access the Linux system, you must first log into Windows and from
 Windows use ThinLinc Client to log in to a Linux server.
+
+{{% /notice %}}
 
 ## Log in to Windows
 
@@ -40,7 +43,6 @@ the form `abcd1234` and **Password A**.
 ## Software Center (ZENworks)
 
 Somewhere on the Windows desktop you will find **Software center (Zenworks)**.
-
 
 ![Software Center (Zenworks) icon on the Windows desktop](/v1/images/prerequisites/linux/software-center-icon.png?width=400px)
 
@@ -108,6 +110,65 @@ The department Linux system runs [Ubuntu Server 18.04 LTS][18-04-lts] using the
 [gnome-flashback]: https://linuxconfig.org/ubuntu-20-04-gnome-flashback-desktop-installation
 [numix]: https://numixproject.github.io/
 
+## The Gnome terminal
+
+You can open a terminal in two ways:
+
+* From the Applicatinos menu at the top left of the desktop:  **Applications** → **Accessories** → **Terminal**.
+* By pressing the keyboard shorcut **CTRL** + **ALT** + **T** .
+
+After a few seconds a new terminal window should open.
+
+![](/v1/images/prerequisites/linux/shell-and-terminal/terminal-1.png)
+
+In the upper left corner of the white area of the terminal window you see
+`abcd1234@arrhenius:~$ `. This it the shell prompt with your username on the form
+`abcd1234` and the name of the Linux server you are
+connected to, in this example `arrhenius`. The shell prompt you see might be
+different.
+
+## The shell prompt 
+
+In the above example, the prompt shows the username of the logged in user `abcd1234`
+together with the name of the physical Linux server `arrhenius` used. You should
+see your own user name. If you are logged into a different physical Linux server
+you will also see a different server name in the prompt.
+
+It is also possible to [tweak the prompt][tweak-prompt] to show custom
+information such as your username, local time etc.
+
+[tweak-prompt]: https://help.ubuntu.com/community/CustomizingBashPrompt
+
+## No shell prompt in instructions
+
+Since the appearance of the shell prompt might vary, in all further instructions
+the shell prompt will be omitted and commands you enter att the shell prompt will be 
+presented in a box like this.
+
+``` text
+ls -F  # Example shell command
+```
+
+If you hover over the box above, the {{% icon icon="copy" %}} icon will appear
+in the upper right corner. Press this icon to copy the text in the box.. Now you
+can paste the copied command at the shell prompt in your terminal and press
+enter to execute the command. 
+
+## Log out from the Linux system
+
+There are two options for logging out from the Linux system. To log out of Linux you can:
+
+1. Click on the icon with a person walking through a door at the top. 
+
+2. Click on the icon with a computer at the top right and then select **Log Out**
+to log out.
+
+![](/v1/images/prerequisites/linux/linux-log-out.png?width=600px)
+
+After you log out, the Linux window closes. If you logged out by mistake
+you must [restart the ThinLinc Client and
+login](#start-the-thinlinc-client) again to continue working with Linux.
+
 ## Remote login with SSH
 
 You can access the department Linux [student servers][linux-hosts] remotely
@@ -128,18 +189,3 @@ $ ssh abcd1234@trygger.it.uu.se
 
 A list of [know problems with the department Linux
 system](http://www.it.uu.se/datordrift/faq/thinlinc) and workarounds.
-
-## Log out from the Linux system
-
-There are two options for logging out from the Linux system. To log out of Linux you can:
-
-1. Click on the icon with a person walking through a door at the top. 
-
-2. Click on the icon with a computer at the top right and then select **Log Out**
-to log out.
-
-![](/v1/images/prerequisites/linux/linux-log-out.png?width=600px)
-
-After you log out, the Linux window closes. If you logged out by mistake
-you must [restart the ThinLinc Client and
-login](#start-the-thinlinc-client) again to continue working with Linux.

@@ -1,6 +1,6 @@
 ---
 title: The shell and the terminal
-weight: 20
+weight: 10
 blackfriday:
  fractions: false
 ---
