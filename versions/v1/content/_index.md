@@ -79,23 +79,117 @@ principles of operating systems.
 In the the operating systems courses at Uppsala University both Unix and Linux
 will be used to introduce the basic principles of operating systems. 
 
-## Menu
+## Toolbar
 
-To the left of each page you find the menu. If the menu is hidden, press the {{%
-icon bars %}} icon on the top of the page to view/hide the menu. The following
-symbols are used in the menu.  
+At the top of each page you find the toolbar with the following buttons.
 
-- Instructions on how to download source code from GitHub are marked with {{%
-  assignmentIcon github %}}.
-- Mandatory assignments are marked with {{% assignmentIcon mandatory %}}. 
-- Optional assignments for higher grade are marked with {{% assignmentIcon
-  higher-grade %}}.
+<table class="icon-list">
+<tr>
+  <td>
+    {{% icon bars %}}
+  </td>
+  <td>
+    This button will only appear if the main menu to the left is hidden. Press this button to show
+    the main menu. 
+  </td>
+</tr>
+<tr>
+  <td>
+    {{% icon list-alt %}}
+  </td>
+  <td>
+    View the table of contents menu for the page.
+  </td>
+</tr>
+<tr>
+  <td>
+    {{% icon print %}}
+  </td>
+  <td>
+    Show printer friendly version of the current page and all its subpages. 
+  </td>
+</tr>
+<tr>
+  <td>
+    {{% icon pen %}}
+  </td>
+  <td>
+    Suggest edits of the page by making a pull request on GitHub. 
+  </td>
+</tr>
+<tr>
+  <td>
+    {{% icon chevron-left %}}
+  </td>
+  <td>
+    Navigate to the next page in the hierarchy.
+  </td>
+</tr>
+<tr>
+  <td>
+   {{% icon chevron-right %}}
+  </td>
+  <td>
+    Navigate to the previous page in the hierarchy.
+  </td>
+</tr>
+</table>
 
-At the bottom of the menu you see two icons. 
 
-- Use {{% icon icon="tint" %}} to select between viewing in dark or light mode. 
-- Use {{% icon history %}} to clear the {{% icon check %}} markings of the pages
+## Main menu
+
+To the left of each page you find the main menu. If the main menu is hidden, press the {{%
+icon bars %}} icon in the toolbar at the top of the page.  The following
+symbols are used in the main menu.  
+
+
+<table class="icon-list">
+<tr>
+  <td>
+   {{% assignmentIcon github %}}
+  </td>
+  <td>
+    Instructions on how to download source code from GitHub.
+  </td>
+</tr>
+<tr>
+  <td>
+    {{% assignmentIcon mandatory %}}
+  </td>
+  <td>
+   Mandatory assignment. 
+  </td>
+</tr>
+<tr>
+  <td>
+   {{% assignmentIcon higher-grade %}}
+  </td>
+  <td>
+     Optional assignment for higher grade.
+  </td>
+</tr>
+</table>
+
+At the bottom of the main menu you see two icons. 
+<table class="icon-list">
+<tr>
+  <td>
+ {{% icon icon="tint" %}}
+  </td>
+  <td>
+    Choose to view the website in dark mode or light mode.
+  </td>
+</tr>
+<tr>
+  <td>
+   {{% icon icon="history" %}}
+  </td>
+  <td>
+  Clear the {{% icon check %}} markings of the pages
   you have visited. 
+  </td>
+</tr>
+</table>
 
 ## Shell commands and code snippets 
 
@@ -122,8 +216,9 @@ right corner of the box. Press this icon to copy the context of the box.
 
 This webpage and all assignments have been created by [Karl Marklund][km] at the
 [Department of information technology][it], [Uppsala university][uu]. The
-original version of the `mutex.c` assignment was contributed by [Nikos
+original version of the [Mutual exclusion][mutex] assignment was contributed by [Nikos
 Nikoleris][nn] when he worked as TA on the courses during his time as a PhD student.
 
 [km]: https://www.katalog.uu.se/profile/?id=N2-482
 [nn]: https://www.arm.ecs.soton.ac.uk/people/dr-nikos-nikoleris/
+[mutex]: threads-and-synchronization/mutex/

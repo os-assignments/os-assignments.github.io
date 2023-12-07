@@ -1,9 +1,9 @@
-{{- if eq (.Get 0)  "mandatory" }}
-    {{- .Site.Params.mandatoryIcon | safeHTML }}
+{{- if eq (.Get 0) "mandatory" }}
+{{- .Site.Params.mandatoryIcon | safeHTML }}
 {{- end }}
 {{- if eq (.Get 0) "higher-grade" }}
-    {{ .Site.Params.higherGradeIcon | safeHTML }}
+{{- .Site.Params.higherGradeIcon | safeHTML }}
 {{- end }}
 {{- if eq (.Get 0) "github" }}
-    {{ .Site.Params.githubIcon | safeHTML }}
+{{- .Site.Params.githubIcon | safeHTML }}
 {{- end }}

@@ -507,3 +507,23 @@ img.uu-full-logo {
     margin-bottom: 3em;
     margin-top: 2em;
 }
+
+
+table.icon-list {
+    border: none;
+}
+
+table.icon-list td {
+    vertical-align: top;
+    border: none;
+}
+
+table.icon-list tr:nth-child(even)>td {
+    background-color: var(--INTERNAL-MAIN-BG-color);
+
+}
+
+table.icon-list tr>td:first-child {
+    width: 2em;
+    important;
+}
