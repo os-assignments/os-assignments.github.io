@@ -3,7 +3,7 @@ title: Working in the terminal
 weight: 30
 ---
 
-![](/v1/images/prerequisites/linux/shell-example-session.png)
+![](/v1/images/prerequisites/linux/shell-example-session.png?width=500px)
 
 On this page your find a small collection of useful shell commands when working
 in the terminal. You will also learn about shell variables, the command
