@@ -145,12 +145,12 @@ Since the appearance of the shell prompt might vary, in all further instructions
 the shell prompt will be omitted and commands you enter att the shell prompt will be 
 presented in a box like this.
 
-``` text
+``` bash session
 ls -F  # Example shell command
 ```
 
-If you hover over the box above, the {{% icon icon="copy" %}} icon will appear
-in the upper right corner. Press this icon to copy the text in the box.. Now you
+If you hover over the box above, a copy button {{% icon icon="copy" %}} will appear
+in the upper right corner. Press this button to copy the text in the box. Now you
 can paste the copied command at the shell prompt in your terminal and press
 enter to execute the command. 
 
@@ -181,8 +181,8 @@ the `ssh` command from the terminal to log in to the department Linux server
 
 [ssh-wp]: https://en.wikipedia.org/wiki/SSH_(Secure_Shell)
 
-``` shell
-$ ssh abcd1234@trygger.it.uu.se
+``` bash session
+ssh abcd1234@trygger.it.uu.se
 ```
 
 ## Known problems

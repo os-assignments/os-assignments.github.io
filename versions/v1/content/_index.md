@@ -193,13 +193,18 @@ At the bottom of the main menu you find these two buttons.
 
 ## Shell commands and code snippets 
 
-Shell commands will be shown in boxes like this. 
+Shell commands to be entered in the terminal are shown in boxes like this. 
 
-``` text
+``` bash session
 make # Run make to compile
 ```
 
-Code snippets will be shown in boxes like this. 
+If you hover over a shell command box, a copy button {{% icon icon="copy" %}} will appear
+in the upper right corner. Press this button to copy the shell command in the box. Now you
+can paste the copied command at the shell prompt in your terminal and press
+enter to execute the command. 
+
+Code snippets are also shown in boxes. For example like this.
 
 ``` C
 int a = 127;    // A global variable. 
@@ -209,8 +214,9 @@ int main(void) {
 }
 ```
 
-If you hover over boxes like these, the {{% icon icon="copy" %}} icon will appear in the upper
-right corner of the box. Press this icon to copy the context of the box. 
+If you hover over a code snippet box, a copy button {{% icon icon="copy" %}} will appear in the upper
+right corner of the box. Press this button to copy the context of the box. Now
+you can paste the code snippet in your code editor.
 
 ## Author
 
