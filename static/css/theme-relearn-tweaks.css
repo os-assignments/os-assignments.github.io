@@ -449,8 +449,10 @@ figure figcaption {
     text-align: left;
 }
 
+
 figure figcaption .attribution {
     color: var(--INTERNAL-MAIN-TEXT-color);
+    display: inline;
 }
 
 figure figcaption .attribution a {
