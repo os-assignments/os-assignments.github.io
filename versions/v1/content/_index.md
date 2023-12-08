@@ -170,7 +170,7 @@ symbols are used in the main menu.
 </tr>
 </table>
 
-At the bottom of the main menu you see follwing two buttons. 
+At the bottom of the main menu you find these two buttons. 
 <table class="icon-list">
 <tr>
   <td>
