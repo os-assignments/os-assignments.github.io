@@ -144,7 +144,7 @@ the `mandatory/src` directory.
 From a terminal, navigate to the `mandatory` directory. To compile all
 programs, type `make` and press enter.
 
-``` text
+``` bash session
 make
 ```
 
@@ -154,13 +154,13 @@ When compiling, `make` places all executables in the `bin` directory.
 
 Run the `signals` program.
 
-``` text
+``` bash session
 ./bin/signals
 ```
 
 You should now see output similar to this in the terminal.
 
-``` text
+``` bash session
 My PID = 81430
 I'm done!
 ```
@@ -186,19 +186,19 @@ To make the program divide by zero, uncomment the following line.
 
 Compile with `make`.
 
-``` text
+``` bash session
 make
 ```
 
 Run the program.
 
-``` text
+``` bash session
 ./bin/signals
 ```
 
 In the terminal you should see something similar to this.
 
-``` text
+``` bash session
 My PID = 81836
 [2]    81836 floating point exception  ./bin/signals
 ```
@@ -275,19 +275,19 @@ signal handler for the `SIGFPE` signal.
 
 Compile with `make`.
 
-``` text
+``` bash session
 make
 ```
 
 Run the program.
 
-``` text
+``` bash session
 ./bin/signals
 ```
 
 In the terminal you should see something similar to this.
 
-``` text
+``` bash session
 My PID = 81979
 Caught SIGFPE: arithmetic exception, such as divide by zero.
 ```
@@ -308,7 +308,7 @@ divide_by_zero();
 Compile and run the program Make sure you see output similar to this in the
 terminal.
 
-``` text
+``` bash session
 My PID = 82040
 I'm done!
 ```
@@ -325,19 +325,19 @@ To make the program cause a segfault, uncomment the following line.
 
 Compile with `make`.
 
-``` text
+``` bash session
 make
 ```
 
 Run the program.
 
-``` text
+``` bash session
 ./bin/signals
 ```
 
 In the terminal you should see something similar to this.
 
-``` text
+``` bash session
 My PID = 82084
 [2]    82084 segmentation fault  ./bin/signals
 ```
@@ -381,7 +381,7 @@ segfault();
 Compile and run the program Make sure you see output similar to this in the
 terminal.
 
-``` text
+``` bash session
 My PID = 82040
 I'm done!
 ```
@@ -399,7 +399,7 @@ Uncomment the following line.
 Compile and run the program. You should see output similar to this in the
 terminal.
 
-``` text
+``` bash session
 My PID = 82249
 ```
 
@@ -409,7 +409,7 @@ The process is now blocked, waiting for any signal to be sent to the process.
 
 To terminate the process, press `Ctrl+C` in the terminal.
 
-``` text
+``` bash session
 My PID = 82249
 ^C
 ```
@@ -434,7 +434,7 @@ Add code to install the function `signal_handler` as the signal handler for the
 When you run the program the process blocks waiting for any signal. When you
 press `Ctrl+C` you should now see output similar to this in the terminal.
 
-``` text 
+``` bash session 
 My PID = 82477
 ^CCaught SIGINT: interactive attention signal, probably a ctrl+c.
 I'm done!
@@ -449,7 +449,7 @@ Open a second terminal.
 Compile and run the program in one of the terminals. The program should block
 waiting for any signal. Note the PID of the blocked process.
 
-``` text
+``` bash session
 My PID = 82629
 ```
 
@@ -457,14 +457,14 @@ The command `kill` can be used to send signals to processes from the terminal.
 To send the `SIGINT` signal to the blocked process, execute the following command in
 the terminal where you replace `<PID>` with the PID of the blocked process.
 
-``` text
+``` bash session
 kill -s INT <PID>
 ```
 
 In the other terminal you should now see the blocked process execute the signal
 handler, then continue in `main` after `pause()`, print `I'm done!` and terminate.
 
-``` text
+``` bash session
 My PID = 82629
 Caught SIGINT: interactive attention signal, probably a ctrl+c.
 I'm done!
@@ -478,7 +478,7 @@ Add code to make the program print "Hello!" when receiving the `SIGUSR1` signal.
 - Send the `SIGUSR1` signal to the process from the other terminal using the
 `kill` command where you replace `<PID>` with the PID of the blocked process.
 
-``` text
+``` bash session
 kill -s SIGUSR1 <PID>
 ```
 

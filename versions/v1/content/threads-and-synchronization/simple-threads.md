@@ -53,13 +53,13 @@ how to create and manipulate  execution contexts.
 Study the source. To compile, navigate to the `examples` directory in the terminal, type `make`
 and press enter.
 
-``` text
+``` bash session
 make
 ```
 
 To run: 
 
-``` text
+``` bash session
 ./bin/contexts
 ```
 
@@ -83,19 +83,19 @@ Study the source and pay attention to all comments.
 In the terminal, navigate to the `higher-grade` directory. Use make to
 compile. 
 
-``` text
+``` bash session
 make
 ```
 
 Run the test program. 
 
-``` text
+``` bash session
 ./bin/sthreads_test
 ```
 
 The program prints the following to terminal and terminates. 
 
-``` text
+``` bash session
 ==== Test program for the Simple Threads API ====
 ```
 ## Cooperative scheduling (grade 4)

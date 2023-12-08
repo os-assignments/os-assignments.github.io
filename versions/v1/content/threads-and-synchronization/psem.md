@@ -47,7 +47,7 @@ In the terminal, navigate to the `examples` directory. Use
 
 [wp-make]: https://en.wikipedia.org/wiki/Make_(software)
 
-``` text
+``` bash session
 make
 ```
 
@@ -55,7 +55,7 @@ make
 
 Run the program from the terminal.
 
-``` text
+``` bash session
 ./bin/psem_test
 ```
 

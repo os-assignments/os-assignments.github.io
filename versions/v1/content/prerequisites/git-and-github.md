@@ -19,21 +19,21 @@ Department Linux user account or to your private computer.
 
 Open a terminal, type `git --version` and press enter. 
 
-``` text
+``` bash session
 git --version
 ```
 
 If `git` is installed you will something similar to this as a result in the
 terminal.
 
-``` text
+``` bash session
 git version 1.9.1
 ```
 
 If `git` is not installed you will something similar to this as a result in the
 terminal.
 
-``` text
+``` bash session
 git: command not found
 ```
 
@@ -55,7 +55,7 @@ The repository contains the folder `sub` and the files `README.md`, `one.txt`
 and `two.txt`. The `sub` folder contains a single file named `third.txt`.
 By clicking on a file, for example the `one.txt` file,  you will see the content of the file.
 
-``` text
+``` bash session
 A small text file.
 ```
 
@@ -70,13 +70,13 @@ copy-to-clipboard icon <i class="far fa-clone"></i> (2) to the right of the URL.
 From the terminal, navigate to a directory where you want the cloned directory
 to be created. To clone the example repository, type `git clone` followed by a space and paste the repository URL. 
 
-``` text
+``` bash session
 $ git clone https://github.com/os-assignments/git-example-repo.git
 ```
 
 Press **enter** to execute the command. Now you should see something similar to this written to the terminal.
 
-``` text
+``` bash session
 Cloning into 'git-example-repo'...
 remote: Counting objects: 14, done.
 remote: Compressing objects: 100% (8/8), done.
@@ -93,14 +93,14 @@ within the current working directory.
 
 To get an overview of the cloned repository, use the `tree` command.
 
-``` text
+``` bash session
 tree git-example-repo
 ```
 
 The `tree` command will print out a tree view showing all files and folders in
 the `git-example-repo` directory.
 
-``` text
+``` bash session
 git-example-repo
 ├── README.md
 ├── one.txt

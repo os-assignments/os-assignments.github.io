@@ -15,7 +15,7 @@ Every user on the Linux system has a unique username. The `whoami` command will 
 Type `whoami` at the shell prompt.
 
 
-``` text
+``` bash session
 whoami
 ```
 
@@ -40,13 +40,13 @@ directory) commands prints the full path of the current working directory.
 
 Type `pwd` at the shell prompt.
 
-``` text
+``` bash session
 pwd
 ```
 
 Press enter to execute the command. 
 
-``` text
+``` bash session
 /home/abcd1234
 ```
 
@@ -70,14 +70,14 @@ To list the files and directories in the current working directory the `ls` comm
 
 Type `ls` at the shell prompt.
 
-``` text
+``` bash session
 ls
 ```
 
 Press enter to execute the `ls` command. You should see something similar to the
 below as result but you might see other files and folders listed.
 
-``` text
+``` bash session
 foo.txt  Desktop  public_html
 ```
 
@@ -91,13 +91,13 @@ To get some more information about files and folder various options can be given
 to the `ls` command. One useful option is `-F`  that marks directories
 with a trailing slash `/`.
 
-``` text
+``` bash session
 ls -F
 ```
 
 You should now see something similar to this.
 
-``` text
+``` bash session
 foo.txt  Desktop/  public_html/
 ```
 
@@ -106,12 +106,12 @@ foo.txt  Desktop/  public_html/
 The `tree` command displays the contents of the current directory and
 subdirectories as a tree structure.
 
-``` text
+``` bash session
 tree
 ```
 The output takes a graphical form which will resemble the following example:
 
-``` text
+``` bash session
 .
 ├── README.md
 ├── one.txt
@@ -128,13 +128,13 @@ the sub directory `sub` there is a single file `three.txt`.
 
 You can provide `tree` with the path to a directory to visualize its content. 
 
-``` text
+``` bash session
 tree sub
 ```
 
 Now, only subtree of the `sub` directory is shown. 
 
-``` text
+``` bash session
 sub/
 └── three.txt
 
@@ -144,7 +144,7 @@ sub/
 {{% notice style="warning" title="Install tree on macOS" %}}
 If you run **macOS** and `tree` is not installed, use [Homebrew](https://brew.sh/) to install `tree`.
 
-``` text
+``` bash session
 brew install tree
 ```
 {{% /notice %}}
@@ -155,26 +155,26 @@ The `cd` command navigates to a different folder. The name `cd` means change dir
 
 First print the current working directory.
 
-``` text
+``` bash session
 pwd
 ```
 
 This will show the path of the current working directory, for example. 
 
-``` text
+``` bash session
 /home/abcd1234
 ```
 
 To navigate to the `Desktop` folder, type `cd Desktop` at the shell prompt and press
 enter.
 
-``` text
+``` bash session
 cd Desktop
 ````
 
 Print the current working directory to confirm. 
 
-``` text
+``` bash session
 pwd
 ````
 
@@ -190,13 +190,13 @@ Note how the current working directory changed from `/home/abcd1234` to
 The directory above the current working directory can be referred to using `..`. 
 To navigate to the parent directory, type `cd ..` and press enter. 
 
-``` text
+``` bash session
 cd ..
 ```
 
 Now, execute the `pwd` command again. 
 
-``` text
+``` bash session
 pwd
 ```
 
@@ -215,7 +215,7 @@ The `cat` command can be used to print the content of a file to the terminal.
 
 Assume you have the following file named `foo.txt` in the current working directory. 
 
-``` text
+``` bash session
 The first line of the file.
 
 The third line. The second line is empty.
@@ -224,7 +224,7 @@ The last line of the file.
 
 You can now print the content of `foo.txt` to the terminal using the `cat` command. 
 
-``` text
+``` bash session
 cat foo.txt
 ```
 
@@ -244,13 +244,13 @@ provided files will be joined together and printed to the terminal.
 
 In the below example `cat` is used to concatenate the file `foo.txt` with itself. 
 
-``` text
+``` bash session
 cat foo.txt foo.txt
 ```
 
 This will output the contents of the file `foo.txt` twice.
 
-``` text
+``` bash session
 The first line of the file.
 
 The third line. The second line is empty.
@@ -263,7 +263,7 @@ The last line of the file.
 
 One useful option to the `cat` command is `-n`:
 
-``` text
+``` bash session
 cat -n foo.txt
 ```
 
@@ -280,7 +280,7 @@ cat -n foo.txt
 
 The `wc` command counts the number of words, lines and bytes. 
 
-``` text
+``` bash session
 wc foo.txt
 ```
 
@@ -300,7 +300,7 @@ input that contains that pattern.
 To search for the the string `X` in the input type `grep X` at the shell prompt
 and press enter.
 
-``` text
+``` bash session
 grep X
 ```
 
@@ -310,7 +310,7 @@ lines containing the character `X`.
 
 Now type `Hello` and press enter. 
 
-``` text
+``` bash session
 Hello
 ```
 
@@ -318,7 +318,7 @@ There is no `X` in the string `Hello` and therefore `grep` will not print back t
 
 Type  `Hello mr X` and press enter and watch what happens.
 
-``` text
+``` bash session
 Hello mr X
 Hello mr X
 ```
@@ -328,7 +328,7 @@ the terminal since it contains a matching `X`.
 
 Lets try a few more lines and observe what happens. 
 
-``` text
+``` bash session
 abc
 abcXdef
 abcXdef
@@ -351,13 +351,13 @@ To filter the lines in a file, the name of the file can be given together with a
 
 Assume you have the file `foo.txt` in your current directory. Using `cat`:
 
-``` text
+``` bash session
 cat foo.txt
 ```
 
 , prints the contents of the file to the terminal:
 
-``` text
+``` bash session
 The first line of the file.
 
 The third line. The second line is empty.
@@ -366,7 +366,7 @@ The last line of the file.
 
 In the below example only lines containing `of` in the file `foo.txt` will be printed to the terminal. 
 
-``` text
+``` bash session
 grep of foo.txt
 ```
 
@@ -384,7 +384,7 @@ we will combine `grep` with `ls` to filter the output of `ls`.
 
 First we use `ls` to list all files and folders.
 
-``` text
+``` bash session
 ls
 foo.txt    Desktop    public_html  
 ```
@@ -392,13 +392,13 @@ foo.txt    Desktop    public_html
 If we are only interested in files (and folders) with names ending in `.txt` we
 can combine `ls` and `grep` to using the pipe character `|`.
 
-``` text
+``` bash session
 ls | grep .txt
 ```
 
 In this example, only the `foo.txt` files matches the `.txt` pattern. 
 
-``` text
+``` bash session
 foo.txt 
 ```
 
@@ -437,13 +437,13 @@ From the terminal, make sure you have the downloaded tarball in the current
 working directory. If you have many files in the current working directory you can 
 use `ls` together with `grep` to search for files with names matching `.tar`.
 
-``` text
+``` bash session
 ls | grep .tar
 ```
 
 Hopefully you will see the downloaded tar ball in the result. 
 
-``` text
+``` bash session
 archive.tar.gz 
 ```
 
@@ -456,7 +456,7 @@ should see `archive.tar.gz` among the results.
 To see the contents of a tarball without extracting all the files you can use
 tar with options `t` and `f`.
 
-``` text
+``` bash session
 tar tf archive.tar.gz
 ```
 
@@ -480,7 +480,7 @@ level directory `archive` with sub folder `sub_folder`. In the top level directo
 To unpack and extract the contents of a gzipped tarball we need to use the `xvfz`
 options together with the `tar` command.
 
-``` text
+``` bash session
 tar xvfz archive.tar.gz
 ```
 
@@ -497,14 +497,14 @@ x archive/sub_folder/info.txt
 Now the tarball have been unpacked. Use `ls` to see what happened to the current
 working directory.
 
-``` text
+``` bash session
 ls | grep archive
 ```
 
 Now you should have both the tar ball `archive.tar.gz` and the extracted 
 `archive` in your working directory. 
 
-``` text
+``` bash session
 archive
 archive.tar.gz
 ```
@@ -514,19 +514,19 @@ current working directory.
 
 Use `cd` to "step inside" the `archive` directory.
 
-``` text
+``` bash session
 cd archive
 ```
 
 Next, use `ls -F` to list the content in this directory.
  
-``` text
+``` bash session
 ls -F
 ```
 
 This is the content of the `archive` folder.
 
-``` text
+``` bash session
 large.txt
 small.txt
 sub_folder/
@@ -534,13 +534,13 @@ sub_folder/
 
 Using the `-R` option `ls` will be run recursively stepping inside every sub-directory. 
 
-``` text
+``` bash session
 ls -R
 ```
 
 The contents of the `archive` folder viewed recursively. 
 
-``` text
+``` bash session
 large.txt	small.txt	sub_folder
 
 ./sub_folder:
@@ -555,7 +555,7 @@ directory.
 To print anything to the terminal simply type `echo` followed by the text you want
 to print.
 
-``` text
+``` bash session
 echo Hello
 ```
 
@@ -575,13 +575,13 @@ a built-in shell variable to make a command more generic and/or portable.
 
 Remember that the command `woami` can be used to print your username. 
 
-``` text
+``` bash session
 whoami
 ```
 
 In this example your username is `abcd1234`.
 
-``` text
+``` bash session
 abcd1234
 ```
 
@@ -596,31 +596,31 @@ or enclosed within `${ }`.
 This: 
 
 
-``` text
+``` bash session
 echo Hello USER
 ```
 
 , results in: 
 
-``` text
+``` bash session
 Hello USER
 ```
 
 But this: 
 
-``` text
+``` bash session
 echo Hello $USER
 ```
 
 , results in: 
 
-``` text
+``` bash session
 Hello abcd1234
 ```
 
 And this: 
 
-``` text
+``` bash session
 echo Hello ${USER}
 ```
 
@@ -635,13 +635,13 @@ Hello abcd1234
 Another useful shell variable is `HOME` with the full path to the home directory
 for the logged in user. You can use `echo` to check the value of the `HOME` variable.
 
-``` text
+``` bash session
 echo $HOME
 ```
 
 In this example the result is: 
 
-``` text 
+``` bash session 
 /home/abcd1234
 ```
 
@@ -658,25 +658,25 @@ forward in history.
 
 Try the following command in the terminal:
 
-``` text
+``` bash session
 pwd
 ```
 
 , resulting in:
 
-``` text
+``` bash session
 /home/abcd1234
 ```
 
 And now this command: 
 
-``` text
+``` bash session
 whoami
 ```
 
 , resulting in: 
 
-``` text 
+``` bash session 
 abcd1234
 ```
 
@@ -689,7 +689,7 @@ For more information about command you can always refer to the corresponding
 built in manual page. For example, to read the manual page for the `ls` command
 simply type `man ls` and press enter at the shell prompt.
 
-``` text
+``` bash session
 man ls
 ```
 
@@ -699,7 +699,7 @@ page, press the space bar. To **quit**, press **q**.
 To learn more about the build in manual pages read the manual page about the man
 command.
 
-``` text
+``` bash session
 man man
 ```
 

@@ -209,19 +209,19 @@ Both parent and child prints two messages and then
 terminates. 
 Navigate to the `examples` directory. Compile using make. 
 
-``` text
+``` bash session
 make
 ```
 
 Run the program. 
 
-``` text
+``` bash session
 ./bin/fork 
 ```
 
 You should see output similar to this in the terminal. 
 
-``` text
+``` bash session
 PARENT <87628> Spawned a child with PID = 87629.
 PARENT <87628> Goodbye.
  CHILD <87629> I'm alive and my PPID = 1.
@@ -388,20 +388,20 @@ variable `status`.
 
 Compile using make. 
 
-``` text
+``` bash session
 make 
 ```
 
 Run the program. 
 
-``` text
+``` bash session
 ./bin/fork_exit_wait_status
 ```
 
 In the output you should be able to see that the
 parent obtained the exit status of the child.  
 
-``` text
+``` bash session
 PARENT <99340> Spawned a child with PID = 99341.
  CHILD <99341> I'm alive and my PPID = 99340.
  CHILD <99341> Goodbye, exit with status 42.
@@ -466,20 +466,20 @@ child.
 
 Compile using make. 
 
-``` text
+``` bash session
 make 
 ```
 
 Run the program. 
 
-``` text
+``` bash session
 ./bin/fork_zombie
 ```
 
 In the output you should be able to see that the child terminates and that the
 parent blocks waiting for a keypress. 
 
-``` text
+``` bash session
 PARENT <4636> Spawned a child with PID = 4637.
 PARENT <4636> Press any key to reap a zombie!
  CHILD <4637> I'm alive and my PPID = 4636.
@@ -497,13 +497,13 @@ about process.
 Use the `--help` flag to see the documentation.  
 
 
-``` text
+``` bash session
 ./tools/monitor --help
 ```
 
 This is the built in documentation for the monitor tool. 
 
-``` text
+``` bash session
 Usage: monitor [-s delay] [-p pid] cmd
 
 A top-like command that only lists USER, PID, STAT and COMM for the
@@ -519,13 +519,13 @@ The `cmd` argument is the name of the program executed by the processes we want
 to monitor. Use the monitor tool to view process status information
 for the parent and child, both executing the `fork_zombie` program.  
 
-``` text
+``` bash session
 ./tools/monitor fork_zombie
 ```
 
 On Linux you should see something similar to this. 
 
-``` text
+``` bash session
 Monitoring processes matching: fork_zombie
 
 Press Ctrl-C to exit
@@ -554,7 +554,7 @@ Another name used for a zombie process is **defunct**.
 From the terminal used to run the `fork_zombie` program, press any key to make the
 parent do `wait` on the child. 
 
-``` text
+``` bash session
 PARENT <4636> Spawned a child with PID = 4637.
 PARENT <4636> Press any key to reap a zombie!
  CHILD <4637> I'm alive and my PPID = 4636.
@@ -567,7 +567,7 @@ PARENT <4636> Press any key to terminate!
 In the terminal used to run `monitor` the zombie process should have disappear,
 leaving only the parent process. 
 
-``` text
+``` bash session
 Monitoring processes matching: fork
 
 Press Ctrl-C to exit
@@ -583,7 +583,7 @@ The parent is now blocked, waiting for user input.
 From the terminal used to run the `fork_zombie` program, press any key to make the
 parent terminate. 
 
-``` text
+``` bash session
 PARENT <4636> Spawned a child with PID = 4637.
 PARENT <4636> Press any key to reap a zombie!
  CHILD <4637> I'm alive and my PPID = 4636.
@@ -627,26 +627,26 @@ int main(void) {
 
 Compile using make. 
 
-``` text
+``` bash session
 make 
 ```
 
 Run the program. 
 
-``` text
+``` bash session
 ./bin/child
 ```
 
 First this program simply prints two messages to the terminal and then wait for a key-press.
 
-``` text
+``` bash session
  CHILD <33172> I'm alive and my PPID = 81166.
  CHILD <33172> Press any key to make me terminate!
 ```
 
 After you press any key in the terminal the program terminates. 
 
-``` text
+``` bash session
  CHILD <33172> I'm alive and my PPID = 81166.
  CHILD <33172> Press any key to make me terminate!
   
@@ -680,17 +680,17 @@ not be reached.
 
 Compile using make. 
 
-``` text
+``` bash session
 make 
 ```
 
 Run the program. 
 
-``` text
+``` bash session
 ./bin/fork_exec
 ```
 
-``` text
+``` bash session
 PARENT <33422> Spawned a child with PID = 33423.
  CHILD <33423> Press any key to make me call exec!
 ```
@@ -698,7 +698,7 @@ PARENT <33422> Spawned a child with PID = 33423.
 Open a second terminal and use the `ps` command with the `-p` option to see
 information about the child process.
 
-``` text
+``` bash session
 ps -p 33206
   PID TTY           TIME CMD
   33423 ttys023    0:00.00 ./bin/fork_exec
@@ -708,7 +708,7 @@ Note that the child process currently is executing the `.bin/fork_exec` executab
 
 In the first terminal, press any key. 
 
-``` text
+``` bash session
  CHILD <33423> I'm alive and my PPID = 33422.
  CHILD <33423> Press any key to make me terminate!
 ```
@@ -716,7 +716,7 @@ In the first terminal, press any key.
 From the other terminal and use the `ps` command with the `-p` option to see
 information about the child process.
 
-``` text
+``` bash session
 ps -p 33206
   PID TTY           TIME CMD
   33423 ttys023    0:00.00 ./bin/child
@@ -727,7 +727,7 @@ Note that the child process now executes the `./bin/child` executable.
 In the first terminal, press any key to make the child process terminate. Now
 the parent performs wait on the child and reports the child exit status. 
 
-``` text
+``` bash session
   CHILD <33423> Goodbye!
  PARENT <33422> Child with PID = 33423 and exit status = 127 terminated.
  PARENT <33422> Goodbye!

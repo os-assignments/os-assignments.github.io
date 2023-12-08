@@ -14,13 +14,13 @@ Before you continue, you must clone the [processes-and-ipc][repo] repository.
 From the terminal, navigate to a directory where you want the cloned directory
 to be created and execute the following command.
 
-``` text
+``` bash session
 git clone https://github.com/os-assignments/processes-and-ipc.git
 ```
 
 Now you should see something similar to this in the terminal.
 
-``` text
+``` bash session
 Cloning into 'processes-and-ipc'...
 remote: Counting objects: 38, done.
 remote: Compressing objects: 100% (26/26), done.
@@ -34,14 +34,14 @@ Checking out files: 100% (32/32), done.
 
 To get an overview of the cloned repository, use the `tree` command.
 
-``` text
+``` bash session
 tree processes-and-ipc
 ```
 
 Now you should see a tree view of all files and directories in the
 `processes-and-ipc` directory.
 
-``` text
+``` bash session
 processes-and-ipc
 ├── examples
 │   ├── bin
@@ -90,7 +90,7 @@ processes-and-ipc
 {{% notice style="warning" title="Install tree on macOS" %}}
 If you run **macOS** and `tree` is not installed, use [Homebrew](https://brew.sh/) to install `tree`.
 
-``` text
+``` bash session
 brew install tree
 ```
 {{% /notice %}}

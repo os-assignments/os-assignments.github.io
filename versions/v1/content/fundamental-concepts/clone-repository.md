@@ -15,13 +15,13 @@ Before you continue, you must clone the [fundamental-os-concepts][repo] reposito
 From the terminal, navigate to a directory where you want the cloned directory
 to be created and execute the following command.
 
-``` text
+``` bash session
 git clone https://github.com/os-assignments/fundamental-os-concepts.git
 ```
 
 Now you should see something similar to this in the terminal.
 
-``` text
+``` bash session
 Cloning into 'fundamental-os-concepts1'...
 remote: Counting objects: 7, done.
 remote: Compressing objects: 100% (6/6), done.
@@ -33,14 +33,14 @@ Unpacking objects: 100% (7/7), done.
 
 To get an overview of the cloned repository, use the `tree` command.
 
-``` text
+``` bash session
 tree fundamental-os-concepts
 ```
 
 Now you should see a tree view of all files and directories in the
 `fundamental-os-concepts` directory.
 
-``` text
+``` bash session
 fundamental-os-concepts
 ├── README.md
 ├── higher-grade
@@ -54,7 +54,7 @@ fundamental-os-concepts
 {{% notice style="warning" title="Install tree on macOS" %}}
 If you run **macOS** and `tree` is not installed, use [Homebrew](https://brew.sh/) to install `tree`.
 
-``` text
+``` bash session
 brew install tree
 ```
 {{% /notice %}}

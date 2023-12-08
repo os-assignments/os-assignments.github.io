@@ -41,23 +41,23 @@ shell.c
 
 Navigate to the `higher-grade` directory. Use make to compile.
 
-``` text
-$ make
+``` bash session
+make
 ```
 
 Run the shell.
 
-``` text
-$ ./bin/shell
+``` bash session
+./bin/shell
 ```
 
-The provided version of the shell is able to execute single commands, for
-example the `ls`.
+The provided version of the shell uses `>>> ` &nbsp; as the prompt and is able to execute single commands, for
+example `ls`.
 
-``` text
+``` bash session
 >>> ls
 >>> Makefile	bin		obj		src
-````
+```
 
 Note that something is wrong with the shell prompt `>>> `. When executing a
 command, the prompt is printed immediately after the command, and not after the
@@ -65,7 +65,7 @@ command has completed. This is something you need to fix.
 
 Let's try to pipe two commands together. 
 
-``` text
+``` bash session
 >>> ls | nl
 >>> Makefile	bin		obj		src
 ```

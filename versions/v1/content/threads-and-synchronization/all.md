@@ -13,13 +13,13 @@ and `mandatory`. In the terminal, navigate to the `threads-synchronization-deadl
 For example, you can use the `all` utility together with `make` to compile all
 programs.
 
-``` C
+``` bash session
 ./all make
 ```
 
 The `all` utility can also be used to delete all objects files and executables.
 
-``` C
+``` bash session
 ./all make clean
 ```
 

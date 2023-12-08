@@ -64,14 +64,14 @@ Use [make][wp-make] to compile the program.
 
 [wp-make]: https://en.wikipedia.org/wiki/Make_(software)
 
-``` text
+``` bash session
 make
 ```
 
 The executable will be named `barrier` and placed in the `bin` sub directory. 
 Run the program from the terminal.
 
-``` text
+``` bash session
 ./bin/two_thread_barrier
 ```
 
@@ -131,13 +131,13 @@ Before you continue think about the following questions.
 
 Compile:
 
-``` text
+``` bash session
 make
 ```
 
 , and run the program: 
 
-``` text
+``` bash session
 ./bin/two_thread_barrier
 ```
 
@@ -145,7 +145,7 @@ make
 
 This is an example of an invalid execution trace when running the `two_thread_barrier` program.
 
-``` text
+``` bash session
 Two threads A and B doing 5 iterations each in lockstep.
 
 Iteration 0
@@ -168,7 +168,7 @@ Iteration 2
 
 This is an example of a valid execution trace when running the `two_thread_barrier` program.
 
-``` text
+``` bash session
 Two threads A and B doing 5 iterations each in lockstep.
 
 Iteration 0
@@ -204,7 +204,7 @@ SUCCESS: All iterations done in lockstep!
 
 In the beginning of `two_thread_barrier.c` you find the following definitions.
 
-``` text
+``` bash session
 #define ITERATIONS      10  // Number of iterations each thread will execute. 
 #define MAX_SLEEP_TIME  3   // Max sleep time (seconds) for each thread. 
 ````

@@ -15,13 +15,13 @@ repository.
 From the terminal, navigate to a directory where you want the cloned directory
 to be created and execute the following command.
 
-``` text
+``` bash session
 git clone https://github.com/os-assignments/threads-synchronization-deadlock.git
 ```
 
 Now you should see something similar to this in the terminal.
 
-``` text
+``` bash session
 Cloning into 'threads-synchronization-deadlock'...
 remote: Counting objects: 23, done.
 remote: Compressing objects: 100% (20/20), done.
@@ -33,13 +33,13 @@ Unpacking objects: 100% (23/23), done.
 
 To get an overview of the cloned repository, use the `tree -d` command.
 
-``` text
+``` bash session
 tree -d threads-synchronization-deadlock
 ```
 
 Now you should see a tree view of the directory strucure.
 
-``` text
+``` bash session
 threads-synchronization-deadlock
 ├── examples
 │   ├── bin
@@ -62,7 +62,7 @@ threads-synchronization-deadlock
 {{% notice style="warning" title="Install tree on macOS" %}}
 If you run **macOS** and `tree` is not installed, use [Homebrew](https://brew.sh/) to install `tree`.
 
-``` text
+``` bash session
 brew install tree
 ```
 {{% /notice %}}

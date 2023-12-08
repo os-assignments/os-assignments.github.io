@@ -68,19 +68,19 @@ the shell command `ls` to list files in a directory.
 
 Use `make` to compile: 
 
-``` text
+``` bash session
 make
 ```
 
 Run the program. 
 
-``` text
+``` bash session
 ./bin/execlp_ls
 ```
 
 You should see something similar to this in the terminal. 
 
-``` text
+``` bash session
 -rw-r--r--@  1 karl  staff  410 Jan 27 21:16 Makefile
 drwxr-xr-x  17 karl  staff  578 Jan 28 22:08 bin
 drwxr-xr-x   3 karl  staff  102 Dec  1  2016 data
@@ -151,19 +151,19 @@ the name of the executable.
 
 Use `make` to compile: 
 
-``` text
+``` bash session
 make
 ```
 
 Run the program. 
 
-``` text
+``` bash session
 ./bin/execvp_ls
 ```
 
 You should see something similar to this in the terminal. 
 
-``` text
+``` bash session
 total 8
 -rw-r--r--@ 1 abcd1234  staff  410 Jan 27 21:16 Makefile
 drwxr-xr-x  5 abcd1234  staff  170 Jan 27 21:17 bin
@@ -219,19 +219,19 @@ the shell command `ls` to list files in a directory.
 
 Use `make` to compile: 
 
-``` text
+``` bash session
 make
 ```
 
 Run the program. 
 
-``` text
+``` bash session
 ./bin/execv_ls
 ```
 
 You should see something similar to this in the terminal. 
 
-``` text
+``` bash session
 total 8
 -rw-r--r--@ 1 abcd1234  staff  410 Jan 27 21:16 Makefile
 drwxr-xr-x  5 abcd1234  staff  170 Jan 27 21:17 bin

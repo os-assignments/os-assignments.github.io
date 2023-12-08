@@ -139,13 +139,13 @@ an error is reported and the process is terminated.
 
 Compile:
 
-``` text
+``` bash session
 make
 ```
 
 , and run the test program: 
 
-``` text
+``` bash session
 ./bin/n_barrier_test
 ```
 
@@ -153,7 +153,7 @@ make
 
 In the beginning of `n_barrier_test.c` you find the following definitions.
 
-``` text 
+``` bash session 
 #define ITERATIONS      10 // The number of iterations executed by each thread.
 #define NTHREADS        5  // Number of threads.
 #define MAX_SLEEP_TIME  3  // Max sleep time (seconds) for each thread. 
@@ -168,7 +168,7 @@ Experiment by changing the above values.
 
 This is an example of incorrect barrier synchronization when running the `n_barrier_test` program.
 
-``` text
+``` bash session
 5 threads T0, ..., T4 doing 3 iterations each in lockstep.
 
 Iteration 0
@@ -191,7 +191,7 @@ Iteration 1
 
 This is an example of correct barrier synchronization when running the `n_barrier_test` program.
 
-``` text
+``` bash session
 5 threads T0, ..., T4 doing 3 iterations each in lockstep.
 
 Iteration 0

@@ -72,13 +72,13 @@ In the terminal, navigate to the `mandatory` directory. Use
 
 [wp-make]: https://en.wikipedia.org/wiki/Make_(software)
 
-``` text
+``` bash session
 make
 ```
 
 The executable will be named `mutex` and placed in the `bin` sub directory. Run the program from the terminal.
 
-``` text
+``` bash session
 ./bin/mutex
 ```
 

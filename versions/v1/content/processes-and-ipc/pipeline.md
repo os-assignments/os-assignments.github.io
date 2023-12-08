@@ -21,39 +21,39 @@ Open a terminal and navigate to the `mandatory` directory.
 The `ls` shell command list directory content. Execute the `ls` command in the
 terminal.
 
-``` text
+``` bash session
 ls
 ```
 
 You should now see this: 
 
-``` text
+``` bash session
 Makefile     bin     obj     src
 ```
 
 
 The `-F` option appends a slash `/` to directory entries.
 
-``` text
+``` bash session
 ls -F
 ```
 
 The only file in the directory is `Makefile`. The directory contains the
 subdirectories `bin`, `obj` and `src`.
 
-``` text
+``` bash session
 Makefile     bin/     obj/     src/
 ```
 
 Add the `-1` option to:
 
-``` text
-$ ls -F -1
+``` bash session
+ls -F -1
 ```
 
 , print each entry on a separate line:
 
-``` text
+``` bash session
 Makefile
 bin/
 obj/
@@ -66,20 +66,20 @@ The `nl` shell command is a filter that reads lines from stdin and echoes each
 line prefixed with a line number to stdout. In the terminal, type `nl` and press
 enter.
 
-``` text
+``` bash session
 nl
 ```
 
 The `nl` command now waits for stdin input. Type `Some text` and press enter.
 
-``` text
+``` bash session
 Some text
      1 Some text
 ```
 
 Type `More text` and press enter.
 
-``` text
+``` bash session
 More text
      2 More text
 ```
@@ -104,13 +104,13 @@ command is piped to input of the  `nl` command.
 [wp-unix-dotadiw]: https://en.wikipedia.org/wiki/Unix_philosophy#Do_One_Thing_and_Do_It_Well
 [wp-pipeline]: https://en.wikipedia.org/wiki/Pipeline_(Unix)
 
-``` text
+``` bash session
 ls -F -1 | nl
 ```
 
 Now the result of `ls -F -1` is printed with line numbers added at the front of each line. 
 
-``` text
+``` bash session
     1 Makefile
     2 bin/
     3 obj/
@@ -130,26 +130,26 @@ see which program executables  the shell uses for the `ls` and `nl` commands.
 
 [wp-PATH]: https://en.wikipedia.org/wiki/PATH_(variable)
 
-``` text
+``` bash session
 which ls
 ```
 
 The executables for the `ls` command program is found in the `/bin` directory.
 
-``` text
+``` bash session
 /bin/ls
 ```
 
 What about the `nl` command?
 
-``` text
-$ which nl
+``` bash session
+which nl
 ```
 
 The executables for the `nl` command programs is also  located in the
 `/bin` directory.
 
-``` text
+``` bash session
 /bin/nl
 ```
 
@@ -229,19 +229,20 @@ Use the file `src/pipeline.c` to implement your solution.
 
 Use make to compile.
 
-``` text
-$ make
+``` bash session
+make
 ```
 
 Run the program.
 
-``` text
-$ ./bin/pipeline
+``` bash session
+./bin/pipeline
 ```
 
-When running the finished program you should see output similar to this.
+When running the finished program you should see output similar to this, where
+`$` is your shell prompt. 
 
-``` text
+``` bash session
 $ ./bin/pipeline
     1 Makefile
     2 bin/

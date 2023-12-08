@@ -246,13 +246,13 @@ In the terminal, navigate to the `mandatory` directory. Use [make][wp-make] to c
 
 [wp-make]: https://en.wikipedia.org/wiki/Make_(software)
 
-``` text
+``` bash session
 make
 ```
 
 Run the test(s).
 
-``` text
+``` bash session
 ./bin/bounded_buffer_test
 ```
 
@@ -267,7 +267,7 @@ Assertion failed: (buffer.size == 10), function init_test, file src/bounded_buff
 
 When a test passes you will see the following output. 
 
-``` text
+``` bash session
 Test SUCCESSFUL :-)
 ```
 
@@ -361,7 +361,7 @@ complete test program that creates:
 For the test program to terminate, the total number of consumed items (`c*m`)
 must equal the total number of items produced (`p*n`). Run the stress test. 
 
-``` text 
+``` bash session 
 ./bin/bounded_buffer_stress_test
 ```
 
@@ -370,7 +370,7 @@ must equal the total number of items produced (`p*n`). Run the stress test.
 The default stress test will now be exuded. On success you should see output
 similar to the following. 
 
-``` text 
+``` bash session 
 Test buffer of size 10 with:
 
  20 producers, each producing 10000 items.
@@ -422,7 +422,7 @@ flags.
    
 In the following example, the default buffer size 10 is changed to 3. 
 
-``` text 
+``` bash session 
 ./bin/bounded_buffer_stress_test -s 3
 ```
 
