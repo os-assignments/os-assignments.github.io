@@ -15,7 +15,7 @@
         ) }}
         {{- if or (or (.Get "title") (.Get "caption")) (.Get "attr")}}
         <figcaption>
-            <div>
+            <div>     
                 <p class="caption">
                     {{- if or (.Get "caption") (.Get "attr")}}
                     {{- .Get "caption" | markdownify }}
@@ -37,14 +37,14 @@
                         }}{{$fig.Get "type"}}{{ with $fig.Get "source" }}</a> {{ end }}{{ end }}
                     {{- if $.Scratch.Get "cc" }}
                     <a href={{ $.Scratch.Get "cclink" }} target="_blank">
-                        <i class="fab fa-creative-commons"></i> by </a>
+                        <i class="fab fa-creative-commons"></i>&#32;</a>by&#32; 
                     {{- else }}
-                    {{- $fig.Get "attr" }}&nbsp;
+                    {{- $fig.Get "attr" }}&#32;
                     {{- end }}
-                    {{- with .Get "by" }}
+                    {{- with .Get "by" }} 
                     {{- with $fig.Get "bylink" }}<a href="{{.}}" target="_blank">{{- end}}
                         {{- .}}
-                        {{- with $fig.Get "bylink" }}</a>{{- end }}.
+                        {{- with $fig.Get "bylink" }} </a>{{- end }}.
                     {{- end }}
                 </p>
                 <span style="display: block; clear:both;" />
