@@ -540,3 +540,42 @@ table.icon-list tr>td:first-child {
         padding-left: 1.5em;
     }
 }
+
+#R-sidebar div.menu-entry {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}
+
+#R-sidebar div.menu-page-title {
+    flex-grow: 1;
+}
+
+.menu-post-icons {
+        flex-grow: 0;
+            flex-shrink: 0;
+    width: 30px;
+    text-align: center;
+    margin-left: auto;
+}
+
+
+#R-sidebar div.menu-entry .read-icon-spacer {
+    flex-grow: 0;
+    flex-shrink: 0;
+    width: 20px;
+}
+
+#R-sidebar ul li  .read-icon {
+
+}
+
+#R-sidebar ul.collapsible-menu > li a i {
+    padding-left: 0px;
+}
+
+#RR-sidebar .submenu-title {
+    padding-right: 0.5em;
+}

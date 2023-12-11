@@ -159,25 +159,98 @@
           {{- end }}
           {{- safeHTML .Params.head }}
           {{- if $numberOfVisibleChildren }}
+
+          <!-- Section menu entry -->
             {{- $title := or .Params.menuTitle .LinkTitle .Title }}
             {{- $url := partial "relLangPrettyUglyURL.hugo" (dict "to" .) }}
             {{- $isCollapsible := or (.Params.collapsibleMenu | default .Site.Params.collapsibleMenu) (not $url) }}
             {{- $currentAlwaysopen := .Params.alwaysopen | default $alwaysopen }}
             {{- $pageHash := md5 .Page }}
             {{- $isOpen := or $currentAlwaysopen $isSelf $isAncestor }}
-          <li data-nav-id="{{ $url }}" class="{{if $isActive }}active {{end}}{{if (or $isSelf $isAncestor) }}parent {{end}}{{if $currentAlwaysopen}}alwaysopen{{end}}">{{ if $isCollapsible }}<input type="checkbox" id="R-section-{{ $pageHash }}" aria-controls="R-subsections-{{ $pageHash }}"{{ if $isOpen }} checked{{ end }}><label for="R-section-{{ $pageHash }}"><i class="fas fa-chevron-down"></i><i class="fas fa-chevron-right"></i><span class="a11y-only">{{ T "Submenu" $title }}</span></label>{{ end }}{{ if $url }}<a class="padding" href="{{ $url }}">{{ else }}<span class="padding">{{ end }}
-            {{- partial "menu-pre.html" . }}{{ $title }}{{ partial "menu-post.html" . }}
-            {{- if $url }}{{ if $showvisitedlinks }}<i class="fas fa-check read-icon"></i>{{ end }}</a>{{ else }}</span>{{ end }}<ul id="R-subsections-{{ $pageHash }}" class="morespace collapsible-menu">
+
+          <li data-nav-id="{{ $url }}" class="{{if $isActive }}active
+          {{end}}{{if (or $isSelf $isAncestor) }}parent {{end}}{{if
+          $currentAlwaysopen}}alwaysopen{{end}}">
+
+          {{ if $isCollapsible }}
+            
+            <input type="checkbox" id="R-section-{{ $pageHash }}" aria-controls="R-subsections-{{ $pageHash }}"{{ if $isOpen }} checked{{ end }}>
+          
+          <label for="R-section-{{ $pageHash }}">
+            <i class="fas fa-chevron-down"></i>
+            <i class="fas fa-chevron-right"></i>
+            <span class="a11y-only">{{ T "Submenu" $title }}</span>
+          </label>
+
+          {{ end }} <!-- if $isCollapsible -->
+          
+         
+
+          {{ if $url }}
+            <a class="padding" href="{{ $url }}">
+          {{ else }}
+            <span class="padding">
+          {{ end }}
+
+ <div class="menu-entry submenu"> 
+     
+          <div>
+          {{- partial "menu-pre.html" . }}
+            <span class="submenu-title">{{ $title }}</span>
+            {{ partial "menu-post.html" . }}
+          </div>
+         
+     
+
+            <div class="read-icon-spacer">
+                 {{- if $url }}
+                 {{ if $showvisitedlinks }}
+                     <i class="fas fa-check read-icon"></i>
+                 {{ end }} 
+                 {{end }} 
+            </div>
+           
+  </div> 
+              {{- if $url }}
+                 </a>
+              {{ else }}
+                  </span>
+              {{ end }}
+
+        
+            <ul id="R-subsections-{{ $pageHash }}" class="morespace collapsible-menu">
             {{- $defaultAlwaysopen := .Site.Params.alwaysopen | default true }}
             {{- range $pages }}
               {{- template "section-tree-nav" dict "sect" . "currentnode" $currentNode "showvisitedlinks" $showvisitedlinks "alwaysopen" $defaultAlwaysopen }}
-            {{- end }}</ul></li>
-          {{- else }}
+            {{- end }}
+            </ul>
+
+          </li>
+
+          {{- else }} <!-- if $numberOfVisibleChildren --> 
+
+            <!-- Page menu entry -->
             {{- $title := or .Params.menuTitle .LinkTitle .Title }}
             {{- $url := partial "relLangPrettyUglyURL.hugo" (dict "to" .) }}
-          <li data-nav-id="{{ $url }}" class="{{if $isActive }}active{{end}}">{{ if $url }}<a class="padding" href="{{ $url }}">{{ else }}<span class="padding">{{ end }}
-              {{- partial "menu-pre.html" . }}{{ $title }}{{ partial "menu-post.html" . }} 
-              
+
+          <li data-nav-id="{{ $url }}" class="{{if $isActive }}active{{end}}">
+
+            {{ if $url }}
+              <a class="padding" href="{{ $url }}">
+            {{ else }}
+              <span class="padding">
+            {{ end }}
+
+            <div class="menu-entry"> 
+
+              <div class="menu-page-title">
+              {{- partial "menu-pre.html" . }}
+              {{ $title }}
+              {{ partial "menu-post.html" . }} 
+              </div>
+
+              <div class="menu-post-icons">
+
               {{ if eq .Params.assignment "mandatory" }}
                 {{ .Site.Params.mandatoryIcon | safeHTML }}
               {{ end }}
@@ -185,9 +258,27 @@
                 {{ .Site.Params.higherGradeIcon | safeHTML }}
               {{ end }}
               {{ if eq .Params.assignment "github" }}
-              {{ .Site.Params.githubIcon | safeHTML }}
-            {{ end }}
-              {{- if $url }}{{ if $showvisitedlinks }}<i class="fas fa-check read-icon"></i>{{ end }}</a>{{ else }}</span>{{ end }}</li>
+                {{ .Site.Params.githubIcon | safeHTML }}
+              {{ end }}
+
+              </div>
+              <div class="read-icon-spacer">
+                 {{- if $url }}
+                 {{ if $showvisitedlinks }}
+                     <i class="fas fa-check read-icon"></i>
+                 {{ end }} 
+                 {{end }} 
+              </div>
+  </div>
+        
+   
+              {{- if $url }}
+                 </a>
+              {{ else }}
+                  </span>
+              {{ end }}
+         
+              </li>
           {{- end }}
         {{- end }}
       {{- end }}
