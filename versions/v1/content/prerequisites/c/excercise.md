@@ -20,7 +20,7 @@ to be created and execute the following command.
 [repo]: https://github.com/os-assignments/c-address-book.git
 
 ``` text
-$ git clone https://github.com/os-assignments/c-address-book.git
+git clone https://github.com/os-assignments/c-address-book.git
 ```
 
 ## address_book.h
