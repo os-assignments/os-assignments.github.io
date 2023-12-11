@@ -1,7 +1,5 @@
 ---
-title: "Simple Threads\u2122"
-# TOML ==> Must use a quoted "string" in order to use Unicode trademark \u2122
-# character in title 
+title: "Simple Threads"
 assignment: higher-grade
 weight: 600
 draft: false
@@ -12,7 +10,7 @@ draft: false
 ![](/v1/images/threads-and-synchronization/higher-grade-overview.png?width=666px)
 
 In this assignment you will implement a simplified version of many-to-one user level
-threads in form of a library called Simple Threads(tm).
+threads in form of a library that we give the name Simple Threads.
 
 ## Preparations 
 
