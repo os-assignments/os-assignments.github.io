@@ -90,11 +90,10 @@ The parent site:
 
 ## Automatic deployment
 
-This GitHub Action [Workflow][workflow] is used to automatically deploy the
+The GitHub Action [Workflow](.github/workflows/hugo.yaml) is used to automatically deploy the
 sites on every push to the `main` branch. 
 
-[workflow]:
-    https://github.com/os-assignments/os-assignments.github.io/actions/runs/7181563865/workflow
+[workflow]: https://github.com/os-assignments/os-assignments.github.io/blob/main/.github/workflows/hugo.yaml
 
 [actions]: https://github.com/os-assignments/os-assignments.github.io/actions
 
