@@ -5,6 +5,13 @@ weight: -10
 
 ![](/v1/images/supported-systems/linux-macOS.png?width=400px)
 
+[Linux][linux] and [macOS][macOS] are the only two fully supported platforms for the programming
+assignments. 
+
+[linux]: https://en.wikipedia.org/wiki/Linux
+
+## Linux and macOS
+
 The programming assignments have been developed and tested on the [department
 Linux system][dep-linux] and [macOS][macOS]. 
 
@@ -37,12 +44,63 @@ Linux system][dep-linux] and [macOS][macOS].
 - In practice this means that you should most likely be able to do the C programming
 assignments on any computer running Linux or macOS.
 
-## Linux on Windows
+## Remote login to the department Linux system with SSH
 
-If you are using Windows and don't want to install Linux alongside Windows on
-your computer (dual boot), one of the following options: 
+You can access the [department Linux System ][dep-linux] remotely using 
+[SSH][ssh-wp] to login to one of the [student servers][linux-hosts].
 
-- Install and use the [Windows subsystem for Linux][wsl]
+- You will not be able to access the graphical desktop environment.
+- But, you can start graphical applications from the command line (shell) if you use [X
+forwarding][x-forwarding] together with SSH. 
+
+In the below example, a user with user name `abcd1234` uses the `ssh` command
+with the `-X` option to enable X forwarding to log in to the department Linux
+server `trygger.it.uu.se`.
+
+[x-forwarding]: https://en.wikipedia.org/wiki/X_Window_System#Remote_desktop
+
+[linux-hosts]: http://www.it.uu.se/datordrift/maskinpark/linux
+
+[ssh-wp]: https://en.wikipedia.org/wiki/SSH_(Secure_Shell)
+
+{{% tab title="Local shell (your computer)" %}}
+``` bash session
+ssh -X abcd1234@trygger.it.uu.se
+```
+{{% /tab %}}
+
+One you are logged in, you can start graphical applications from the Linux
+shell. You can for example run [Mars](prerequisites/mips-and-mars/). 
+
+{{% tab title="Remote shell (department Linux system)" %}}
+``` bash session
+mars
+```
+{{% /tab %}}
+
+![](/v1/images/mars/MARS_hello.png)
+
+To edit C source code you can for example use the [VS Code][vscode] source code
+editor remotely. 
+
+[vscode]: https://en.wikipedia.org/wiki/Visual_Studio_Code
+
+{{% tab title="Remote shell (department Department Linux system)" %}}
+``` bash session
+code
+```
+{{% /tab %}}
+
+![](/v1/images/prerequisites/linux/vscode.png)
+
+
+## Linux inside Windows
+
+If you are using Windows and don't like working remotely with the Deparment
+Linux system, nor do you want to install Linux alongside Windows on
+your computer (dual boot),consider one of the following options: 
+
+- Install and use the [Windows subsystem for Linux][wsl].
 - Install [VirtualBox][virtualbox] and run a virtual Linux machine. This [tutorial][installing-ubuntu-on-virtual-box] will cover how to install
 VirtualBox and set up your first virtual machine, show you how to get Ubuntu and
 prepare for installation, and walk you through an installation of Ubuntu.
