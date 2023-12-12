@@ -579,3 +579,10 @@ table.icon-list tr>td:first-child {
 #R-sidebar .submenu-title {
     padding-right: 0.2em;
 }
+
+#R-body .tab-nav-button>.tab-nav-text {
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    padding-left: 1em;
+    padding-right: 1em;
+}
