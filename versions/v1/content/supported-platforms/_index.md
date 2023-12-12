@@ -98,7 +98,7 @@ code
 
 If you are using Windows and don't like working remotely with the Deparment
 Linux system, nor do you want to install Linux alongside Windows on
-your computer (dual boot),consider one of the following options: 
+your computer (dual boot), consider one of the following options. 
 
 - Install and use the [Windows subsystem for Linux][wsl].
 - Install [VirtualBox][virtualbox] and run a virtual Linux machine. This [tutorial][installing-ubuntu-on-virtual-box] will cover how to install
