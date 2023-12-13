@@ -3,7 +3,7 @@ title: Supported platforms
 weight: -10
 ---
 
-![](/v1/images/supported-systems/linux-macOS.png?width=400px)
+![](/v1/images/supported-platforms/linux-macOS.png?width=400px)
 
 [Linux][linux] and [macOS][macOS] are the only two fully supported platforms for the programming
 assignments. 
@@ -52,6 +52,13 @@ You can access the [department Linux System ][dep-linux] remotely using
 - You will not be able to access the graphical desktop environment.
 - But, you can start graphical applications from the command line (shell) if you use [X
 forwarding][x-forwarding] together with SSH. 
+
+{{% notice style="tip" title="SSH with X forwarding on Linux, macOS and Windows" %}}
+
+Read more [here](https://kb.iu.edu/d/bdnt) about how to install SSH with X forwarding support on your
+system. 
+
+{{% /notice %}}
 
 In the below example, a user with user name `abcd1234` uses the `ssh` command
 with the `-X` option to enable X forwarding to log in to the department Linux
