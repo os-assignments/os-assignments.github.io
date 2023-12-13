@@ -18,11 +18,11 @@ information technology][it], [Uppsala university][uu].
 
 - Our studies will be based on principles of the [Unix](#unix) and
   [Linux](#linux) operating systems.
-- For all assignments, you will [use Git to clone provided source code from repositories on GitHub][git/github]. 
+- For all assignments, you will [use Git][git/github] to clone provided source code from repositories on GitHub. 
 - [Mips assembly][mips] will be used to study the fundamental principles of how
   the operating system interacts with the hardware. To edit and execute Mips assembly programs we will use [Mars][mars] (Mips
 Assembler and Runtime Simulator). 
-- [C programming][c] in an [Linux or macOS](supported-systems) environment will be used to further study a few important concepts.
+- [C programming][c] in an [Linux or macOS](supported-platforms) environment will be used to further study a few important concepts.
 - [Make][make] will be used to compile all C programming assignments. 
 
 
