@@ -554,13 +554,17 @@ table.icon-list tr>td:first-child {
 }
 
 .menu-post-icons {
-        flex-grow: 0;
-            flex-shrink: 0;
-    width: 30px;
-    text-align: center;
-    margin-left: auto;
+    flex-grow: 0;
+    flex-shrink: 0;
+    width: 40px;
 }
 
+.menu-post-icons  i {
+    margin: auto auto;
+    width: 20px;
+    display: block;
+    margin-top: 5px;
+}
 
 #R-sidebar div.menu-entry .read-icon-spacer {
     flex-grow: 0;
