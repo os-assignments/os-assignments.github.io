@@ -20,10 +20,13 @@ information technology][it], [Uppsala university][uu].
 
 ## Hugo
 
-Static website built with [Hugo][hugo].
+Static website built with [Hugo][hugo]. The site has been developed with Hugo
+[v0.120.4][v0.120.v] but a window of versions a round this version will also
+probably work. 
 
 [hugo]: https://gohugo.io/
 
+[v0.120.v]: https://github.com/gohugoio/hugo/releases/tag/v0.120.4
 ## Theme Relearn
 
 The website uses a customized version of the [Relearn][relearn] Hugo theme.
