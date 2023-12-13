@@ -8,16 +8,16 @@ theme = 'relearn'
 # For search functionality and print
 
 [outputs]
-  home = ["HTML", "RSS", "PRINT", "SEARCH"]
-  section = ["HTML", "RSS", "PRINT"]
-  page = ["HTML", "RSS", "PRINT"]
+home = ["HTML", "RSS", "PRINT", "SEARCH"]
+section = ["HTML", "RSS", "PRINT"]
+page = ["HTML", "RSS", "PRINT"]
 
 # By default, Goldmark does not render raw HTML and potentially dangerous links. If you have lots of inline HTML and/or JavaScript, you may need to turn this on.
 
 [markup]
-  [markup.goldmark]
-    [markup.goldmark.renderer]
-      unsafe = true
+[markup.goldmark]
+[markup.goldmark.renderer]
+unsafe = true
 
 [params]
 
@@ -44,11 +44,6 @@ theme = 'relearn'
 # the docs provide an interactive theme generator to help you with this task.
 
 themeVariant = ["dark", "light"]
-
-IIIthemeVariant = [
-  { identifier = "dark"}, 
-  {identifier = "light"}
-  ]
 
 # The color variants used for auto mode.
 # Default: [ "relearn-light", "relearn-dark" ], overwritten by the first

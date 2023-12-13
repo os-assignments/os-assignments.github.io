@@ -44,8 +44,10 @@ A small parent site for all versions is found in the `content` directory.
 
 ## Common configuration
 
-The parent site and any version sites all share the same Hugo configuration in
-`hugo.toml`.
+The parent site and the `v1` site share the same base [Hugo
+configuration][config] in `config/_default/hugo.toml`.
+
+[config]:https://gohugo.io/getting-started/configuration/
 
 Customizations to the Relearn theme in `layouts` and `static`.
 
