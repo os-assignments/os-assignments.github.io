@@ -1,12 +1,15 @@
 # Operating systems assignments 
 
-Operating systems programming assignments for the OS (1DT044), OSPP (1DT096) and
-DSP (1DT003) courses at the [Department of information technology][it], [Uppsala
-university][uu].
+Operating systems programming assignments for the OS ([1DT044][os]), OSPP
+([1DT096][ospp]) and DSP ([1DT003][dsp]) courses at the [Department of
+information technology][it], [Uppsala university][uu].
+
+[os]: https://www.uu.se/en/study/course?query=1DT044
+[ospp]: https://www.uu.se/en/study/course?query=1DT096
+[dsp]: https://www.uu.se/en/study/course?query=1DT003
 
 [it]: https://www.it.uu.se/first?lang=en
-
-[uu]: https://www.uu.se/en/
+[uu]: https://www.uu.se/en/     
 
 <p align="center">
 <picture>
