@@ -547,6 +547,7 @@ table.icon-list tr>td:first-child {
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: nowrap;
+    margin-bottom: 0.2em;
 }
 
 #R-sidebar div.menu-page-title {
