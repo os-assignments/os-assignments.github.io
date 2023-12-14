@@ -99,11 +99,11 @@ only used for input and output to and from a connected computer. In the below im
     src="/v1/images/prerequisites/linux/shell-and-terminal/DEC-VT52-terminal-PDP-11-55.jpg"
     maxwidth="600px"
     caption="A DEC VT52 video terminal connected to a PDP 11/55 computer."
-    source="http://www.bejaardecomputers.nl/index-en.html"
+    source="https://web.archive.org/web/20190526054853fw_/http://www.bejaardecomputers.nl/DSC04627-600.jpg"
     type="Photograph"
     attr="courtesy of"
     by="House for Retired and Aged Computers"
-    bylink="http://www.bejaardecomputers.nl/index-en.html"
+    bylink="https://web.archive.org/web/20190610164544fw_/http://www.bejaardecomputers.nl/index-en.html"
 >}}
 
 <!--
