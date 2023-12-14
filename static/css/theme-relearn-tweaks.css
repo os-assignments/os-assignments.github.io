@@ -1,5 +1,10 @@
 @import "variant-internal.css";
 
+:root {
+    --MENU-WIDTH-M: 18.375rem;
+    --MENU-WIDTH-L: 20.75rem;
+}
+
 #R-header-wrapper {
     background-image: url("images/uu-sigill.png");
     background-repeat: no-repeat;
