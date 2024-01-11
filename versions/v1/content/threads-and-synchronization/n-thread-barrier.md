@@ -6,7 +6,7 @@ weight: 210
 draft: false
 ---
 
-<h2 class="subtitle">Optional assignment for higher grade</h2>
+<h2 class="subtitle">Optional assignment for higher grade (1 point)</h2>
 
 ![](/v1/images/threads-and-synchronization/n-thread-barrier.png?width=633px)
 

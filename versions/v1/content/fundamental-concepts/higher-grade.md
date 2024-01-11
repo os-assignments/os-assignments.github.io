@@ -6,7 +6,7 @@ weight: 70
 draft: false
 ---
 
-<h2 class="subtitle">Optional assignment for higher grade</h2>
+<h2 class="subtitle">Optional assignment for higher grade (3 points)</h2>
 
 ## The Mars built-in system calls
 
@@ -368,17 +368,16 @@ If you haven't done so already, you must [clone](clone-repository) the
 You don't have to start from scratch but can use the provided 
 `higher-grade/multiprogramming.s` as a starting point. 
 
-## Grade 4
+## Higher grade points (max 3)
 
-For grade 4 your system must have working implementations of the custom `getjid` and
+
+For 1 point your system must have working implementations of the custom `getjid` and
 `getc` system calls. Follow the labels `TODO_1`,
 `TODO_2`, ..., `TODO_8` in the provided `multiprogramming.s` file to guide you
 step by step.
 
 
-## Grade 5
-
-For grade 5 your system must have a working implementation of the custom `gets`
+For 3 points, in addition to the 1 point requirements above, your system must have a working implementation of the custom `gets`
 system call. You must also provide a user level job with a few test cases
 showing that `gets` works for different buffer sizes. 
 

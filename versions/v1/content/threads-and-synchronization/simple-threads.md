@@ -5,7 +5,7 @@ weight: 600
 draft: false
 ---
 
-<h2 class="subtitle">Optional assignment for higher grade</h2>
+<h2 class="subtitle">Optional assignment for higher grade (3 points)</h2>
 
 ![](/v1/images/threads-and-synchronization/higher-grade-overview.png?width=666px)
 
@@ -96,9 +96,9 @@ The program prints the following to terminal and terminates.
 ``` bash session
 ==== Test program for the Simple Threads API ====
 ```
-## Cooperative scheduling (grade 4)
+## Cooperative scheduling (2 points)
 
-For grade 4 you must implement **all** the **functions** in the Simple Threads API
+For grade 2 points you must implement **all** the **functions** in the Simple Threads API
 **except** `done()` and `join`. This includes **cooperative scheduling** where
 threads `yield()` control back to the thread manager. 
 
@@ -117,9 +117,9 @@ For grade 4 you may assume the main thread and all other threads are
 non-terminating loops. 
 {{% /notice %}}
 
-## Preemptive scheduling (grade 5)
+## Preemptive scheduling (3 points)
 
-For grade 5 you must also implement the `done()` and `join()` functions in the
+For 3 points, you must also implement the `done()` and `join()` functions in the
 Simple Threads API. In addition to cooperative scheduling with `yield()` you must also implement
 **preemptive scheduling**. 
 

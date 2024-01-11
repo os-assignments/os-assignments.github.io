@@ -5,7 +5,7 @@ weight: 50
 draft: false
 ---
 
-<h2 class="subtitle">Optional assignment for higher grade</h2>
+<h2 class="subtitle">Optional assignment for higher grade (3 points)</h2>
 
 A shell is an interface between a user and the
 operating system. It lets us give commands to the system and start other
@@ -74,15 +74,13 @@ When trying to pipe two commands together, only the first command is executed.
 The second command is not executed. The output of the first command in not piped
 to as input to the second command. This is something you need to fix. 
 
-## Grade 4
+## Higher grade points (max 3)
 
-For grade 4 your shell must be able to handle a single command and a pipeline
+For 1 point your shell must be able to handle a single command and a pipeline
 with two commands. When executing a command line, the prompt `>>> ` &nbsp; must be
 printed after the execution of the command line has finished. 
 
-## Grade 5
-
-In addition to the requirement for grade 4, the grade 5 shell must be able to
+For 3 points, in addition to the 1 point requirements above, the shell must be able to
 handle a pipeline with two, three or more commands. 
 
 You must also make sure that after a command line has finished, all
