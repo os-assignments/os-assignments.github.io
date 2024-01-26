@@ -82,7 +82,9 @@ Open the file `mandatory/exceptions-and-interrupts.s` in Mars.
 Study the assembly source code of the loaded program in the built in editor
 pane.
 
-{{% notice style="tip" title="A brief overview" %}} Read the code with the intention of
+{{% notice style="tip" title="A brief overview" %}} 
+
+Read the code with the intention of
 getting an overview of the overall structure. Focus on **labels** and jumps to
 labels. Focus on the difference between the user text segment (`.text`) and
 kernel text segment (`.ktext`). You will study the details later. {{% /notice %}}
@@ -189,7 +191,7 @@ Before you continue, **clear** both the **Mars Messages** and **Run I/O.**
 
 ## Pseudo instructions
 
-In the Execute pain the source instructions are shown in the **Source** column and
+In the Execute pane the source instructions are shown in the **Source** column and
 the actual instructions produced by the assembler are shown in the **Basic** column.
 Note that the first source instruction `li $s0, 0x7fffffff` is a pseudo
 instruction that is translated to one `lui` instruction and one `ori` instruction,
@@ -245,7 +247,7 @@ address is now highlighted.
 
 ### The cause register
 
-On the Coproc 0 tab in the register pane, look at the cause register (register
+In the Coproc 0 tab in the register pane, look at the cause register (register
 13).
 
 ![](/v1/images/fundamental-concepts/assignment/step-2.png)
@@ -325,7 +327,7 @@ Execute the `andi $k1, $k0, 0x00007c` instruction.
 {{% /mars%}}
 
 In the register pane, register `$k1` should now have value `0x00000030` =
-[binary] = `0000 0000 0000 0000 0000 0000 0011 0000`,.
+[binary] = `0000 0000 0000 0000 0000 0000 0011 0000`.
 
 ### Shift two steps to the right
 
@@ -389,14 +391,14 @@ In the **Run I/O** pane you should now see the following message.
 ===>      Arithmetic overflow       <===
 ```
 
-Next an unconditional jump to label `__resume_from_exceptioni` is done.
+Next an unconditional jump to label `__resume_from_exception` is done.
 
 {{% mars step-forward %}}Execute the `j __resume_from_exception` instruction.{{% /mars%}}
 
 ### Resume from exception
 
-Execution now continues at the label `__resume_from_exception`. First the value
-of the EPC register is now fetch from the coprocessor 0 register `$14` to the
+Execution now continues at the label `__resume_from_exception`. Next the value
+of the EPC register is fetched from the coprocessor 0 register `$14` to the
 CPU register `$k0`.
 
 {{% mars step-forward %}}Execute the `mfc0 $k0, $14` instruction.{{% /mars%}}
