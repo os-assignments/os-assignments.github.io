@@ -56,8 +56,8 @@ pid_t fork(void);
 
 Return value
 : On success, the PID of the child process is returned in the parent, and 0 is
-  returned in the child. On failure, -1 is returned in the parent, no child
-  process is created, and errno is set appropriately.
+  returned in the child. On failure, `-1` is returned in the parent, no child
+  process is created, and `errno` is set appropriately.
   
   
 ## Fork returns twice on success
@@ -507,7 +507,7 @@ This is the built in documentation for the monitor tool.
 Usage: monitor [-s delay] [-p pid] cmd
 
 A top-like command that only lists USER, PID, STAT and COMM for the
-current user and and proceses with a command name with a grep match of cmd.
+current user and and processes with a command name with a grep match of cmd.
 
 Options:
  -s delay    Delay in seconds between refresh, default = 1.
@@ -516,8 +516,10 @@ Options:
 ```
 
 The `cmd` argument is the name of the program executed by the processes we want
-to monitor. Use the monitor tool to view process status information
-for the parent and child, both executing the `fork_zombie` program.  
+to monitor. 
+
+Now let's try and use the monitor tool to view process status information
+for the parent and child, both executing the `fork_zombie` example program.  
 
 ``` bash session
 ./tools/monitor fork_zombie
@@ -541,11 +543,13 @@ child.
 
 The `S` column show the status of the process. 
 
-- The parent got status `S` (sleep)
-  meaning the process is waiting for an event to complete. In this case the parent
-  is blocked waiting for the child to terminate. 
+- The parent got status `S` (sleep) meaning the process is waiting for an event
+  to complete. In this case the parent is blocked waiting for the call to
+  `getchar()` to return, i.e, the parent is blocked waiting for a key to be
+  pressed on the keyboard.
 - The child got status `Z` (zombie) meaning the process terminated but not
-  yet reaped by its parent.
+  yet reaped by its parent, i.e., the parent is alive but have not yet done
+  `wait` on the terminated child.
   
 Another name used for a zombie process is **defunct**. 
 
