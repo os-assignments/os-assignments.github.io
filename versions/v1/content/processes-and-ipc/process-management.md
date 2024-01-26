@@ -491,6 +491,15 @@ of the child using `wait`. The child process has now become a zombie process.
 
 ## Monitor 
 
+On Unix-like systems, the [top][top] command produces an ordered list of running
+processes selected by user-specified criteria, and updates it periodically.
+
+There are a few differences between the top command used by OS X and Linux. The
+`tools/monitor` tools provides a simple but portable alternative for
+monitoring processes with a specified command name.
+
+[top]: https://en.wikipedia.org/wiki/Top_(software)
+
 Open a second terminal and navigate to the `processes-and-ipc` directory. 
 The `tools/monitor` tool can be used to view process status information
 about process. 
