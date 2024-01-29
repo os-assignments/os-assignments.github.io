@@ -176,7 +176,7 @@ The parent must use fork twice, once for each child process.
 
 ## Parent waits twice
 
-The parent should use `wait` to twice to wait for both child process to
+The parent should use `wait` twice to wait for both child processes to
 terminate.
 
 ## The children uses execlp
