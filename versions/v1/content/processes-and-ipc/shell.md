@@ -1,6 +1,7 @@
 ---
 title: Shell
 assignment: higher-grade
+points: 3
 weight: 50
 draft: false
 ---

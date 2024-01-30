@@ -562,13 +562,24 @@ table.icon-list tr>td:first-child {
 .menu-post-icons {
     flex-grow: 0;
     flex-shrink: 0;
-    width: 40px;
+    width: 60px;
 }
 
-.menu-post-icons  i {
-    margin: auto auto;
+.menu-post-icons .points {
+    display: inline-block;
+    width: 10px;
+}
+
+.menu-post-icons .post-icons {
     width: 20px;
-    display: block;
+    display: inline-block;
+    text-align: center;
+}
+
+.menu-post-icons  .post-icons i {
+    margin: auto auto;
+    width: 10px;
+    display: inline;
     margin-top: 5px;
 }
 

@@ -2,6 +2,7 @@
 title: N thread barrier synchronization
 linkTitle: N thread barrier
 assignment: higher-grade
+points: 1
 weight: 210
 draft: false
 ---

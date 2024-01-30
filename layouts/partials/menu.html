@@ -251,15 +251,31 @@
 
               <div class="menu-post-icons">
 
+                    <div class="points">
+                      {{ if .Params.points }}
+                      {{ .Params.points }}
+                      {{ else }} &nbsp;
+                      {{ end }}
+                    </div>
+
+              <div class="post-icons">
               {{ if eq .Params.assignment "mandatory" }}
                 {{ .Site.Params.mandatoryIcon | safeHTML }}
               {{ end }}
+
+              
+            
               {{ if eq .Params.assignment "higher-grade" }}
+
+            
+
                 {{ .Site.Params.higherGradeIcon | safeHTML }}
               {{ end }}
               {{ if eq .Params.assignment "github" }}
                 {{ .Site.Params.githubIcon | safeHTML }}
               {{ end }}
+
+              </div> <!-- post-icons -->
 
               </div>
               <div class="read-icon-spacer">

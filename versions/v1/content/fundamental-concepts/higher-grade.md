@@ -2,6 +2,7 @@
 linktitle: Higher grade assignment
 title: Multiprogramming and custom system calls in Mips
 assignment: higher-grade
+points: 3
 weight: 70
 draft: false
 ---

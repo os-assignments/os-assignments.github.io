@@ -1,6 +1,7 @@
 ---
 title: "Simple Threads"
 assignment: higher-grade
+points: 3
 weight: 600
 draft: false
 ---
