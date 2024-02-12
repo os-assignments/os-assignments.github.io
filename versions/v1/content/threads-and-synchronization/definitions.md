@@ -25,7 +25,7 @@ start, run, and complete in overlapping time periods.
 ## Process
 
 To run a program the operating system must allocate memory and creates a
-process. A processes have stack, heap, data segment and text segment in user
+process. A processes has a stack, a heap, a data segment and a text segment in user
 space. The CPU context and file descriptor table are kept in kernel space. When
 executing the program, the program counter (PC) jumps around in the text
 segment.  
@@ -34,11 +34,11 @@ segment.
 ![](/v1/images/threads-and-synchronization/process.png)
 
 
-## Treads
+## Threads
 
-A process can have one ore more threads of execution. Threads share heap, data
+A process can have one or more threads of execution. Threads share heap, data
 segment, text segment and file descriptor table but have separate stacks and
-CPU contexts. Each thread have a private program counter and threads executes
+CPU contexts. Each thread has a private program counter and threads executes
 concurrently. Depending on how threads are implemented, the CPU contexts can be
 stored in user space or kernel space. In the below figure a process with three
 threads is shown.
