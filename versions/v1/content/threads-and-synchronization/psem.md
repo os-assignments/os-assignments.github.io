@@ -36,7 +36,7 @@ int main(void) {
 
 ## Example program 
 
-In `examples/src/psem_test.c` you find a complete example program with
+In `mandatory/src/psem_test.c` you find a complete example program with
 two threads (main and a pthread) that synchronize their execution using a `psem`
 semaphore. 
 

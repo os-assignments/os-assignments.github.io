@@ -286,7 +286,7 @@ Make sure to initialize all members of the `buffer_t` struct.
 
 ### Step 2 - Buffer destruction
 
-You must complete the buffer initialization. 
+You must complete the buffer destruction. 
 
 Function
 : `buffer_destroy`

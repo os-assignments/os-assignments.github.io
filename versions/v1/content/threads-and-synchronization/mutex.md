@@ -269,7 +269,7 @@ Explain the following concepts and relate them to the source code and the behavi
 Locks and semaphores:
 
 - What is the purpose of mutex locks?
-- If yoy had to make a choice between using a semaphore or a mutex to enforce
+- If you had to make a choice between using a semaphore or a mutex to enforce
   mutex, what would you recommend and why? 
 - How do you construct a spinlock using the atomic  `test-and-set` instruction?
 
