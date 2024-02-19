@@ -163,10 +163,10 @@ type `tuple_t`.
 int size
 : The number of elements in the array, i.e., the size of the buffer. 
 
-int out
-: The index in the array where the next items should be produced. 
-
 int in
+: The index in the array where the next item should be produced. 
+
+int out
 : The index in the array from where the next item should be consumed. 
 
 psem_t *mutex
@@ -213,7 +213,7 @@ Use one **semaphore** named **data** to count the number of data items in the bu
 
 A new bounded buffer with 10 elements will be represented as follows. 
 
-<img src="/v1/images/buffer-internals-example.png" style="width:444px;"/>
+<img src="/v1/images/threads-and-synchronization/buffer-internals-example.png" style="width:444px;"/>
 
 The `empty` semaphore counts the number of
 empty slots in the buffer and is initialized to `10`. Initially there are no
