@@ -42,20 +42,26 @@ bank_test.c
 
 ## The bank API
 
-The bank API is defined in `bank.h`.
+The simple bank API is defined in `bank.h`.
+
+A single bank account is represented by the following C structure. 
 
 ``` C 
-
-/**
- *  A bank account represented by the following C structure.
- *
- *  NOTE: You may need to add members to this structure.
- */
 typedef struct {
   int balance;
 
 } account_t;
 
+```
+
+What more is needed to be added to the structure?
+
+- One ore more pthread mutex locks?
+- Anything else?
+
+These are the functions in the simple bank API. 
+
+```C
 /**
  * account_new()
  *   Creates a new bank account.
@@ -92,19 +98,18 @@ void account_destroy(account_t* account);
  * to:
  *   The account to transfer the money to.
  *
+ * return value:
+ *   Return -1 if not sufficient funds in the from account. Otherwise returns 0.
+ *
  */
-void transfer(int amount, account_t* from, account_t* to);
+int transfer(int amount, account_t* from, account_t* to);
 
 ```
 
-What more is needed to be added to the structure to implement the barrier? For example, do you need to add:
-
-- one ore more pthread mutex locks?
-- anything else?
 
 ## Add synchronization
 
-You must add the needed synchronization to avoid data races. 
+You must add the needed synchronization.
 
 ## Prevent deadlocks
 
@@ -112,7 +117,7 @@ You must make sure to prevent deadlocks.
 
 ## Pthread mutex locks
 
-This is how you can declare and initialize a [Pthread mutex lock][pthread-mutex]. 
+This is an example of how you can declare and initialize a [Pthread mutex lock][pthread-mutex]. 
 
 
 ``` C
@@ -133,7 +138,7 @@ if (pthread_mutex_init(&mutex, NULL) < 0) {
 In `bank_test.c` you find a working program testing your implementation. 
 
 
-## Compile and run the test
+## Compile and run the test of the simple bank API.
 
 Compile:
 
@@ -148,127 +153,122 @@ make
 ```
 
 
+## Example of correct synchronization
+
+This is an example showing two rounds of correct synchronization.
+
+``` bash session
+Account Amount
+------------------
+0	      500
+1	      0
+2	      0
+3	      200
+4	      0
+5	      0
+6	      0
+7	      0
+8	      0
+9	      0
+------------------
+   Sum: 700
+
+Round 1 of 100
+
+From  Amount    To  Result
+
+7 ---- 200 ---> 8   Insufficient funds
+1 ---- 200 ---> 7   Insufficient funds
+2 ---- 200 ---> 7   Insufficient funds
+0 ---- 150 ---> 4   Ok
+3 ---- 200 ---> 0   Ok
+
+Account Amount
+------------------
+0	      550
+1	      0
+2	      0
+3	      0
+4	      150
+5	      0
+6	      0
+7	      0
+8	      0
+9	      0
+------------------
+   Sum: 700
+
+Total amount of money was initially 700 and is now 700.
+
+System invariant (conservation of money) not broken.
+
+```
+
 ## Example of incorrect synchronization
 
-This is an example of incorrect synchronization.
+In this example, everything looks ok in round 4, but in round 5 a race condition
+is detected. 
 
 ``` bash session
+Round 4 of 100
+
+From  Amount    To  Result
+
+8 ---- 050 ---> 3   Insufficient funds
+1 ---- 200 ---> 7   Insufficient funds
+4 ---- 100 ---> 6   Insufficient funds
+2 ---- 150 ---> 6   Insufficient funds
+4 ---- 150 ---> 7   Insufficient funds
 
 Account Amount
 ------------------
 0	      500
-1	      0
+1	      50
 2	      0
-3	      200
+3	      50
 4	      0
 5	      0
-6	      0
+6	      100
 7	      0
 8	      0
 9	      0
 ------------------
    Sum: 700
-
-Round 1 of 100
-
-7 --- 200 ---> 2 Insufficient funds
-5 --- 250 ---> 8 Insufficient funds
-2 --- 050 ---> 7 Insufficient funds
-3 --- 150 ---> 0
-3 --- 150 ---> 2
-
-Account Amount
-------------------
-0	      650
-1	      0
-2	      150
-3	      -100
-4	      0
-5	      0
-6	      0
-7	      0
-8	      0
-9	      0
-------------------
-   Sum: 700
-
-ERROR: Negative balance due to DATA RACE!
-```
-
-## Example of correct  synchronization
-
-This is an example showing two round of correct synchronization.
-
-``` bash session
-Account Amount
-------------------
-0	      500
-1	      0
-2	      0
-3	      200
-4	      0
-5	      0
-6	      0
-7	      0
-8	      0
-9	      0
-------------------
-   Sum: 700
-
-Round 1 of 100
-
-8 --- 150 ---> 5 Insufficient funds
-3 --- 250 ---> 8 Insufficient funds
-1 --- 250 ---> 9 Insufficient funds
-4 --- 100 ---> 8 Insufficient funds
-3 --- 200 ---> 2
-
-Account Amount
-------------------
-0	      500
-1	      0
-2	      200
-3	      0
-4	      0
-5	      0
-6	      0
-7	      0
-8	      0
-9	      0
-------------------
-   Sum: 700
-
-SUCCESS: System invariant not broken!
 
 Total amount of money was initially 700 and is now 700.
 
-Round 2 of 100
+System invariant (conservation of money) not broken.
 
-7 --- 250 ---> 4 Insufficient funds
-1 --- 050 ---> 2 Insufficient funds
-7 --- 250 ---> 9 Insufficient funds
-3 --- 050 ---> 2 Insufficient funds
-0 --- 250 ---> 5
+Round 5 of 100
+
+From  Amount    To  Result
+
+4 ---- 250 ---> 9   Insufficient funds
+9 ---- 150 ---> 3   Insufficient funds
+8 ---- 100 ---> 0   Insufficient funds
+0 ---- 100 ---> 5   Ok
+0 ---- 100 ---> 9   Ok
 
 Account Amount
 ------------------
-0	      250
-1	      0
-2	      200
-3	      0
+0	      400
+1	      50
+2	      0
+3	      50
 4	      0
-5	      250
-6	      0
+5	      100
+6	      100
 7	      0
 8	      0
-9	      0
+9	      100
 ------------------
-   Sum: 700
+   Sum: 800
 
-SUCCESS: System invariant not broken!
+Total amount of money was initially 700 and is now 800.
 
-Total amount of money was initially 700 and is now 700.
+RACE CONDITION: System invariant (conservation of money) broken!
 ```
+
 
 ## Deadlock
 
@@ -276,36 +276,40 @@ You must make sure the simulation never deadlocks. If a deadlock occur, the
 simulation will halt, for example like this. 
 
 ```bash_session
-Round 96 of 100
+Round 57 of 100
 
-6 --- 250 ---> 0 Insufficient funds
-5 --- 150 ---> 8
-2 --- 100 ---> 4
-8 --- 100 ---> 1
-2 --- 100 ---> 6
+From  Amount    To  Result
+
+1 ---- 250 ---> 7   Insufficient funds
+6 ---- 150 ---> 3   Insufficient funds
+6 ---- 100 ---> 3   Insufficient funds
+9 ---- 100 ---> 7   Insufficient funds
+8 ---- 100 ---> 5   Ok
 
 Account Amount
 ------------------
-0	      100
-1	      150
-2	      0
-3	      0
-4	      150
-5	      0
-6	      100
-7	      100
-8	      100
-9	      0
+0	50
+1	50
+2	50
+3	50
+4	0
+5	100
+6	0
+7	100
+8	300
+9	0
 ------------------
    Sum: 700
 
-SUCCESS: System invariant not broken!
-
 Total amount of money was initially 700 and is now 700.
 
-Round 97 of 100
+System invariant (conservation of money) not broken.
 
-2 --- 100 ---> 5 Insufficient funds
-0 --- 050 ---> 6
-7 --- 050 ---> 1
+Round 58 of 100
+
+From  Amount    To  Result
+
+0 ---- 200 ---> 1   Insufficient funds
+2 ---- 050 ---> 7   Ok
+3 ---- 200 ---> 7   Insufficient funds
 ```
