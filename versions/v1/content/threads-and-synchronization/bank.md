@@ -171,7 +171,7 @@ Account Amount
 8	      0
 9	      0
 ------------------
-   Sum: 700
+     Sum: 700
 
 Round 1 of 100
 
@@ -196,7 +196,7 @@ Account Amount
 8	      0
 9	      0
 ------------------
-   Sum: 700
+     Sum: 700
 
 Total amount of money was initially 700 and is now 700.
 
@@ -233,7 +233,7 @@ Account Amount
 8	      0
 9	      0
 ------------------
-   Sum: 700
+     Sum: 700
 
 Total amount of money was initially 700 and is now 700.
 
@@ -262,7 +262,7 @@ Account Amount
 8	      0
 9	      100
 ------------------
-   Sum: 800
+     Sum: 800
 
 Total amount of money was initially 700 and is now 800.
 
@@ -288,18 +288,18 @@ From  Amount    To  Result
 
 Account Amount
 ------------------
-0	50
-1	50
-2	50
-3	50
-4	0
-5	100
-6	0
-7	100
-8	300
-9	0
+0	      50
+1	      50
+2	      50
+3	      50
+4	      0
+5	      100
+6	      0
+7	      100
+8	      300
+9	      0
 ------------------
-   Sum: 700
+     Sum: 700
 
 Total amount of money was initially 700 and is now 700.
 
