@@ -8,8 +8,23 @@ draft: false
 
 <h2 class="subtitle">Optional assignment for higher grade (1 point)</h2>
 
+{{% notice  style="tip" title="New assignment" %}}
+  This is a new  1 point higher grade assignment replacing the [N Thread barrier
+  ](./n-thread-barrier) assignment. 
+
+{{% /notice %}}
+
 In this higher grade assignment you will do a simple simulation of money
 transfers between bank accounts. 
+
+## Git pull
+
+In order to get the new source files and the updated `Makefile` for this new
+assignment, you need to pull the updates from the GitHub repo. 
+
+``` bash
+git pull
+```
 
 ## Overview
 
@@ -87,6 +102,13 @@ What more is needed to be added to the structure to implement the barrier? For e
 - one ore more pthread mutex locks?
 - anything else?
 
+## Add synchronization
+
+You must add the needed synchronization to avoid data races. 
+
+## Prevent deadlocks
+
+You must make sure to prevent deadlocks. 
 
 ## Pthread mutex locks
 
