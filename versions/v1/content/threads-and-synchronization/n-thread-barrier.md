@@ -9,6 +9,12 @@ draft: false
 
 <h2 class="subtitle">Optional assignment for higher grade (1 point)</h2>
 
+{{% notice style="warning" title="Deprecated" %}}
+  This 1 point higher grade assignment has been replaced with the [Simple bank
+  simulation](./bank) assignment. 
+
+{{% /notice %}}
+
 ![](/v1/images/threads-and-synchronization/n-thread-barrier.png?width=633px)
 
 In the [two-thread-barrier](two-thread-barrier) assignment you solved the barrier synchronization problem for two threads. 
@@ -26,7 +32,7 @@ Linux.
 In the `higher-grade/src` directory you find the following files. 
 
 n_barrier.h
-: Header file with the API to the n thread barrier. Here you must 
+: Header file with the API to the n thread barrier. 
 
 n_barrier.c
 : The implementation of the n thread barrier. 
