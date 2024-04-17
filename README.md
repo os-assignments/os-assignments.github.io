@@ -106,3 +106,40 @@ sites on every push to the `main` branch.
 [actions]: https://github.com/os-assignments/os-assignments.github.io/actions
 
 [v1]: https://os-assignments.github.io/v1/
+
+## TODO - My theme Relearn tweaks as Hugo Module
+
+I'we done a few tweaks to the Hugo [Relearn][relearn] theme that I would like to re-use in
+other sites.  
+
+Layout tweaks: 
+
+```
+layouts
+├── partials
+│   ├── custom-header.html
+│   └── menu.html
+```
+
+CSS Tweaks:
+
+```
+static/css
+├── images
+│   ├── uu-full-logo-dark.png
+│   ├── uu-full-logo-light.png
+│   └── uu-sigill.png
+├── theme-dark.css
+├── theme-light.css
+└── theme-relearn-tweaks.css
+```
+
+One approach (the best?) seems to be: 
+ - [Using Hugo Modules Instead of Git Submodules][using-hugo-modules]
+
+[using-hugo-modules]: https://www.adamormsby.com/posts/012-hugo-modules/
+
+Read more about customization of the Hugo Relearn theme: 
+ - [Customization][relearn-customization]
+
+[relearn-customization]: https://mcshelby.github.io/hugo-theme-relearn/basics/customization/
