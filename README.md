@@ -136,13 +136,19 @@ static/css
 
 One approach (the best?) seems to be: 
  - [Using Hugo Modules Instead of Git Submodules][using-hugo-modules]
-- What I want to do seems similar to the [papermod-custom][papermod] Hugo module.
-
-[papermod]: https://github.com/aormsby/papermod-custom
+ - What I want to do seems similar to the [papermod-custom][papermod] Hugo module.
+ - [Go Modules vs git submodule?][go-vs-git]
+   - Answer from [bep](https://discourse.gohugo.io/t/go-modules-vs-git-submodule/24490/4).
 
 [using-hugo-modules]: https://www.adamormsby.com/posts/012-hugo-modules/
 
+[papermod]: https://github.com/aormsby/papermod-custom
+
+[go-vs-git]: https://discourse.gohugo.io/t/go-modules-vs-git-submodule/24490
+
 Read more about customization of the Hugo Relearn theme: 
  - [Customization][relearn-customization]
+  
 
 [relearn-customization]: https://mcshelby.github.io/hugo-theme-relearn/basics/customization/
+
