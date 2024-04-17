@@ -136,6 +136,9 @@ static/css
 
 One approach (the best?) seems to be: 
  - [Using Hugo Modules Instead of Git Submodules][using-hugo-modules]
+- What I want to do seems similar to the [papermod-custom][papermod] Hugo module.
+
+[papermod]: https://github.com/aormsby/papermod-custom
 
 [using-hugo-modules]: https://www.adamormsby.com/posts/012-hugo-modules/
 
