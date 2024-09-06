@@ -8,102 +8,102 @@ theme = 'relearn'
 # For search functionality and print
 
 [outputs]
-home = ["HTML", "RSS", "PRINT", "SEARCH"]
-section = ["HTML", "RSS", "PRINT"]
-page = ["HTML", "RSS", "PRINT"]
+    home = ["HTML", "RSS", "PRINT", "SEARCH"]
+    section = ["HTML", "RSS", "PRINT"]
+    page = ["HTML", "RSS", "PRINT"]
 
-# By default, Goldmark does not render raw HTML and potentially dangerous links. If you have lots of inline HTML and/or JavaScript, you may need to turn this on.
+    # By default, Goldmark does not render raw HTML and potentially dangerous links. If you have lots of inline HTML and/or JavaScript, you may need to turn this on.
 
 [markup]
-[markup.goldmark]
-[markup.goldmark.renderer]
-unsafe = true
+    [markup.goldmark]
+        [markup.goldmark.renderer]
+            unsafe = true
 
 [params]
 
-###############################################################################
-# Relearn Theme
-# These options are specific to the Relearn theme.
+    ###############################################################################
+    # Relearn Theme
+    # These options are specific to the Relearn theme.
 
-#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-# Variants
-# These options set your color variant.
+    #++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+    # Variants
+    # These options set your color variant.
 
-# Used color variants.
-# Default: "auto"
-# This sets one or more color variants, available to your readers to choose
-# from. You can either set a single value eg. "zen-light" or an array like
-# [ "neon", "learn" ]. If the array has more than one entry, a variant selector
-# is shown in the lower part of the menu. The first entry in the array is the
-# default variant, used for first time visitors.
-# The theme ships with the following variants: "auto", "relearn-bright",
-# "relearn-light", "relearn-dark", "zen-light", "zen-dark", "neon", "learn",
-# "blue", "green", "red". The auto variant is somewhat special. See the
-# option for themeVariantAuto below.
-# You can also define your own variants. See the docs how this works. Also,
-# the docs provide an interactive theme generator to help you with this task.
+    # Used color variants.
+    # Default: "auto"
+    # This sets one or more color variants, available to your readers to choose
+    # from. You can either set a single value eg. "zen-light" or an array like
+    # [ "neon", "learn" ]. If the array has more than one entry, a variant selector
+    # is shown in the lower part of the menu. The first entry in the array is the
+    # default variant, used for first time visitors.
+    # The theme ships with the following variants: "auto", "relearn-bright",
+    # "relearn-light", "relearn-dark", "zen-light", "zen-dark", "neon", "learn",
+    # "blue", "green", "red". The auto variant is somewhat special. See the
+    # option for themeVariantAuto below.
+    # You can also define your own variants. See the docs how this works. Also,
+    # the docs provide an interactive theme generator to help you with this task.
 
-themeVariant = ["dark", "light"]
+    themeVariant = ["dark", "light"]
 
-# The color variants used for auto mode.
-# Default: [ "relearn-light", "relearn-dark" ], overwritten by the first
-# two non-auto options of your `themeVariant` option if present.
-# The auto variant defines how your site adjusts to your selected OS settings
-# for light/dark mode. The first array element is the variant for light mode,
-# the second for dark mode.
-# themeVariantAuto = ["dark", "light"]
+    # The color variants used for auto mode.
+    # Default: [ "relearn-light", "relearn-dark" ], overwritten by the first
+    # two non-auto options of your `themeVariant` option if present.
+    # The auto variant defines how your site adjusts to your selected OS settings
+    # for light/dark mode. The first array element is the variant for light mode,
+    # the second for dark mode.
+    # themeVariantAuto = ["dark", "light"]
 
-# Default: false
-# If shown, a Home button will appear below the search bar and the main menu.
-# It links to your the home page of the current language.
-disableLandingPageButton = true
+    # Default: false
+    # If shown, a Home button will appear below the search bar and the main menu.
+    # It links to your the home page of the current language.
+    disableLandingPageButton = true
 
-# Hide copy-to-clipboard for inline code.
-# Default: false
-# This removes the copy-to-clipboard button from your inline code.
-disableInlineCopyToClipBoard = true
+    # Hide copy-to-clipboard for inline code.
+    # Default: false
+    # This removes the copy-to-clipboard button from your inline code.
+    disableInlineCopyToClipBoard = true
 
-# The initial expand state of submenus.
-# Default: not set
-# This controls whether submenus will be expanded (true), or collapsed (false)
-# in the menu. If not set, the first menu level is set to false, all others
-# levels are set to true. This can be overridden in the page's frontmatter.
-# If the displayed page has submenus, they will always been displayed expanded
-# regardless of this option.
-alwaysopen = false
+    # The initial expand state of submenus.
+    # Default: not set
+    # This controls whether submenus will be expanded (true), or collapsed (false)
+    # in the menu. If not set, the first menu level is set to false, all others
+    # levels are set to true. This can be overridden in the page's frontmatter.
+    # If the displayed page has submenus, they will always been displayed expanded
+    # regardless of this option.
+    alwaysopen = false
 
-# Shows expander for submenus.
-# Default: false
-# If set to true, a submenu in the sidebar will be displayed in a collapsible
-# tree view and a clickable expander is set in front of the entry.
-collapsibleMenu = true
+    # Shows expander for submenus.
+    # Default: false
+    # If set to true, a submenu in the sidebar will be displayed in a collapsible
+    # tree view and a clickable expander is set in front of the entry.
+    collapsibleMenu = true
 
-# Shows checkmarks for visited pages of the main menu.
-# Default: false
-# This also causes the display of the `Clear History` entry in the lower part
-# of the menu to remove all checkmarks. The checkmarks will also been removed
-# if you regenerate your site as the ids are not stable.
-showVisitedLinks = true
+    # Shows checkmarks for visited pages of the main menu.
+    # Default: false
+    # This also causes the display of the `Clear History` entry in the lower part
+    # of the menu to remove all checkmarks. The checkmarks will also been removed
+    # if you regenerate your site as the ids are not stable.
+    showVisitedLinks = true
 
-# Generate link URLs the Hugo way.
-# Default: false
-# If set to true, the theme behaves like a standard Hugo installation and
-# appends no index.html to prettyURLs. As a trade off, your build project will
-# not be servable from the file system.
-disableExplicitIndexURLs = true
+    # Generate link URLs the Hugo way.
+    # Default: false
+    # If set to true, the theme behaves like a standard Hugo installation and
+    # appends no index.html to prettyURLs. As a trade off, your build project will
+    # not be servable from the file system.
+    disableExplicitIndexURLs = true
 
-##### TWEAKS BY KARL
+    ##### TWEAKS BY KARL
 
-# Tweak by Karl. Don't show chapter numbers for the the chapter archetype. 
-# Default: false
-# If set to true, the chapther number will not be rendered for the chapter 
-# archetype. 
-# This new logic has been added in my
-# layouts/partials/archetypes/chapter/article.html theme relearn override. 
-disableShowChapterNumber = true
+    # Tweak by Karl. Don't show chapter numbers for the the chapter archetype. 
+    # Default: false
+    # If set to true, the chapther number will not be rendered for the chapter 
+    # archetype. 
+    # This new logic has been added in my
+    # layouts/partials/archetypes/chapter/article.html theme relearn override. 
+    disableShowChapterNumber = true
 
-githubIcon = "<i class='fab fa-github'></i>"
+    githubIcon = "<i class='fab fa-github'></i>"
 
-mandatoryIcon = "<i class='fa fa-exclamation-triangle'></i>"
+    mandatoryIcon = "<i class='fa fa-exclamation-triangle'></i>"
 
-higherGradeIcon = "<i class='fas fa-star'></i>"
+    higherGradeIcon = "<i class='fas fa-star'></i>"
