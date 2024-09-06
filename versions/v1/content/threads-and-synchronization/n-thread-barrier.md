@@ -4,7 +4,7 @@ linkTitle: N thread barrier
 assignment: higher-grade
 points: 1
 weight: 210
-draft: false
+draft: true
 ---
 
 <h2 class="subtitle">Optional assignment for higher grade (1 point)</h2>
