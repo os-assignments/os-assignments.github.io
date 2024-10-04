@@ -607,3 +607,51 @@ table.icon-list tr>td:first-child {
     padding-left: 1em;
     padding-right: 1em;
 }
+
+
+#elm-wrapper {
+    text-align: center;
+}
+
+#elm-wrapper * {
+    color: var(--INTERNAL-MAIN-TEXT-color) !important;
+    border-color: var(--INTERNAL-MAIN-TEXT-color) !important;
+}
+
+#elm-wrapper div[title="Reset"],
+#elm-wrapper div[title="Add process"] {
+    background-color: var(--BUTTON-BG) !important;
+}
+
+#elm-wrapper div[title="Reset"]:hover,
+#elm-wrapper div[title="Add process"]:hover {
+    background-color: var(--ACTIVE-BUTTON-BG) !important;
+       border-color: var(--ACCENT-KM-color) !important;
+}
+
+#elm-wrapper div[title="Reset"]:hover *,
+#elm-wrapper div[title="Add process"]:hover * {
+   color: black !important;
+}
+
+
+#elm-wrapper .table-header {
+  border-bottom: 4px solid var( --INTERNAL-MAIN-TEXT-color) !important;
+}
+
+#elm-wrapper .gantt-cell {
+  // border: 1px solid var( --ACCENT-2-color) !important;
+}
+
+#elm-wrapper .inc-dec *  {
+    color: var(--INTERNAL-MAIN-LINK-color) !important;
+
+}
+#elm-wrapper .inc-dec.active  {
+   border-color: var(--ACCENT-KM-color) !important;
+   background-color: var(--ACTIVE-BUTTON-BG) !important;
+}
+
+#elm-wrapper .inc-dec.active * {
+    color: var(--ACTIVE-FG) !important;
+}

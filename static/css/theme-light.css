@@ -14,6 +14,11 @@
     /* brand accent color, used for search highlights */
 
     --ACCENT-2-color: rgba(130, 229, 80, 1);
+
+    --BUTTON-BG:   var(--MAIN-BG-color);
+
+    --ACTIVE-BUTTON-BG:   rgb(255 255 204);
+
     --SUBTITLE-color: rgb(89, 88, 88);
     --STRONG-color: var(--INTERNAL-MAIN-TEXT-color);
     ----MAIN-LINK-color: var(--PRIMARY-color);
