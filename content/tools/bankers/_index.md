@@ -1,6 +1,7 @@
 ---
 title: Banker's algorithm
 archetype: home
+weight: 20
 ---
 
 
