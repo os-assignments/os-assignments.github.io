@@ -18,8 +18,7 @@ values in the table below and press `-` (decrement) och `+` (increment).
  - When adjusting the arrival times, processes will always need to
 arrive in alphabetical order and two processes cannot arrive at the same time. 
 
- You can only delete the
-last process. When adjusting the arrival times, processes will always need to
-arrive in alphabetical order and two processes cannot arrive at the same time. 
+When hovering of the last row in the process table, you can chose to delete
+this process by pressing the {{% icon trash %}} delete symbol.
 
 {{% elm src="/elm/cpu-scheduling.js" id="elm-cpu-scheduling"%}}
