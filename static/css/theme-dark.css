@@ -17,10 +17,11 @@
     --ACCENT-KM-color: rgb(249, 182, 24);
     --ACCENT-KM-ORANGE-color: orange;
 
-    --BUTTON-BG:   var(--MAIN-BG-color);
+    --BUTTON-BG:   var(--INTERNAL-MAIN-LINK-color);
     --ACTIVE-BUTTON-BG: var(--ACCENT-2-color);
     --ACTIVE-FG: black;
 
+         --TABLE-BORDER-color: rgba(100, 100, 100, 1);
     --LOGO-BOTTOM-LINE-color: var(--ACCENT-2-color);
     --SUBTITLE-color: darkgray;
     --STRONG-color: var(--ACCENT-2-color);

@@ -609,49 +609,191 @@ table.icon-list tr>td:first-child {
 }
 
 
-#elm-wrapper {
+#elm-cpu-scheduling {
     text-align: center;
 }
 
-#elm-wrapper * {
-    color: var(--INTERNAL-MAIN-TEXT-color) !important;
-    border-color: var(--INTERNAL-MAIN-TEXT-color) !important;
+#elm-bankers .editable-cell *,
+#elm-bankers .editable-cell 
+ {
+   color: var(--INTERNAL-MAIN-LINK-color) !important;
+  font-weight: normal;
+  cursor: pointer;
 }
 
-#elm-wrapper div[title="Reset"],
-#elm-wrapper div[title="Add process"] {
+
+.invalid-editable-cell * {
+  color: yellow !important;
+  font-weight: normal;
+  cursor: pointer;
+}
+
+#elm-cpu-scheduling *,
+#elm-bankers * {
+   color: var(--INTERNAL-MAIN-TEXT-color);  
+    // border-color: var(--INTERNAL-MAIN-TEXT-color) !important;
+}
+#elm-cpu-scheduling div[title="Reset"],
+#elm-cpu-scheduling div[title="Add process"] {
     background-color: var(--BUTTON-BG) !important;
 }
 
-#elm-wrapper div[title="Reset"]:hover,
-#elm-wrapper div[title="Add process"]:hover {
+#elm-cpu-scheduling div[title="Reset"]:hover,
+#elm-cpu-scheduling div[title="Add process"]:hover,
+#elm-bankers .button:hover 
+ {
     background-color: var(--ACTIVE-BUTTON-BG) !important;
        border-color: var(--ACCENT-KM-color) !important;
+        
 }
 
-#elm-wrapper div[title="Reset"]:hover *,
-#elm-wrapper div[title="Add process"]:hover * {
+
+#elm-cpu-scheduling div[title="Reset"]:hover *,
+#elm-cpu-scheduling div[title="Add process"]:hover *,
+#elm-bankers .button:hover * {
    color: black !important;
 }
 
 
-#elm-wrapper .table-header {
-  border-bottom: 4px solid var( --INTERNAL-MAIN-TEXT-color) !important;
+#elm-cpu-scheduling .table-header {
+  border-bottom: 4px solid var( --TABLE-BORDER-color) !important;
 }
 
-#elm-wrapper .gantt-cell {
-  // border: 1px solid var( --ACCENT-2-color) !important;
+#elm-cpu-scheduling .gantt-cell {
+  border: 1px solid var(--INTERNAL-MAIN-TEXT-color) !important;
 }
 
-#elm-wrapper .inc-dec *  {
+#elm-cpu-scheduling .inc-dec *  {
     color: var(--INTERNAL-MAIN-LINK-color) !important;
 
 }
-#elm-wrapper .inc-dec.active  {
+#elm-cpu-scheduling .inc-dec.active  {
    border-color: var(--ACCENT-KM-color) !important;
    background-color: var(--ACTIVE-BUTTON-BG) !important;
 }
 
-#elm-wrapper .inc-dec.active * {
+#elm-cpu-scheduling .inc-dec.active * {
     color: var(--ACTIVE-FG) !important;
+}
+
+/*** ELM BANKERS ***/
+
+
+#elm-bankers table {
+  border-collapse: collapse;
+  text-align: center;
+}
+
+#elm-bankers .button {
+    background-color: var(--BUTTON-BG); //--INTERNAL-MAIN-LINK-color);
+}
+#elm-bankers td.changed {
+    color:yellow;
+}
+#elm-bankers td,
+#elm-bankers th {
+  padding: 4px;
+  vertical-align: "middle";
+  border: 1px solid var(--TABLE-BORDER-color);
+}
+
+#elm-bankers th.title {
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  border-bottom: 5px solid var(--TABLE-BORDER-color);
+}
+
+#elm-bankers td.tid {
+  padding-left: 1em;
+  padding-right: 1em;
+  border: 0px;
+}
+
+#elm-bankers td.done {
+  padding-left: 1em;
+  padding-right: 2em;
+  width: 3em;
+  border: 0px;
+}
+
+#elm-bankers td.choice {
+  padding-left: 1em;
+  padding-right: 1em;
+
+}
+
+
+
+
+
+#elm-bankers .changed {
+  background-color: rgb(245, 143, 143);
+}
+
+#elm-bankers td.editable-cell:hover {
+  background-color: yellow;
+}
+
+#elm-bankers td.static-cell {
+  color: black;
+}
+
+#elm-bankers .flash:hover {
+  background-color: red;
+  color: yellow;
+}
+
+#elm-bankers table th {
+    font-weight: bold;
+    text-align: center;
+    background-color: transparent !important;
+}
+#elm-bankers .no-bottom-border {
+    border-bottom: none !important;
+}
+
+#elm-bankers table th.no-border,
+#elm-bankers table td.no-border {
+  border: 0px !important;
+  border-bottom: 0px !important;
+}
+
+#elm-bankers th.no-left-no-top {
+  border-left: 0px;
+  border-top: 0px;
+}
+
+#elm-bankers th.fat-border-left,
+#elm-bankers td.fat-border-left {
+  border-left: 5px solid  var(--TABLE-BORDER-color);
+}
+
+#elm-bankers th.fat-border-right,
+#elm-bankers td.fat-border-right {
+  border-right: 5px solid  var(--TABLE-BORDER-color);
+}
+
+#elm-bankers .section-title {
+  padding-top: 1em;
+  padding-bottom: 1em;
+  font-size: 1.6em;
+  font-weight: bold;
+  text-align: left;
+}
+
+#elm-bankers td.msg {
+    padding-top: 20px;
+    border: 0px;
+    text-align: left;
+}
+
+#elm-bankers td.tid-header {
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+#elm-bankers table {border: none}
+
+#elm-bankers a * {
+    color: var(--INTERNAL-MAIN-LINK-color) !important ; 
 }

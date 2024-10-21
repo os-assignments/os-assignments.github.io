@@ -13,9 +13,11 @@
     --ACCENT-color: rgba(255, 136, 255, 1);
     /* brand accent color, used for search highlights */
 
+     --TABLE-BORDER-color: black;
+     
     --ACCENT-2-color: rgba(130, 229, 80, 1);
 
-    --BUTTON-BG:   var(--MAIN-BG-color);
+    --BUTTON-BG:   lightgray;
 
     --ACTIVE-BUTTON-BG:   rgb(255 255 204);
 
