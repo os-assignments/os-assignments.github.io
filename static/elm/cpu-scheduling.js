@@ -12273,6 +12273,8 @@ var $author$project$Main$IncMouseOver = function (a) {
 	return {$: 'IncMouseOver', a: a};
 };
 var $author$project$Main$blue = A3($mdgriffith$elm_ui$Element$rgb255, 0, 0, 255);
+var $mdgriffith$elm_ui$Internal$Flag$fontAlignment = $mdgriffith$elm_ui$Internal$Flag$flag(12);
+var $mdgriffith$elm_ui$Element$Font$center = A2($mdgriffith$elm_ui$Internal$Model$Class, $mdgriffith$elm_ui$Internal$Flag$fontAlignment, $mdgriffith$elm_ui$Internal$Style$classes.textCenter);
 var $mdgriffith$elm_ui$Element$Border$roundEach = function (_v0) {
 	var topLeft = _v0.topLeft;
 	var topRight = _v0.topRight;
@@ -12348,7 +12350,6 @@ var $author$project$Main$incDec = F3(
 							common,
 							_List_fromArray(
 								[
-									$mdgriffith$elm_ui$Element$width($mdgriffith$elm_ui$Element$fill),
 									$mdgriffith$elm_ui$Element$Border$widthEach(
 									{bottom: 2, left: 0, right: 0, top: 2})
 								])),
@@ -12356,10 +12357,12 @@ var $author$project$Main$incDec = F3(
 							$mdgriffith$elm_ui$Element$el,
 							_List_fromArray(
 								[
+									$mdgriffith$elm_ui$Element$centerX,
 									$mdgriffith$elm_ui$Element$width(
 									$mdgriffith$elm_ui$Element$px(40)),
 									$mdgriffith$elm_ui$Element$paddingEach(
-									{bottom: 0, left: 8, right: 8, top: 0})
+									{bottom: 0, left: 8, right: 8, top: 0}),
+									$mdgriffith$elm_ui$Element$Font$center
 								]),
 							$mdgriffith$elm_ui$Element$text(
 								$elm$core$Debug$toString(value)))),
@@ -13844,26 +13847,76 @@ var $author$project$Main$metricsV2 = F2(
 							acc0,
 							startStop)))));
 	});
+var $author$project$Main$ActiveQ = {$: 'ActiveQ'};
 var $author$project$Main$DoNothing = {$: 'DoNothing'};
+var $author$project$Main$Q = {$: 'Q'};
+var $author$project$Main$activeQ = function (model) {
+	var _v0 = model.active;
+	if ((_v0.$ === 'Just') && (_v0.a.$ === 'ActiveQ')) {
+		var _v1 = _v0.a;
+		return true;
+	} else {
+		return false;
+	}
+};
 var $author$project$Main$simulations = function (model) {
 	return _List_fromArray(
 		[
 			_Utils_Tuple3(
 			$author$project$Simulation$FCFS,
-			$mdgriffith$elm_ui$Element$text('First Come First Serve (FCFS)'),
+			_Utils_Tuple2(
+				$mdgriffith$elm_ui$Element$text('First Come First Serve (FCFS)'),
+				$mdgriffith$elm_ui$Element$text('First Come First Serve (FCFS)')),
 			$author$project$Main$DoNothing),
 			_Utils_Tuple3(
 			$author$project$Simulation$SJF,
-			$mdgriffith$elm_ui$Element$text('Shortest Job First (SJF)'),
+			_Utils_Tuple2(
+				$mdgriffith$elm_ui$Element$text('Shortest Job First (SJF)'),
+				$mdgriffith$elm_ui$Element$text('Shortest Job First (SJF)')),
 			$author$project$Main$DoNothing),
 			_Utils_Tuple3(
 			$author$project$Simulation$PSJF,
-			$mdgriffith$elm_ui$Element$text('Preemptive Shortest Job First (PSJF)'),
+			_Utils_Tuple2(
+				$mdgriffith$elm_ui$Element$text('Preemptive Shortest Job First (PSJF)'),
+				$mdgriffith$elm_ui$Element$text('Preemptive Shortest Job First (PSJF)')),
 			$author$project$Main$DoNothing),
 			_Utils_Tuple3(
 			$author$project$Simulation$RR(model.q),
-			$mdgriffith$elm_ui$Element$text(
-				'Round Robin (RR) with q  = ' + $elm$core$Debug$toString(model.q)),
+			_Utils_Tuple2(
+				A2(
+					$mdgriffith$elm_ui$Element$row,
+					_List_fromArray(
+						[
+							$mdgriffith$elm_ui$Element$Events$onMouseEnter(
+							$author$project$Main$SetActive(
+								$elm$core$Maybe$Just($author$project$Main$ActiveQ))),
+							$mdgriffith$elm_ui$Element$Events$onMouseLeave(
+							$author$project$Main$SetActive($elm$core$Maybe$Nothing)),
+							$mdgriffith$elm_ui$Element$centerY
+						]),
+					_List_fromArray(
+						[
+							A2(
+							$mdgriffith$elm_ui$Element$el,
+							_List_fromArray(
+								[$mdgriffith$elm_ui$Element$centerY]),
+							$mdgriffith$elm_ui$Element$text('Round Robin (RR) with q  = ')),
+							A3(
+							$author$project$Main$incDec,
+							$author$project$Main$Q,
+							$author$project$Main$activeQ(model),
+							model.q),
+							A2(
+							$mdgriffith$elm_ui$Element$el,
+							_List_fromArray(
+								[
+									$mdgriffith$elm_ui$Element$width($mdgriffith$elm_ui$Element$fill),
+									$mdgriffith$elm_ui$Element$height($mdgriffith$elm_ui$Element$fill)
+								]),
+							$mdgriffith$elm_ui$Element$none)
+						])),
+				$mdgriffith$elm_ui$Element$text(
+					'Round Robin (RR) with q  = ' + $elm$core$Debug$toString(model.q))),
 			$author$project$Main$DoNothing)
 		]);
 };
@@ -13878,7 +13931,9 @@ var $author$project$Main$runSimulations = function (model) {
 		$elm$core$List$map,
 		function (_v0) {
 			var alg = _v0.a;
-			var title = _v0.b;
+			var _v1 = _v0.b;
+			var title = _v1.a;
+			var txt = _v1.b;
 			var msg = _v0.c;
 			return A2(
 				$elm$core$Maybe$map,
@@ -13888,7 +13943,8 @@ var $author$project$Main$runSimulations = function (model) {
 						gantt: g,
 						metrics: A2($author$project$Main$metricsV2, arrivals, g),
 						msg: msg,
-						title: title
+						title: title,
+						txt: txt
 					};
 				},
 				A2($author$project$Main$getGanttChartV2, model.processes, alg));
@@ -13899,7 +13955,6 @@ var $mdgriffith$elm_ui$Internal$Model$Bottom = {$: 'Bottom'};
 var $mdgriffith$elm_ui$Element$alignBottom = $mdgriffith$elm_ui$Internal$Model$AlignY($mdgriffith$elm_ui$Internal$Model$Bottom);
 var $mdgriffith$elm_ui$Internal$Model$Left = {$: 'Left'};
 var $mdgriffith$elm_ui$Element$alignLeft = $mdgriffith$elm_ui$Internal$Model$AlignX($mdgriffith$elm_ui$Internal$Model$Left);
-var $mdgriffith$elm_ui$Internal$Flag$fontAlignment = $mdgriffith$elm_ui$Internal$Flag$flag(12);
 var $mdgriffith$elm_ui$Element$Font$alignLeft = A2($mdgriffith$elm_ui$Internal$Model$Class, $mdgriffith$elm_ui$Internal$Flag$fontAlignment, $mdgriffith$elm_ui$Internal$Style$classes.textLeft);
 var $mdgriffith$elm_ui$Internal$Model$Max = F2(
 	function (a, b) {
@@ -14695,7 +14750,7 @@ var $author$project$Main$viewSimulations = function (sims) {
 	var ms = A2(
 		$elm$core$List$map,
 		function (r) {
-			return _Utils_Tuple2(r.title, r.metrics);
+			return _Utils_Tuple3(r.title, r.txt, r.metrics);
 		},
 		$elm_community$maybe_extra$Maybe$Extra$values(sims));
 	var hdr = F2(
@@ -14729,13 +14784,14 @@ var $author$project$Main$viewSimulations = function (sims) {
 				F2(
 					function (_v0, acc) {
 						var t = _v0.a;
-						var m = _v0.b;
+						var txt = _v0.b;
+						var m = _v0.c;
 						return A2(
 							$elm$core$List$cons,
 							A2(
 								$elm$core$Maybe$map,
 								function (mm) {
-									return {cpuUtilization: mm.cpuUtilization, responseTime: mm.responseTime, throughput: mm.throughput, title: t, turnaroundTime: mm.turnaroundTime, waitingTime: mm.waitingTime};
+									return {cpuUtilization: mm.cpuUtilization, responseTime: mm.responseTime, throughput: mm.throughput, title: t, turnaroundTime: mm.turnaroundTime, txt: txt, waitingTime: mm.waitingTime};
 								},
 								m),
 							acc);
@@ -14775,7 +14831,7 @@ var $author$project$Main$viewSimulations = function (sims) {
 								_List_fromArray(
 									[$mdgriffith$elm_ui$Element$Font$alignLeft]),
 								_List_fromArray(
-									[r.title])));
+									[r.txt])));
 					},
 					width: algWidth
 				},
