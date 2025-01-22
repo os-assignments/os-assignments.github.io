@@ -73,7 +73,7 @@ Instructions
 :   `j`, `blt` and `bge`. 
   
   
-## arrays.c
+## arrays.s
 
 File
 :   `arrays.s`

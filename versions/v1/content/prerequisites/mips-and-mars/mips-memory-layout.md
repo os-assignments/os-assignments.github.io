@@ -14,7 +14,7 @@ memory allocated to a MIPS program is shown.
 The purpose of the various memory segments:
 
 * The **user level code** is stored in the **text segment**.
-* **Static data** (data know at compile time) use by the user program is stored
+* **Static data** (data known at compile time) use by the user program is stored
   in the **data segment**.
 * **Dynamic data** (data allocated during runtime) by the user program is stored
   in the **heap**.
