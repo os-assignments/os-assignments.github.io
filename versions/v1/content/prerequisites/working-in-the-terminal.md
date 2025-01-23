@@ -5,7 +5,7 @@ weight: 30
 
 ![](/v1/images/prerequisites/linux/shell-example-session.png?width=500px)
 
-On this page your find a small collection of useful shell commands when working
+On this page you find a small collection of useful shell commands when working
 in the terminal. You will also learn about shell variables, the command
 history and how to read manual pages in the terminal. 
 
@@ -36,7 +36,7 @@ In all examples and instructions you should replace `abcd1234` with your actual 
 ## Print working directory (pwd)
 
 The shell has a concept of a current working directory. The `pwd` (print working
-directory) commands prints the full path of the current working directory.
+directory) command prints the full path of the current working directory.
 
 Type `pwd` at the shell prompt.
 
