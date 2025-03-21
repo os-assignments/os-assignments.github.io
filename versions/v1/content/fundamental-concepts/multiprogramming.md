@@ -38,8 +38,7 @@ In a multiprogramming system, a the following state transitions are possible.
 
 | From       | To        | Description                                                                                                                   |
 | :--------: | :-------: | -------------                                                                                                                 |
-| Running    | Waiting   | When a running job requests I/O, the job changes state from running to waiting.                                               |
-| Running    | Ready     | When an I/O requests completes, the running job changes state from running to ready.                                          |
+| Running    | Waiting   | When a running job requests I/O, the job changes state from running to waiting.                                               |                                      |
 | Waiting    | Ready     | When an I/O requests completes, the job waiting for the request to complete  changes state from waiting to ready.             |
 | Ready      | Running   | When an I/O requests completes, one of the ready jobs are selected to run on the CPU and changes state from ready to running. |
 
