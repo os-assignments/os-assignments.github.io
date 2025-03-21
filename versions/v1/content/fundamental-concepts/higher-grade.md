@@ -114,8 +114,7 @@ the following state transitions are possible.
 
 |  From   |   To    | Description                                                                                                        |
 | :-----: | :-----: | ------------------------------------------------------------------------------------------------------------------ |
-| Running | Waiting | When the running job requests I/O, the job changes state from running to waiting.                                  |
-|  Ready  | Running | When the running job requests I/O, the other job changes state from ready to running.                              |
+| Running | Waiting | When the running job requests I/O, the job changes state from running to waiting.                                  |                      |
 | Running |  Ready  | When an I/O requests completes, the running job changes state from running to ready.                               |
 | Waiting | Running | When an I/O requests completes, the job waiting for the request to complete changes state from waiting to running. |
 
